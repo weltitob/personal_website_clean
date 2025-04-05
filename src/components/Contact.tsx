@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 
 const Contact = () => {
   const [emailCopied, setEmailCopied] = useState(false);
-  const [activeTab, setActiveTab] = useState('projekte');
+  const [activeTab, setActiveTab] = useState('projects');
   
   const sectionRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
@@ -55,9 +55,9 @@ const Contact = () => {
       
       <div className="content-wrapper relative z-10">
         <div className="text-center mb-12">
-          <h2 ref={headingRef} className="slide-up mb-4">Bereit für dein nächstes Projekt?</h2>
+          <h2 ref={headingRef} className="slide-up mb-4">Ready for your next project?</h2>
           <p ref={textRef} className="contact-intro-text mx-auto fade-in delay-100">
-            Lass uns gemeinsam deine Vision in die Realität umsetzen. Ich bin immer auf der Suche nach neuen Herausforderungen und spannenden Projekten.
+            Let's turn your vision into reality together. I'm always looking for new challenges and exciting projects.
           </p>
         </div>
         
@@ -66,22 +66,22 @@ const Contact = () => {
             <div className="contact-card-header">
               <div className="contact-tabs">
                 <button 
-                  className={`contact-tab ${activeTab === 'projekte' ? 'active' : ''}`}
-                  onClick={() => setActiveTab('projekte')}
+                  className={`contact-tab ${activeTab === 'projects' ? 'active' : ''}`}
+                  onClick={() => setActiveTab('projects')}
                 >
-                  Projekte
+                  Projects
                 </button>
                 <button 
-                  className={`contact-tab ${activeTab === 'beratung' ? 'active' : ''}`}
-                  onClick={() => setActiveTab('beratung')}
+                  className={`contact-tab ${activeTab === 'consulting' ? 'active' : ''}`}
+                  onClick={() => setActiveTab('consulting')}
                 >
-                  Beratung
+                  Consulting
                 </button>
                 <button 
-                  className={`contact-tab ${activeTab === 'allgemein' ? 'active' : ''}`}
-                  onClick={() => setActiveTab('allgemein')}
+                  className={`contact-tab ${activeTab === 'general' ? 'active' : ''}`}
+                  onClick={() => setActiveTab('general')}
                 >
-                  Allgemein
+                  General
                 </button>
               </div>
             </div>
@@ -92,7 +92,7 @@ const Contact = () => {
                   <img src="/images/tobi_profile.jpeg" alt="Tobi" className="contact-avatar-img" />
                   <div className="contact-status">
                     <span className="contact-status-dot"></span>
-                    Für neue Projekte verfügbar
+                    Available for new projects
                   </div>
                 </div>
                 
@@ -102,7 +102,7 @@ const Contact = () => {
                   
                   <div className="contact-response-time">
                     <span className="contact-response-icon">⏱️</span>
-                    <span>Antwortzeit: &lt; 24 Stunden</span>
+                    <span>Response time: &lt; 24 hours</span>
                   </div>
                   
                   <div className="contact-methods">
@@ -117,7 +117,7 @@ const Contact = () => {
                           <button 
                             className="contact-copy-button"
                             onClick={copyEmailToClipboard}
-                            aria-label="E-Mail kopieren"
+                            aria-label="Copy email"
                           >
                             {emailCopied ? 
                               <span className="copy-success">✓</span> : 
@@ -145,16 +145,16 @@ const Contact = () => {
               
               <div className="contact-message">
                 <p className="contact-message-text">
-                  {activeTab === 'projekte' && "Hast du ein spannendes Projekt? Erzähle mir mehr darüber und lass uns gemeinsam die beste Lösung finden."}
-                  {activeTab === 'beratung' && "Benötigst du technische Beratung oder Hilfe bei der Planung deines digitalen Projekts? Ich unterstütze dich gerne."}
-                  {activeTab === 'allgemein' && "Hast du Fragen oder möchtest du einfach in Kontakt treten? Ich freue mich auf deine Nachricht."}
+                  {activeTab === 'projects' && "Do you have an exciting project? Tell me more about it and let's find the best solution together."}
+                  {activeTab === 'consulting' && "Do you need technical consulting or help planning your digital project? I'm happy to support you."}
+                  {activeTab === 'general' && "Do you have questions or just want to get in touch? I look forward to hearing from you."}
                 </p>
               </div>
             </div>
             
             <div className="contact-card-actions">
               <a href="mailto:tobi@example.com" className="btn-glow-gradient contact-btn">
-                <span className="btn-text">E-Mail senden</span>
+                <span className="btn-text">Send Email</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2">
                   <line x1="22" y1="2" x2="11" y2="13"></line>
                   <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
@@ -165,7 +165,7 @@ const Contact = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                 </svg>
-                Anrufen
+                Call
               </a>
             </div>
           </div>

@@ -125,21 +125,21 @@ function App() {
         
         <div className="narrative-section">
           <div className="content-wrapper">
-            <h2 className="slide-up">Meilenstein: Projekt Beta</h2>
+            <h2 className="slide-up">Milestone: Project Beta</h2>
             <div className="project-card fade-in delay-100">
               <div className="flex items-center justify-center order-last md:order-first">
-                <img src="https://placehold.co/600x450/0f172a/e2e8f0?text=Projekt+Beta+Visual" alt="[Bild von Projekt Beta]" className="w-full h-auto max-w-md" />
+                <img src="https://placehold.co/600x450/0f172a/e2e8f0?text=Project+Beta+Visual" alt="[Project Beta image]" className="w-full h-auto max-w-md" />
               </div>
               <div className="project-details">
-                <h3>[Titel des Projekts Beta]</h3>
+                <h3>[Project Beta Title]</h3>
                 <p>
-                  Hier ging es darum, [Problembeschreibung]. Die Lösung war [Art der Anwendung], mit einem besonderen Fokus auf [wichtiger Aspekt, z.B. Performance, User Experience].
+                  This was about [problem description]. The solution was [type of application], with a special focus on [important aspect, e.g. performance, user experience].
                 </p>
                 <p>
-                  Eingesetzte Technologien: <span className="tech-highlight">Vue.js</span>, <span className="tech-highlight">TypeScript</span>, <span className="tech-highlight">Headless CMS</span>.
+                  Technologies used: <span className="tech-highlight">Vue.js</span>, <span className="tech-highlight">TypeScript</span>, <span className="tech-highlight">Headless CMS</span>.
                 </p>
                 <div className="mt-6 space-x-3">
-                  <button onClick={() => window.dispatchEvent(new CustomEvent('openModal', { detail: 'project-beta-modal' }))} className="btn-glow-gradient">Mehr Details</button>
+                  <button onClick={() => window.dispatchEvent(new CustomEvent('openModal', { detail: 'project-beta-modal' }))} className="btn-glow-gradient">More Details</button>
                   <a href="#" className="btn-secondary">Code <span className="lucide text-xs ml-1">&#xea1f;</span></a>
                 </div>
               </div>
@@ -149,12 +149,12 @@ function App() {
 
         <div className="narrative-section">
           <div className="content-wrapper md:w-3/4 lg:w-2/3 text-center mx-auto">
-            <h2 className="slide-up">Philosophie: Mehr als Code</h2>
+            <h2 className="slide-up">Philosophy: More Than Code</h2>
             <p className="section-intro-text fade-in delay-100">
-              Technologie ist ein Werkzeug. Mein Ziel ist es, dieses Werkzeug so einzusetzen, dass es echten Mehrwert schafft – durch durchdachtes Design, robuste Architektur und eine Prise Innovation.
+              Technology is a tool. My goal is to use this tool in a way that creates real value – through thoughtful design, robust architecture, and a touch of innovation.
             </p>
             <p className="fade-in delay-200">
-              Ich strebe nach Lösungen, die nicht nur heute funktionieren, sondern auch morgen Bestand haben. Klarheit, Effizienz und eine positive Nutzererfahrung stehen dabei im Mittelpunkt. Die Reise geht weiter...
+              I strive for solutions that not only work today but will also stand the test of time. Clarity, efficiency, and a positive user experience are at the center of everything I do. The journey continues...
             </p>
           </div>
         </div>
@@ -169,28 +169,28 @@ function App() {
       {/* Modals */}
       <Modal 
         id="project-alpha-modal"
-        title="Projekt Alpha: [Titel]"
+        title="Project Alpha: [Title]"
         status="DEPLOYED"
         statusIndicator="status-deployed"
-        description="Detaillierte Beschreibung von Projekt Alpha. Herausforderungen, Lösungsansätze, technische Architektur, erreichte Ziele."
+        description="Detailed description of Project Alpha. Challenges, solution approaches, technical architecture, achieved goals."
         techStack={["React", "Node.js", "WebSocket", "AWS", "Testing Library"]}
       />
       
       <Modal 
         id="project-beta-modal"
-        title="Projekt Beta: [Titel]"
+        title="Project Beta: [Title]"
         status="IN DEVELOPMENT"
         statusIndicator="status-development"
-        description="Detaillierte Beschreibung von Projekt Beta. Vision, technische Entscheidungen, besondere Herausforderungen, aktueller Stand."
+        description="Detailed description of Project Beta. Vision, technical decisions, special challenges, current status."
         techStack={["Vue.js", "Strapi", "TypeScript", "Docker", "GraphQL"]}
       />
       
       <Modal 
         id="project-x-modal"
-        title="Projekt X: [Titel]"
+        title="Project X: [Title]"
         status="ACTIVE"
         statusIndicator="status-development"
-        description="Details zum aktuellen Projekt X..."
+        description="Details on the current Project X..."
         techStack={["React", "Next.js", "Tailwind CSS"]}
       />
     </>

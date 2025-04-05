@@ -36,31 +36,31 @@ const CVTimeline = () => {
   return (
     <section id="cv-timeline" className="section timeline-section bg-slate-900/30">
       <div className="content-wrapper">
-        <h2 className="text-center slide-up">Beruflicher Werdegang</h2>
+        <h2 className="text-center slide-up">Professional Career</h2>
         <p className="section-intro-text text-center mx-auto fade-in delay-100">
-          Meine wichtigsten Stationen und Ausbildungsphasen.
+          My key positions and educational background.
         </p>
         <div className="timeline-container-wrapper">
           <ul className="timeline" ref={timelineRef}>
             <li className="timeline-item">
               <div className="timeline-content">
-                <span className="timeline-date">Juli 2022 - Heute</span>
-                <h4 className="timeline-title">Webentwickler bei Firma A</h4>
-                <p className="timeline-description">Hauptverantwortlich für [Aufgabenbereich], Arbeit mit [Technologien]. Erfolgreiche Umsetzung von [Beispielprojekt/Erfolg].</p>
+                <span className="timeline-date">July 2022 - Present</span>
+                <h4 className="timeline-title">Web Developer at Company A</h4>
+                <p className="timeline-description">Main responsibility for [area of responsibility], work with [technologies]. Successful implementation of [example project/success].</p>
               </div>
             </li>
             <li className="timeline-item">
               <div className="timeline-content">
-                <span className="timeline-date">Oktober 2020 - Juni 2022</span>
-                <h4 className="timeline-title">Junior Entwickler bei Agentur B</h4>
-                <p className="timeline-description">Erste professionelle Erfahrungen in [Bereich], Erstellung von [Art von Projekten].</p>
+                <span className="timeline-date">October 2020 - June 2022</span>
+                <h4 className="timeline-title">Junior Developer at Agency B</h4>
+                <p className="timeline-description">First professional experiences in [area], creation of [type of projects].</p>
               </div>
             </li>
             <li className="timeline-item">
               <div className="timeline-content">
-                <span className="timeline-date">Oktober 2017 - September 2020</span>
-                <h4 className="timeline-title">Studium Informatik an Uni C</h4>
-                <p className="timeline-description">Abschluss: Bachelor of Science. Schwerpunkte: [Schwerpunkt 1], [Schwerpunkt 2].</p>
+                <span className="timeline-date">October 2017 - September 2020</span>
+                <h4 className="timeline-title">Computer Science at University C</h4>
+                <p className="timeline-description">Degree: Bachelor of Science. Focus areas: [Focus area 1], [Focus area 2].</p>
               </div>
             </li>
           </ul>

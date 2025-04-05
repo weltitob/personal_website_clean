@@ -51,11 +51,11 @@ const Header = () => {
         <div className="content-wrapper flex justify-between items-center">
             <a href="#" className="text-xl font-bold text-gradient hover:opacity-80 transition duration-300">Tobi</a>
             <nav id="main-nav" className="flex flex-wrap space-x-1 md:space-x-2 text-xs sm:text-sm">
-                <a href="#journey" className={`nav-link ${activeSection === '#journey' ? 'active' : ''}`}>Die Reise</a>
+                <a href="#journey" className={`nav-link ${activeSection === '#journey' ? 'active' : ''}`}>Journey</a>
                 <a href="#skills" className={`nav-link ${activeSection === '#skills' ? 'active' : ''}`}>Skills</a>
-                <a href="#project-timeline" className={`nav-link ${activeSection === '#project-timeline' ? 'active' : ''}`}>Projekte</a>
-                <a href="#cv-timeline" className={`nav-link ${activeSection === '#cv-timeline' ? 'active' : ''}`}>Lebenslauf</a>
-                <a href="#contact" className={`nav-link ${activeSection === '#contact' ? 'active' : ''}`}>Kontakt</a>
+                <a href="#project-timeline" className={`nav-link ${activeSection === '#project-timeline' ? 'active' : ''}`}>Projects</a>
+                <a href="#cv-timeline" className={`nav-link ${activeSection === '#cv-timeline' ? 'active' : ''}`}>Resume</a>
+                <a href="#contact" className={`nav-link ${activeSection === '#contact' ? 'active' : ''}`}>Contact</a>
             </nav>
         </div>
     </header>

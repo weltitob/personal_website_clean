@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Copyright */}
           <div className="text-sm text-slate-400 font-mono">
-            &copy; <span>{currentYear}</span> Tobi | Design & Code mit Leidenschaft
+            &copy; <span>{currentYear}</span> Tobi | Design & Code with Passion
           </div>
           
           {/* Social Media Icons */}

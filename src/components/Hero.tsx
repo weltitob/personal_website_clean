@@ -144,7 +144,7 @@ const Hero = () => {
                   <div className="profile-name">Tobi</div>
                   <div className="profile-title">Web Developer & Designer</div>
                   <div className="profile-location">
-                    <span className="location-icon">📍</span> Deutschland
+                    <span className="location-icon">📍</span> Germany
                   </div>
                 </div>
                 <div className="tech-pills">
@@ -188,14 +188,14 @@ const Hero = () => {
           {/* Welcome text and headline - NOW ON THE RIGHT */}
           <div className="hero-text slide-up">
             <h1 ref={headingRef} className="hero-heading">
-              <span className="welcome-text glitch-text" data-text="Willkommen">Willkommen</span>
-              <span className="hero-tagline">in meiner <span className="text-gradient">digitalen</span> Welt</span>
+              <span className="welcome-text glitch-text" data-text="Welcome">Welcome</span>
+              <span className="hero-tagline">to my <span className="text-gradient">digital</span> world</span>
             </h1>
             
             <p ref={textRef} className="hero-intro delay-100">
-              Entdecke meine kreative Reise durch Technologie und Design.
-              Von der Idee bis zur Umsetzung erschaffe ich digitale Erlebnisse, 
-              die Menschen begeistern und Probleme elegant lösen.
+              Discover my creative journey through technology and design.
+              From concept to implementation, I create digital experiences 
+              that inspire people and solve problems elegantly.
             </p>
 
 
@@ -203,25 +203,25 @@ const Hero = () => {
             <div className="hero-stats">
               <div className="hero-stat">
                 <span className="hero-stat-number counter" data-target="5">0</span>
-                <span className="hero-stat-label">Jahre Erfahrung</span>
+                <span className="hero-stat-label">Years Experience</span>
               </div>
               <div className="hero-stat">
                 <span className="hero-stat-number counter" data-target="30">0</span>
-                <span className="hero-stat-label">Projekte</span>
+                <span className="hero-stat-label">Projects</span>
               </div>
               <div className="hero-stat">
                 <span className="hero-stat-number counter" data-target="15">0</span>
-                <span className="hero-stat-label">Technologien</span>
+                <span className="hero-stat-label">Technologies</span>
               </div>
             </div>
             
             <div className="hero-actions delay-200">
               <a ref={buttonRef} href="#journey" className="btn-glow-gradient">
-                <span className="btn-text">Meine Arbeit entdecken</span>
+                <span className="btn-text">Discover My Work</span>
                 <span className="btn-icon">→</span>
               </a>
               <a href="#contact" className="btn-outline">
-                <span className="lucide mr-2">&#xe900;</span> Kontakt
+                <span className="lucide mr-2">&#xe900;</span> Contact
               </a>
             </div>
           </div>
