@@ -1,0 +1,27 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.status-deployed {
+  background-color: #10b981; /* green-500 */
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+}
+
+.status-development {
+  background-color: #f59e0b; /* amber-500 */
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.6);
+}
+
+.status-pending {
+  background-color: #6366f1; /* indigo-500 */
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.6);
+}
