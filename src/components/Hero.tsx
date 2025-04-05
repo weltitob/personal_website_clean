@@ -90,7 +90,7 @@ const Hero = () => {
   // Calculate parallax effects based on mouse position and scroll
   const moveX = mousePosition.x * 30 - 15;
   const moveY = mousePosition.y * 30 - 15;
-  const parallaxY = scrollY * 0.4;
+  // const parallaxY = scrollY * 0.4; // Uncomment if needed
 
   return (
     <section id="hero" ref={heroRef} className="hero-container overflow-hidden">

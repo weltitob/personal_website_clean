@@ -12,7 +12,7 @@ import Modal from './components/Modal'
 
 function App() {
   // Custom cursor state and refs
-  const [isHovering, setIsHovering] = useState(false);
+  const [, setIsHovering] = useState(false);
   const cursorRingRef = useRef<HTMLDivElement>(null);
   const cursorDotRef = useRef<HTMLDivElement>(null);
 
@@ -102,7 +102,7 @@ function App() {
       
       // Remove the global style element
       const styleElement = document.querySelector('style');
-      if (styleElement && styleElement.textContent.includes('cursor: none')) {
+      if (styleElement && styleElement.textContent && styleElement.textContent.includes('cursor: none')) {
         styleElement.remove();
       }
       

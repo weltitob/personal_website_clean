@@ -8,7 +8,7 @@ const Header = () => {
       const sections = document.querySelectorAll('.section');
       const headerHeight = document.getElementById('main-header')?.offsetHeight || 60;
       
-      let bestMatch = { id: null, ratio: 0, top: Infinity };
+      let bestMatch: { id: string | null, ratio: number, top: number } = { id: null, ratio: 0, top: Infinity };
       
       sections.forEach((section) => {
         const id = `#${section.getAttribute('id')}`;
