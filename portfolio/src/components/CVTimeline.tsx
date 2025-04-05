@@ -1,21 +1,35 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 const CVTimeline = () => {
+  const timelineRef = useRef<HTMLUListElement>(null);
+  
   useEffect(() => {
-    const timelineItems = document.querySelectorAll('.timeline-item');
+    // Make sure DOM is loaded
+    if (!timelineRef.current) return;
     
+    const timelineItems = timelineRef.current.querySelectorAll('.timeline-item');
+    
+    // Force immediate visibility for better display
+    timelineItems.forEach(item => {
+      item.classList.add('visible');
+    });
+    
+    // Set up Intersection Observer for scroll animation when scrolling to view
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
     
+    // Observe for scroll
     timelineItems.forEach(item => observer.observe(item));
     
     return () => {
-      timelineItems.forEach(item => observer.unobserve(item));
+      if (timelineItems) {
+        timelineItems.forEach(item => observer.unobserve(item));
+      }
     };
   }, []);
 
@@ -27,7 +41,7 @@ const CVTimeline = () => {
           Meine wichtigsten Stationen und Ausbildungsphasen.
         </p>
         <div className="timeline-container-wrapper">
-          <ul className="timeline">
+          <ul className="timeline" ref={timelineRef}>
             <li className="timeline-item">
               <div className="timeline-content">
                 <span className="timeline-date">Juli 2022 - Heute</span>
