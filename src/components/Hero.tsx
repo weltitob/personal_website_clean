@@ -116,15 +116,15 @@ const Hero = () => {
         <div className="hero-badges">
           <div className="tech-badge">
             <div className="tech-badge-icon"></div>
-            <span className="tech-badge-text">Developer</span>
+            <span className="tech-badge-text">Software Engineer</span>
           </div>
           <div className="tech-badge">
             <div className="tech-badge-icon"></div>
-            <span className="tech-badge-text">Designer</span>
+            <span className="tech-badge-text">Design Thinker</span>
           </div>
           <div className="tech-badge">
             <div className="tech-badge-icon"></div>
-            <span className="tech-badge-text">Creator</span>
+            <span className="tech-badge-text">Digital Craftsman</span>
           </div>
         </div>
         

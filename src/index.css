@@ -1013,7 +1013,7 @@ p {
 /* Card positioned behind image */
 .profile-card-behind {
   position: absolute;
-  top: 30px; /* Moved down to overlap with the image */
+  top: 60px; /* Moved further down to create more overlap with the image */
   left: -40px;
   width: 200px;
   border-radius: 12px;
@@ -1459,7 +1459,7 @@ p {
   }
   
   .profile-card-behind {
-    top: -20px;
+    top: 30px;
     left: -20px;
     width: 170px;
     padding: 0.75rem;
