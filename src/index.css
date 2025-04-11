@@ -21,7 +21,9 @@
 
 /* Base & Theme */
 html { 
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -30,6 +32,13 @@ body {
   color: #e2e8f0; /* slate-200 */
   overflow-x: hidden;
   margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Global link styling */
+a {
+  text-decoration: none;
 }
 
 /* Animated Gradient Background (Subtle) */
@@ -75,10 +84,11 @@ body::before {
 
 /* Layout & Sections */
 .content-wrapper { 
-  max-width: 1100px; 
+  width: 100%;
+  max-width: 1200px;
   margin-left: auto; 
   margin-right: auto; 
-  padding: 0 1.5rem; 
+  padding: 0 2rem; 
 }
 
 .narrative-section {
@@ -284,10 +294,10 @@ body::before {
 
 /* Typography */
 h1 { 
-  font-size: clamp(2.8rem, 9vw, 5.5rem); 
+  font-size: clamp(2rem, 7vw, 3.6rem); 
   font-weight: 800; 
   line-height: 1.1; 
-  margin-bottom: 1.5rem; 
+  margin-bottom: 1rem; 
   letter-spacing: -0.02em;
   text-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
@@ -391,6 +401,7 @@ p {
   background: linear-gradient(to right, #7c3aed, #2563eb);
   box-shadow: 0 0 8px rgba(168, 85, 247, 0.4), 0 0 15px rgba(59, 130, 246, 0.3);
   transition: transform 0.2s ease-out, box-shadow 0.3s ease-out;
+  text-decoration: none;
 }
 
 .btn-glow-gradient:hover { 
@@ -782,13 +793,15 @@ p {
 /* Hero Container & Background */
 .hero-container {
   position: relative;
-  min-height: 80vh;
-  padding-top: 3rem;
-  overflow: hidden;
+  min-height: 70vh;
+  padding-top: 4rem;
+  padding-bottom: 1.5rem;
+  overflow-x: visible;
   display: flex;
   align-items: center;
   justify-content: center;
   perspective: 1000px;
+  width: 100%;
 }
 
 .hero-shapes {
@@ -907,6 +920,7 @@ p {
   align-items: flex-start;
   position: relative;
   z-index: 10;
+  width: 100%;
 }
 
 @media (min-width: 1024px) {
@@ -973,18 +987,19 @@ p {
 .hero-heading {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
 .welcome-text {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: clamp(1.3rem, 3.5vw, 2rem);
   font-weight: 600;
   color: #f8fafc;
 }
 
 .hero-tagline {
-  font-size: clamp(2rem, 6vw, 3.8rem);
+  font-size: clamp(1.7rem, 5vw, 3rem);
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -992,11 +1007,11 @@ p {
 }
 
 .hero-intro {
-  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  font-size: clamp(0.9rem, 1.8vw, 1.05rem);
   color: #cbd5e1;
-  max-width: 600px;
-  margin-bottom: 2rem;
-  line-height: 1.7;
+  max-width: 560px;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
 }
 
 /* Visual Elements */
@@ -1013,32 +1028,33 @@ p {
 /* Card positioned behind image */
 .profile-card-behind {
   position: absolute;
-  top: 60px; /* Moved further down to create more overlap with the image */
-  left: -40px;
-  width: 200px;
-  border-radius: 12px;
+  top: 10px; /* Better positioned for visibility */
+  left: -30px; /* More visible from the left side */
+  width: 240px;
+  border-radius: 16px;
   overflow: hidden;
   background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.95));
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   padding: 1rem;
-  z-index: 5; /* Positioned behind the image */
+  z-index: 15; /* Above the image for better visibility */
   will-change: transform;
+  transform-style: preserve-3d;
 }
 
 .tech-pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1rem;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
 }
 
 .tech-pill {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   background: rgba(59, 130, 246, 0.2);
   color: #93c5fd;
-  padding: 0.2rem 0.5rem;
+  padding: 0.15rem 0.4rem;
   border-radius: 50px;
   font-family: 'Roboto Mono', monospace;
   border: 1px solid rgba(59, 130, 246, 0.3);
@@ -1053,14 +1069,13 @@ p {
   border-radius: 16px;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3), 
               0 0 0 1px rgba(255, 255, 255, 0.1);
-  transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
-  transition: transform 0.5s ease;
-  z-index: 10; /* Above the card */
+  will-change: transform;
+  transform-style: preserve-3d;
+  z-index: 5; /* Behind the profile card */
+  margin-left: 0; /* Reset margin */
 }
 
-.venice-image-wrapper:hover {
-  transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) scale(1.02);
-}
+/* Removed hover state since we're handling with JavaScript now */
 
 .venice-image {
   width: 100%;
@@ -1106,7 +1121,7 @@ p {
 
 .profile-card-inner {
   width: 100%;
-  padding: 1rem;
+  padding: 0.75rem;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1122,22 +1137,25 @@ p {
   font-weight: 700;
   font-size: 1.5rem;
   color: white;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.3rem;
+  letter-spacing: -0.01em;
 }
 
 .profile-title {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #94a3b8;
   font-family: 'Roboto Mono', monospace;
   margin-bottom: 0.5rem;
+  font-weight: 500;
 }
 
 .profile-location {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: #cbd5e1;
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 
 .location-icon {
@@ -1173,66 +1191,97 @@ p {
   100% { transform: rotate(360deg); }
 }
 
-/* Tech Icons */
-.tech-icons {
-  position: absolute;
-  z-index: 30;
-}
-
-.tech-icon {
+/* Tech Tags */
+.tech-tag {
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 90px;
+  gap: 6px;
+  padding: 0 12px;
   height: 30px;
   background: rgba(15, 23, 42, 0.85);
   backdrop-filter: blur(8px);
-  border-radius: 20px;
+  border-radius: 30px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: white;
   font-family: 'Roboto Mono', monospace;
   font-size: 0.75rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  animation: iconFloat 4s ease-in-out infinite;
-  transform: perspective(800px) rotateY(-15deg);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  animation: float 8s ease-in-out infinite;
 }
 
-.tech-icon:nth-child(1) {
-  top: 20px;
-  right: -35px;
+.tech-tag:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
-.tech-icon:nth-child(2) {
-  top: 70px;
-  right: -65px;
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
 }
 
-.tech-icon:nth-child(3) {
-  top: 120px;
-  right: -45px;
+.tech-tag:nth-child(2) { animation-delay: 0s; }
+.tech-tag:nth-child(3) { animation-delay: 1s; }
+.tech-tag:nth-child(4) { animation-delay: 2s; }
+.tech-tag:nth-child(5) { animation-delay: 3s; }
+.tech-tag:nth-child(6) { animation-delay: 4s; }
+.tech-tag:nth-child(7) { animation-delay: 5s; }
+.tech-tag:nth-child(8) { animation-delay: 6s; }
+
+.tech-tag-img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.3));
 }
 
-.tech-icon:nth-child(4) {
-  top: 170px;
-  right: -70px;
+.azure-icon {
+  width: 22px;
+  height: 22px;
 }
 
-.tech-icon:nth-child(5) {
-  top: 220px;
-  right: -40px;
+.aws-icon {
+  width: 20px;
+  height: 20px;
 }
 
-@keyframes iconFloat {
-  0%, 100% { transform: perspective(800px) rotateY(-15deg) translateY(0) rotate(-3deg); }
-  50% { transform: perspective(800px) rotateY(-15deg) translateY(-10px) rotate(3deg); }
+.mongodb-icon {
+  width: 20px;
+  height: 20px;
 }
 
-.tech-label {
+
+/* Tech skills section in hero */
+.hero-key-points {
+  margin-bottom: 1.5rem;
+}
+
+.hero-intro-small {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.highlight {
+  color: #a78bfa;
+  font-weight: 600;
+}
+
+.tech-tag-label {
   background: linear-gradient(90deg, #38bdf8, #818cf8);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: none;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 /* Button Styles */
@@ -1309,6 +1358,8 @@ p {
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  justify-content: center;
 }
 
 .btn-outline:hover {
@@ -1322,8 +1373,8 @@ p {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 3rem;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .btn-outline {
@@ -1355,10 +1406,10 @@ p {
 .hero-stats::before {
   content: '';
   position: absolute;
-  top: -1rem;
-  left: -1.5rem;
-  width: calc(100% + 3rem);
-  height: calc(100% + 2rem);
+  top: -0.75rem;
+  left: -1.25rem;
+  width: calc(100% + 2.5rem);
+  height: calc(100% + 1.5rem);
   background: rgba(15, 23, 42, 0.3);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1372,6 +1423,8 @@ p {
   flex-direction: column;
   padding: 1rem;
   position: relative;
+  min-width: 120px;
+  text-align: center;
 }
 
 .hero-stat::after {
@@ -1390,13 +1443,31 @@ p {
 }
 
 .hero-stat-number {
-  font-size: 2.5rem;
+  font-size: 1.9rem;
   font-weight: 800;
   background: linear-gradient(to right, #60a5fa, #a78bfa);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   line-height: 1;
+  text-shadow: 0 5px 15px rgba(99, 102, 241, 0.2);
+  display: inline;
+}
+
+.hero-stat-value {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.hero-stat-plus {
+  font-size: 1.7rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-left: 2px;
   text-shadow: 0 5px 15px rgba(99, 102, 241, 0.2);
 }
 
@@ -1406,6 +1477,8 @@ p {
   margin-top: 0.25rem;
   font-family: 'Roboto Mono', monospace;
   letter-spacing: 0.05em;
+  display: block;
+  clear: both;
 }
 
 /* Footer social icons */
@@ -1454,15 +1527,15 @@ p {
   }
   
   .venice-image-wrapper {
-    width: 250px;
+    width: 260px;
     height: 350px;
   }
   
   .profile-card-behind {
     top: 30px;
-    left: -20px;
-    width: 170px;
-    padding: 0.75rem;
+    left: -25px;
+    width: 200px;
+    padding: 1.25rem;
   }
   
   .profile-name {
@@ -1483,7 +1556,7 @@ p {
     padding: 0.15rem 0.4rem;
   }
   
-  .tech-icons {
+  .tech-tag {
     display: none;
   }
 }
@@ -1826,6 +1899,7 @@ a, button, input, textarea, select, [role="button"],
 .tech-highlight, .hero-stat, .project-card, 
 [onclick], .timeline-item, .hero-badges div {
   cursor: none !important;
+  text-decoration: none;
 }
 
 /* Custom cursor styles - site-wide implementation */

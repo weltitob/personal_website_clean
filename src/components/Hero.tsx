@@ -87,10 +87,9 @@ const Hero = () => {
     });
   }, []);
 
-  // Calculate parallax effects based on mouse position and scroll
+  // Calculate parallax effects based on mouse position only (not affected by scroll)
   const moveX = mousePosition.x * 30 - 15;
   const moveY = mousePosition.y * 30 - 15;
-  // const parallaxY = scrollY * 0.4; // Uncomment if needed
 
   return (
     <section id="hero" ref={heroRef} className="hero-container overflow-hidden">
@@ -113,20 +112,7 @@ const Hero = () => {
       </div>
       
       <div className="content-wrapper relative z-10">
-        <div className="hero-badges">
-          <div className="tech-badge">
-            <div className="tech-badge-icon"></div>
-            <span className="tech-badge-text">Software Engineer</span>
-          </div>
-          <div className="tech-badge">
-            <div className="tech-badge-icon"></div>
-            <span className="tech-badge-text">Design Thinker</span>
-          </div>
-          <div className="tech-badge">
-            <div className="tech-badge-icon"></div>
-            <span className="tech-badge-text">Digital Craftsman</span>
-          </div>
-        </div>
+        {/* Hero badges removed */}
         
         <div className="hero-grid">
           {/* Profile visualization - WITH CARD BEHIND IMAGE */}
@@ -155,8 +141,14 @@ const Hero = () => {
               </div>
             </div>
             
-            {/* Main image on top */}
-            <div className="venice-image-wrapper">
+            {/* Main image on top with mouse movement animation */}
+            <div 
+              className="venice-image-wrapper"
+              style={{
+                transform: `perspective(1000px) rotateX(${moveY * 0.2}deg) rotateY(${-moveX * 0.2}deg) translateZ(5px)`,
+                transition: mousePosition.x === 0 ? 'none' : 'transform 0.2s ease-out'
+              }}
+            >
               <img 
                 ref={venetianImageRef}
                 src="/images/tobi_profile.jpeg" 
@@ -166,23 +158,7 @@ const Hero = () => {
               <div className="image-overlay"></div>
             </div>
             
-            <div className="tech-icons">
-              <div className="tech-icon" style={{ animationDelay: '0s' }}>
-                <span className="tech-label">Python</span>
-              </div>
-              <div className="tech-icon" style={{ animationDelay: '0.3s' }}>
-                <span className="tech-label">OpenAI</span>
-              </div>
-              <div className="tech-icon" style={{ animationDelay: '0.6s' }}>
-                <span className="tech-label">Azure</span>
-              </div>
-              <div className="tech-icon" style={{ animationDelay: '0.9s' }}>
-                <span className="tech-label">Flutter</span>
-              </div>
-              <div className="tech-icon" style={{ animationDelay: '1.2s' }}>
-                <span className="tech-label">React</span>
-              </div>
-            </div>
+           
           </div>
           
           {/* Welcome text and headline - NOW ON THE RIGHT */}
@@ -193,7 +169,6 @@ const Hero = () => {
             </h1>
             
             <p ref={textRef} className="hero-intro delay-100">
-              Bachelor of Science in Mobile Informatics from DHBW Friedrichshafen. 
               Currently working as Junior Business Consultant at Boehringer Ingelheim.
               I build modern applications using the latest technologies, with a passion 
               for clean code, intuitive design, and AI-enhanced solutions that solve real-world problems.
@@ -203,15 +178,15 @@ const Hero = () => {
             
             <div className="hero-stats">
               <div className="hero-stat">
-                <span className="hero-stat-number counter" data-target="3">0</span>
+                <span className="hero-stat-number counter" data-target="6">0</span>
                 <span className="hero-stat-label">Years Experience</span>
               </div>
               <div className="hero-stat">
-                <span className="hero-stat-number counter" data-target="1">0</span>
-                <span className="hero-stat-label">Million Followers</span>
+                <span className="hero-stat-number counter" data-target="53">0</span>
+                <span className="hero-stat-label">Technologies Used</span>
               </div>
               <div className="hero-stat">
-                <span className="hero-stat-number counter" data-target="10">0</span>
+                <span className="hero-stat-number counter" data-target="16">0</span>
                 <span className="hero-stat-label">Projects Completed</span>
               </div>
             </div>

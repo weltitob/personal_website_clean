@@ -105,6 +105,7 @@ const Header = () => {
             <nav id="main-nav" className="hidden md:flex flex-wrap space-x-2 text-sm">
                 <a href="#journey" className={`nav-link ${activeSection === '#journey' ? 'active' : ''}`}>Journey</a>
                 <a href="#skills" className={`nav-link ${activeSection === '#skills' ? 'active' : ''}`}>Skills</a>
+                <a href="#education-timeline" className={`nav-link ${activeSection === '#education-timeline' ? 'active' : ''}`}>Education</a>
                 <a href="#project-timeline" className={`nav-link ${activeSection === '#project-timeline' ? 'active' : ''}`}>Projects</a>
                 <a href="#cv-timeline" className={`nav-link ${activeSection === '#cv-timeline' ? 'active' : ''}`}>Resume</a>
                 <a href="#contact" className={`nav-link ${activeSection === '#contact' ? 'active' : ''}`}>Contact</a>
@@ -131,6 +132,13 @@ const Header = () => {
                      className={`nav-link ${activeSection === '#skills' ? 'active' : ''}`}
                      onClick={handleNavLinkClick}>
                      Skills
+                  </a>
+                </div>
+                <div className="mobile-nav-item">
+                  <a href="#education-timeline" 
+                     className={`nav-link ${activeSection === '#education-timeline' ? 'active' : ''}`}
+                     onClick={handleNavLinkClick}>
+                     Education
                   </a>
                 </div>
                 <div className="mobile-nav-item">
