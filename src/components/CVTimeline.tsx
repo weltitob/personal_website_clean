@@ -36,31 +36,38 @@ const CVTimeline = () => {
   return (
     <section id="cv-timeline" className="section timeline-section bg-slate-900/30">
       <div className="content-wrapper">
-        <h2 className="text-center slide-up">Professional Career</h2>
+        <h2 className="text-center slide-up">Personal Achievements</h2>
         <p className="section-intro-text text-center mx-auto fade-in delay-100">
-          My key positions and educational background.
+          Key milestones and accomplishments in my professional journey.
         </p>
         <div className="timeline-container-wrapper">
           <ul className="timeline" ref={timelineRef}>
             <li className="timeline-item">
               <div className="timeline-content">
-                <span className="timeline-date">July 2022 - Present</span>
-                <h4 className="timeline-title">Web Developer at Company A</h4>
-                <p className="timeline-description">Main responsibility for [area of responsibility], work with [technologies]. Successful implementation of [example project/success].</p>
+                <span className="timeline-date">2023</span>
+                <h4 className="timeline-title">Overachievement Award</h4>
+                <p className="timeline-description">Received an overachievement recommendation from Boehringer Ingelheim based on my performance during dual studies and contributions to the company's projects.</p>
               </div>
             </li>
             <li className="timeline-item">
               <div className="timeline-content">
-                <span className="timeline-date">October 2020 - June 2022</span>
-                <h4 className="timeline-title">Junior Developer at Agency B</h4>
-                <p className="timeline-description">First professional experiences in [area], creation of [type of projects].</p>
+                <span className="timeline-date">2022</span>
+                <h4 className="timeline-title">1 Million Social Media Followers</h4>
+                <p className="timeline-description">Built and scaled a social media presence to over 1 million followers through data-driven trend detection and automated content strategy.</p>
               </div>
             </li>
             <li className="timeline-item">
               <div className="timeline-content">
-                <span className="timeline-date">October 2017 - September 2020</span>
-                <h4 className="timeline-title">Computer Science at University C</h4>
-                <p className="timeline-description">Degree: Bachelor of Science. Focus areas: [Focus area 1], [Focus area 2].</p>
+                <span className="timeline-date">2021</span>
+                <h4 className="timeline-title">Start-up BW "Young Talents" Winner</h4>
+                <p className="timeline-description">Part of the winning team at the Elevator Pitch "Young Talents" competition hosted by Start-up BW for our innovative business concept.</p>
+              </div>
+            </li>
+            <li className="timeline-item">
+              <div className="timeline-content">
+                <span className="timeline-date">2021</span>
+                <h4 className="timeline-title">Accepted to DHBW Friedrichshafen</h4>
+                <p className="timeline-description">Started my dual studies program in Mobile Informatics, partnering with Boehringer Ingelheim for practical experience while maintaining a 1.6 GPA.</p>
               </div>
             </li>
           </ul>

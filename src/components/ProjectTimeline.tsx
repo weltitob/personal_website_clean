@@ -22,41 +22,40 @@ const ProjectTimeline = () => {
   return (
     <section id="project-timeline" className="section timeline-section">
       <div className="content-wrapper">
-        <h2 className="text-center slide-up">Projekt-Chronologie</h2>
+        <h2 className="text-center slide-up">Projects</h2>
         <p className="section-intro-text text-center mx-auto fade-in delay-100">
-          Eine Auswahl meiner wichtigsten Projekte im zeitlichen Verlauf.
+          A selection of my key projects and their development timeline.
         </p>
         <div className="timeline-container-wrapper">
           <ul className="timeline">
             <li className="timeline-item">
               <div className="timeline-content">
-                <span className="timeline-date">März 2024 - Heute</span>
-                <h4 className="timeline-title">Aktuelles Projekt X</h4>
-                <p className="timeline-description">Entwicklung von [Kurzbeschreibung]. Fokus auf [Technologie/Ziel].</p>
+                <span className="timeline-date">March 2023 - Present</span>
+                <h4 className="timeline-title">Social Media Automation</h4>
+                <p className="timeline-description">Built a data-driven solution that achieved over 1 million Instagram followers through intelligent trend detection and automated content posting.</p>
                 <button onClick={() => window.dispatchEvent(new CustomEvent('openModal', { detail: 'project-x-modal' }))} className="btn-secondary text-xs mt-3">Details</button>
               </div>
             </li>
             <li className="timeline-item">
               <div className="timeline-content">
-                <span className="timeline-date">September 2023 - Februar 2024</span>
-                <h4 className="timeline-title">Projekt Alpha</h4>
-                <p className="timeline-description">Konzeption & Umsetzung eines [Art der Anwendung] mit <span className="tech-highlight">React</span> und <span className="tech-highlight">Node.js</span>.</p>
+                <span className="timeline-date">September 2022 - February 2023</span>
+                <h4 className="timeline-title">TADA - AI Incident Analysis</h4>
+                <p className="timeline-description">Developed an AI-powered system that identifies trends in incident tickets using <span className="tech-highlight">Python</span>, <span className="tech-highlight">Azure</span>, and <span className="tech-highlight">OpenAI</span>.</p>
                 <button onClick={() => window.dispatchEvent(new CustomEvent('openModal', { detail: 'project-alpha-modal' }))} className="btn-secondary text-xs mt-3">Details</button>
               </div>
             </li>
             <li className="timeline-item">
               <div className="timeline-content">
-                <span className="timeline-date">Januar 2023 - August 2023</span>
-                <h4 className="timeline-title">Open Source Beitrag Z</h4>
-                <p className="timeline-description">Mitarbeit an [Projektname], Implementierung von [Feature].</p>
+                <span className="timeline-date">January 2022 - August 2022</span>
+                <h4 className="timeline-title">Bitcoin Wallet (NexusWallet)</h4>
+                <p className="timeline-description">Created a mobile Bitcoin wallet application using <span className="tech-highlight">Flutter</span> and <span className="tech-highlight">JavaScript</span>.</p>
               </div>
             </li>
             <li className="timeline-item">
               <div className="timeline-content">
-                <span className="timeline-date">Juni 2022 - Dezember 2022</span>
-                <h4 className="timeline-title">Projekt Beta</h4>
-                <p className="timeline-description">Aufbau einer [Art der Anwendung] mit <span className="tech-highlight">Vue.js</span> und Headless CMS.</p>
-                <button onClick={() => window.dispatchEvent(new CustomEvent('openModal', { detail: 'project-beta-modal' }))} className="btn-secondary text-xs mt-3">Details</button>
+                <span className="timeline-date">June 2021 - December 2021</span>
+                <h4 className="timeline-title">Loco Maps</h4>
+                <p className="timeline-description">Developed an open-source mapping solution similar to Google Maps using <span className="tech-highlight">React Native</span> and <span className="tech-highlight">PWA</span> technologies.</p>
               </div>
             </li>
           </ul>

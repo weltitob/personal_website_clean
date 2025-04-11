@@ -22,36 +22,24 @@ const Journey = () => {
   return (
     <section id="journey" className="section">
       <div className="narrative-section">
-        <div className="content-wrapper md:w-3/4 lg:w-2/3">
-          <h2 className="slide-up">Der Funke: Code & Kreativität</h2>
-          <p className="fade-in delay-100">
-            Es begann mit [Deine Anekdote hier: erster Computer, Website, Spiel...]. Die Möglichkeit, aus reiner Logik etwas Visuelles, Interaktives zu erschaffen, zog mich sofort in ihren Bann. Es war die perfekte Mischung aus analytischem Denken und kreativem Ausdruck.
-          </p>
-          <p className="fade-in delay-200">
-            Frühe Experimente mit <span className="tech-highlight">HTML</span> und <span className="tech-highlight">CSS</span> führten schnell zu komplexeren Herausforderungen und dem Wunsch, nicht nur zu gestalten, sondern robuste, dynamische Anwendungen zu bauen.
-          </p>
-        </div>
-      </div>
-
-      <div className="narrative-section">
         <div className="content-wrapper">
-          <h2 className="slide-up">Meilenstein: Projekt Alpha</h2>
+          <h2 className="slide-up">Resume</h2>
           <div className="project-card fade-in delay-100">
             <div className="project-details">
-              <h3>[Titel des Projekts Alpha]</h3>
+              <h3>Education & Professional Experience</h3>
               <p>
-                Die Aufgabe war, [Problembeschreibung]. Meine Lösung war ein [Art der Anwendung, z.B. interaktives Dashboard], das [Nutzen stiften]. Der Fokus lag auf einer klaren Informationsarchitektur und Echtzeit-Updates.
+                I'm completing my Bachelor of Science in Mobile Informatics at DHBW Friedrichshafen (2021-2024) with a strong GPA of 1.6. Currently, I work as a Junior Business Consultant at Boehringer Ingelheim, where I started as part of my dual studies program. This role has provided me with practical experience in software development and data science, working on projects that combine technical innovation with business value.
               </p>
               <p>
-                Kerntechnologien: <span className="tech-highlight">React</span>, <span className="tech-highlight">Node.js</span>, <span className="tech-highlight">WebSocket</span>.
+                I thrive in challenging, agile environments and enjoy working in teams where I can contribute to business success while continuously developing my skills. My experience spans mobile app development, web development, and AI/ML solutions, with a focus on finding practical applications for emerging technologies.
               </p>
               <div className="mt-6 space-x-3">
-                <button onClick={() => window.dispatchEvent(new CustomEvent('openModal', { detail: 'project-alpha-modal' }))} className="btn-glow-gradient">Mehr Details</button>
-                <a href="#" className="btn-secondary">Code <span className="lucide text-xs ml-1">&#xea1f;</span></a>
+                <a href="#cv-timeline" className="btn-glow-gradient">View Full CV <span className="btn-icon">→</span></a>
+                <a href="#project-timeline" className="btn-secondary">See Projects <span className="lucide text-xs ml-1">&#xea1f;</span></a>
               </div>
             </div>
             <div className="flex items-center justify-center">
-              <img src="https://placehold.co/600x450/0f172a/e2e8f0?text=Projekt+Alpha+Visual" alt="[Bild von Projekt Alpha]" className="w-full h-auto max-w-md" />
+              <img src="https://placehold.co/600x450/0f172a/e2e8f0?text=Education+and+Experience" alt="Education and Professional Experience" className="w-full h-auto max-w-md" />
             </div>
           </div>
         </div>

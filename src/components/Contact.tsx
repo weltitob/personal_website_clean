@@ -55,9 +55,9 @@ const Contact = () => {
       
       <div className="content-wrapper relative z-10">
         <div className="text-center mb-12">
-          <h2 ref={headingRef} className="slide-up mb-4">Ready for your next project?</h2>
+          <h2 ref={headingRef} className="slide-up mb-4">Get in Touch</h2>
           <p ref={textRef} className="contact-intro-text mx-auto fade-in delay-100">
-            Let's turn your vision into reality together. I'm always looking for new challenges and exciting projects.
+            Have a question or want to connect? Feel free to reach out through any of the channels below.
           </p>
         </div>
         
@@ -90,15 +90,11 @@ const Contact = () => {
               <div className="contact-info">
                 <div className="contact-avatar">
                   <img src="/images/tobi_profile.jpeg" alt="Tobi" className="contact-avatar-img" />
-                  <div className="contact-status">
-                    <span className="contact-status-dot"></span>
-                    Available for new projects
-                  </div>
                 </div>
                 
                 <div className="contact-details">
-                  <h3 className="contact-name">Tobi</h3>
-                  <p className="contact-title">Web Developer & Designer</p>
+                  <h3 className="contact-name">Tobias Welti</h3>
+                  <p className="contact-title">Fullstack Developer</p>
                   
                   <div className="contact-response-time">
                     <span className="contact-response-icon">⏱️</span>
@@ -172,7 +168,7 @@ const Contact = () => {
         </div>
         
         <div className="contact-social">
-          <div className="contact-social-label">Oder finde mich auf:</div>
+          <div className="contact-social-label">Or find me on:</div>
           <div className="contact-social-icons">
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="contact-social-link" aria-label="LinkedIn">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="contact-social-icon">

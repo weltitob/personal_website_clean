@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState<string>('');
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
   
   useEffect(() => {
     const handleScroll = () => {
@@ -46,17 +47,115 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Handle mobile menu toggling
+  const handleNavLinkClick = () => {
+    setMenuOpen(false);
+  };
+  
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const hamburgerButton = document.querySelector('.mobile-menu-button');
+      
+      if (menuOpen && 
+          mobileMenu && 
+          hamburgerButton && 
+          !mobileMenu.contains(target) && 
+          !hamburgerButton.contains(target)) {
+        setMenuOpen(false);
+      }
+    };
+    
+    document.addEventListener('mousedown', handleClickOutside);
+    
+    // Prevent body scrolling when menu is open
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
+
   return (
     <header id="main-header">
         <div className="content-wrapper flex justify-between items-center">
-            <a href="#" className="text-xl font-bold text-gradient hover:opacity-80 transition duration-300">Tobi</a>
-            <nav id="main-nav" className="flex flex-wrap space-x-1 md:space-x-2 text-xs sm:text-sm">
+            <a href="#" className="text-xl font-bold text-gradient hover:opacity-80 transition duration-300">Hi, I'm Tobi</a>
+            
+            {/* Hamburger button for mobile */}
+            <button 
+              className="mobile-menu-button md:hidden"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+            >
+              <div className={`hamburger-icon ${menuOpen ? 'open' : ''}`}>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </button>
+            
+            {/* Desktop navigation */}
+            <nav id="main-nav" className="hidden md:flex flex-wrap space-x-2 text-sm">
                 <a href="#journey" className={`nav-link ${activeSection === '#journey' ? 'active' : ''}`}>Journey</a>
                 <a href="#skills" className={`nav-link ${activeSection === '#skills' ? 'active' : ''}`}>Skills</a>
                 <a href="#project-timeline" className={`nav-link ${activeSection === '#project-timeline' ? 'active' : ''}`}>Projects</a>
                 <a href="#cv-timeline" className={`nav-link ${activeSection === '#cv-timeline' ? 'active' : ''}`}>Resume</a>
                 <a href="#contact" className={`nav-link ${activeSection === '#contact' ? 'active' : ''}`}>Contact</a>
             </nav>
+            
+            {/* Background overlay for mobile menu */}
+            <div 
+              className={`mobile-menu-overlay ${menuOpen ? 'active' : ''}`} 
+              onClick={handleNavLinkClick}
+            ></div>
+            
+            {/* Mobile navigation */}
+            <div className={`mobile-menu ${menuOpen ? 'active' : ''}`}>
+              <nav className="mobile-nav">
+                <div className="mobile-nav-item">
+                  <a href="#journey" 
+                     className={`nav-link ${activeSection === '#journey' ? 'active' : ''}`}
+                     onClick={handleNavLinkClick}>
+                     Journey
+                  </a>
+                </div>
+                <div className="mobile-nav-item">
+                  <a href="#skills" 
+                     className={`nav-link ${activeSection === '#skills' ? 'active' : ''}`}
+                     onClick={handleNavLinkClick}>
+                     Skills
+                  </a>
+                </div>
+                <div className="mobile-nav-item">
+                  <a href="#project-timeline" 
+                     className={`nav-link ${activeSection === '#project-timeline' ? 'active' : ''}`}
+                     onClick={handleNavLinkClick}>
+                     Projects
+                  </a>
+                </div>
+                <div className="mobile-nav-item">
+                  <a href="#cv-timeline" 
+                     className={`nav-link ${activeSection === '#cv-timeline' ? 'active' : ''}`}
+                     onClick={handleNavLinkClick}>
+                     Resume
+                  </a>
+                </div>
+                <div className="mobile-nav-item">
+                  <a href="#contact" 
+                     className={`nav-link ${activeSection === '#contact' ? 'active' : ''}`}
+                     onClick={handleNavLinkClick}>
+                     Contact
+                  </a>
+                </div>
+              </nav>
+            </div>
         </div>
     </header>
   );

@@ -71,7 +71,7 @@ const Modal = ({ id, title, status, statusIndicator, description, techStack }: M
             );
           })}
         </div>
-        <a href="#" className="btn-secondary">Code ansehen <span className="lucide text-xs ml-1">&#xea1f;</span></a>
+        <a href="#" className="btn-secondary">View Project <span className="lucide text-xs ml-1">&#xea1f;</span></a>
       </div>
     </div>
   );

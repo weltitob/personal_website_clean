@@ -123,41 +123,6 @@ function App() {
         <Journey />
         <Skills />
         
-        <div className="narrative-section">
-          <div className="content-wrapper">
-            <h2 className="slide-up">Milestone: Project Beta</h2>
-            <div className="project-card fade-in delay-100">
-              <div className="flex items-center justify-center order-last md:order-first">
-                <img src="https://placehold.co/600x450/0f172a/e2e8f0?text=Project+Beta+Visual" alt="[Project Beta image]" className="w-full h-auto max-w-md" />
-              </div>
-              <div className="project-details">
-                <h3>[Project Beta Title]</h3>
-                <p>
-                  This was about [problem description]. The solution was [type of application], with a special focus on [important aspect, e.g. performance, user experience].
-                </p>
-                <p>
-                  Technologies used: <span className="tech-highlight">Vue.js</span>, <span className="tech-highlight">TypeScript</span>, <span className="tech-highlight">Headless CMS</span>.
-                </p>
-                <div className="mt-6 space-x-3">
-                  <button onClick={() => window.dispatchEvent(new CustomEvent('openModal', { detail: 'project-beta-modal' }))} className="btn-glow-gradient">More Details</button>
-                  <a href="#" className="btn-secondary">Code <span className="lucide text-xs ml-1">&#xea1f;</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="narrative-section">
-          <div className="content-wrapper md:w-3/4 lg:w-2/3 text-center mx-auto">
-            <h2 className="slide-up">Philosophy: More Than Code</h2>
-            <p className="section-intro-text fade-in delay-100">
-              Technology is a tool. My goal is to use this tool in a way that creates real value – through thoughtful design, robust architecture, and a touch of innovation.
-            </p>
-            <p className="fade-in delay-200">
-              I strive for solutions that not only work today but will also stand the test of time. Clarity, efficiency, and a positive user experience are at the center of everything I do. The journey continues...
-            </p>
-          </div>
-        </div>
         
         <ProjectTimeline />
         <CVTimeline />
@@ -169,29 +134,21 @@ function App() {
       {/* Modals */}
       <Modal 
         id="project-alpha-modal"
-        title="Project Alpha: [Title]"
+        title="TADA: AI-Powered Incident Trend Analysis"
         status="DEPLOYED"
         statusIndicator="status-deployed"
-        description="Detailed description of Project Alpha. Challenges, solution approaches, technical architecture, achieved goals."
-        techStack={["React", "Node.js", "WebSocket", "AWS", "Testing Library"]}
+        description="TADA identifies trends in incident ticket data at Boehringer Ingelheim. Users upload data via a Power App, then workflows route data to Azure where Python code with OpenAI integration analyzes the data. Results are displayed in the Power App interface. The system includes related subprojects: incident solution prediction using embeddings and audio transcription with local Whisper/Phenome models."
+        techStack={["Python", "Azure", "OpenAI", "Microsoft Power Apps", "MS Workflows"]}
       />
       
-      <Modal 
-        id="project-beta-modal"
-        title="Project Beta: [Title]"
-        status="IN DEVELOPMENT"
-        statusIndicator="status-development"
-        description="Detailed description of Project Beta. Vision, technical decisions, special challenges, current status."
-        techStack={["Vue.js", "Strapi", "TypeScript", "Docker", "GraphQL"]}
-      />
       
       <Modal 
         id="project-x-modal"
-        title="Project X: [Title]"
+        title="Social Media Automation with AI"
         status="ACTIVE"
         statusIndicator="status-development"
-        description="Details on the current Project X..."
-        techStack={["React", "Next.js", "Tailwind CSS"]}
+        description="Built a data-driven solution that achieved over 1 million Instagram followers through intelligent trend detection and automated content posting. The system uses Python to analyze emerging content patterns, identify engagement opportunities, and automatically schedule posts for maximum reach and engagement."
+        techStack={["Python", "Data Analysis", "Trend Detection", "Automation", "Instagram API"]}
       />
     </>
   )

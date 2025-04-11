@@ -141,16 +141,16 @@ const Hero = () => {
             >
               <div className="profile-card-inner">
                 <div className="profile-card-content">
-                  <div className="profile-name">Tobi</div>
-                  <div className="profile-title">Web Developer & Designer</div>
+                  <div className="profile-name">Tobias Welti</div>
+                  <div className="profile-title">Fullstack Developer</div>
                   <div className="profile-location">
-                    <span className="location-icon">📍</span> Germany
+                    <span className="location-icon">📍</span> Stuttgart, Germany
                   </div>
                 </div>
                 <div className="tech-pills">
+                  <span className="tech-pill">Python</span>
                   <span className="tech-pill">React</span>
-                  <span className="tech-pill">TypeScript</span>
-                  <span className="tech-pill">UI/UX</span>
+                  <span className="tech-pill">Flutter</span>
                 </div>
               </div>
             </div>
@@ -168,19 +168,19 @@ const Hero = () => {
             
             <div className="tech-icons">
               <div className="tech-icon" style={{ animationDelay: '0s' }}>
-                <span className="tech-label">React</span>
+                <span className="tech-label">Python</span>
               </div>
               <div className="tech-icon" style={{ animationDelay: '0.3s' }}>
-                <span className="tech-label">TypeScript</span>
+                <span className="tech-label">OpenAI</span>
               </div>
               <div className="tech-icon" style={{ animationDelay: '0.6s' }}>
-                <span className="tech-label">Node.js</span>
+                <span className="tech-label">Azure</span>
               </div>
               <div className="tech-icon" style={{ animationDelay: '0.9s' }}>
-                <span className="tech-label">Vue.js</span>
+                <span className="tech-label">Flutter</span>
               </div>
               <div className="tech-icon" style={{ animationDelay: '1.2s' }}>
-                <span className="tech-label">UI/UX</span>
+                <span className="tech-label">React</span>
               </div>
             </div>
           </div>
@@ -188,30 +188,31 @@ const Hero = () => {
           {/* Welcome text and headline - NOW ON THE RIGHT */}
           <div className="hero-text slide-up">
             <h1 ref={headingRef} className="hero-heading">
-              <span className="welcome-text glitch-text" data-text="Welcome">Welcome</span>
-              <span className="hero-tagline">to my <span className="text-gradient">digital</span> world</span>
+              <span className="welcome-text glitch-text" data-text="Fullstack Developer">Fullstack Developer</span>
+              <span className="hero-tagline">creating <span className="text-gradient">innovative solutions</span></span>
             </h1>
             
             <p ref={textRef} className="hero-intro delay-100">
-              Discover my creative journey through technology and design.
-              From concept to implementation, I create digital experiences 
-              that inspire people and solve problems elegantly.
+              Bachelor of Science in Mobile Informatics from DHBW Friedrichshafen. 
+              Currently working as Junior Business Consultant at Boehringer Ingelheim.
+              I build modern applications using the latest technologies, with a passion 
+              for clean code, intuitive design, and AI-enhanced solutions that solve real-world problems.
             </p>
 
 
             
             <div className="hero-stats">
               <div className="hero-stat">
-                <span className="hero-stat-number counter" data-target="5">0</span>
+                <span className="hero-stat-number counter" data-target="3">0</span>
                 <span className="hero-stat-label">Years Experience</span>
               </div>
               <div className="hero-stat">
-                <span className="hero-stat-number counter" data-target="30">0</span>
-                <span className="hero-stat-label">Projects</span>
+                <span className="hero-stat-number counter" data-target="1">0</span>
+                <span className="hero-stat-label">Million Followers</span>
               </div>
               <div className="hero-stat">
-                <span className="hero-stat-number counter" data-target="15">0</span>
-                <span className="hero-stat-label">Technologies</span>
+                <span className="hero-stat-number counter" data-target="10">0</span>
+                <span className="hero-stat-label">Projects Completed</span>
               </div>
             </div>
             
