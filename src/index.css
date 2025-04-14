@@ -913,6 +913,145 @@ p {
   position: relative;
 }
 
+/* Auto-scrolling Technology Marquee */
+.tech-marquee-container {
+  position: relative;
+  width: 100%;
+  overflow: visible; /* Change to visible to avoid clipping */
+  padding: 2rem 0;
+  margin-top: 2rem;
+  padding-top: 3rem;
+  background-color: rgba(15, 23, 42, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-marquee-title {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.tech-marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 10px 0; /* Add padding to prevent clipping */
+}
+
+.tech-marquee-content {
+  display: flex;
+  animation: marqueeScroll 30s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move left by half of the content width */
+  }
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 2rem; /* Add vertical padding */
+  margin: 5px 0; /* Add margin for spacing */
+  transition: transform 0.3s ease;
+}
+
+.tech-item:hover {
+  transform: translateY(-5px);
+}
+
+.tech-item img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+  filter: grayscale(50%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.tech-item:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+.tech-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(145deg, rgba(59, 130, 246, 0.3), rgba(139, 92, 246, 0.3));
+  border-radius: 8px;
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Specialized Tech Icons */
+.tech-icon[data-icon="JS"] {
+  background: linear-gradient(145deg, rgba(247, 223, 30, 0.7), rgba(240, 219, 79, 0.5));
+  color: #323330;
+}
+
+.tech-icon[data-icon="TS"] {
+  background: linear-gradient(145deg, rgba(49, 120, 198, 0.7), rgba(45, 114, 184, 0.5));
+  color: white;
+}
+
+.tech-icon[data-icon="N"] {
+  background: linear-gradient(145deg, rgba(51, 153, 51, 0.7), rgba(51, 153, 51, 0.5));
+  color: white;
+}
+
+.tech-icon[data-icon="Go"] {
+  background: linear-gradient(145deg, rgba(0, 173, 216, 0.7), rgba(0, 173, 216, 0.5));
+  color: white;
+}
+
+.tech-icon[data-icon="C#"] {
+  background: linear-gradient(145deg, rgba(104, 33, 122, 0.7), rgba(104, 33, 122, 0.5));
+  color: white;
+}
+
+.tech-icon[data-icon="SQL"] {
+  background: linear-gradient(145deg, rgba(0, 120, 171, 0.7), rgba(0, 120, 171, 0.5));
+  color: white;
+}
+
+.tech-icon[data-icon="FB"] {
+  background: linear-gradient(145deg, rgba(255, 196, 0, 0.7), rgba(244, 129, 29, 0.5));
+  color: white;
+}
+
+.tech-icon[data-icon="GC"] {
+  background: linear-gradient(145deg, rgba(219, 68, 55, 0.7), rgba(15, 157, 88, 0.3), rgba(66, 133, 244, 0.5));
+  color: white;
+}
+
+.tech-item:hover .tech-icon {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+}
+
+.tech-item span {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-family: 'Roboto Mono', monospace;
+  max-width: 200px;
+  text-align: center;
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1618,6 +1757,31 @@ p {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 0;
+}
+
+.contact-simple-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-simple-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+}
+
+.contact-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
 }
 
 .contact-card {
