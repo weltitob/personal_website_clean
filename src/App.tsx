@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import Journey from './components/Journey'
 import Skills from './components/Skills'
+import TechMarquee from './components/TechMarquee'
 import ProjectTimeline from './components/ProjectTimeline'
 import EducationTimeline from './components/EducationTimeline'
 import CVTimeline from './components/CVTimeline'
@@ -121,6 +122,7 @@ function App() {
       
       <main>
         <Hero />
+        <TechMarquee />
         <Skills />
         <Journey />
         <EducationTimeline />
