@@ -2,7 +2,7 @@ import React from 'react';
 
 const TechMarquee = () => {
   return (
-    <div id="tech-marquee" className="section narrative-section">
+    <div id="tech-marquee" className="narrative-section" style={{ marginTop: 0, paddingTop: 0, paddingBottom: 0 }}>
       {/* Auto-scrolling Technology Marquee */}
       <div className="tech-marquee-container">
         <h3 className="tech-marquee-title">Technologies I've Worked With</h3>
@@ -18,15 +18,15 @@ const TechMarquee = () => {
                 <span>Python</span>
               </div>
               <div className="tech-item">
-                <span className="tech-icon" data-icon="JS">JS</span>
+                <img src="/images/tech-icons/javascript.svg" alt="JavaScript" />
                 <span>JavaScript</span>
               </div>
               <div className="tech-item">
-                <span className="tech-icon" data-icon="TS">TS</span>
+                <img src="/images/tech-icons/typescript.svg" alt="TypeScript" />
                 <span>TypeScript</span>
               </div>
               <div className="tech-item">
-                <span className="tech-icon" data-icon="N">N</span>
+                <img src="/images/tech-icons/nodejs.svg" alt="Node.js" />
                 <span>Node.js</span>
               </div>
               <div className="tech-item">
@@ -42,7 +42,7 @@ const TechMarquee = () => {
                 <span>Azure</span>
               </div>
               <div className="tech-item">
-                <span className="tech-icon" data-icon="GC">GC</span>
+                <img src="/images/tech-icons/googlecloud.svg" alt="Google Cloud" />
                 <span>Google Cloud</span>
               </div>
               <div className="tech-item">
@@ -50,11 +50,11 @@ const TechMarquee = () => {
                 <span>OpenAI</span>
               </div>
               <div className="tech-item">
-                <span className="tech-icon" data-icon="Go">Go</span>
+                <img src="/images/tech-icons/go.svg" alt="Go" />
                 <span>Go/Golang</span>
               </div>
               <div className="tech-item">
-                <span className="tech-icon" data-icon="C#">C#</span>
+                <img src="/images/tech-icons/csharp.svg" alt="C#" />
                 <span>C#</span>
               </div>
               <div className="tech-item">
@@ -62,11 +62,11 @@ const TechMarquee = () => {
                 <span>MongoDB</span>
               </div>
               <div className="tech-item">
-                <span className="tech-icon" data-icon="SQL">SQL</span>
+                <img src="/images/tech-icons/sql.svg" alt="SQL" />
                 <span>SQL</span>
               </div>
               <div className="tech-item">
-                <span className="tech-icon" data-icon="FB">FB</span>
+                <img src="/images/tech-icons/firebase.svg" alt="Firebase" />
                 <span>Firebase</span>
               </div>
               
@@ -80,15 +80,15 @@ const TechMarquee = () => {
                 <span>Python</span>
               </div>
               <div className="tech-item">
-                <span className="tech-icon" data-icon="JS">JS</span>
+                <img src="/images/tech-icons/javascript.svg" alt="JavaScript" />
                 <span>JavaScript</span>
               </div>
               <div className="tech-item">
-                <span className="tech-icon" data-icon="TS">TS</span>
+                <img src="/images/tech-icons/typescript.svg" alt="TypeScript" />
                 <span>TypeScript</span>
               </div>
               <div className="tech-item">
-                <span className="tech-icon" data-icon="N">N</span>
+                <img src="/images/tech-icons/nodejs.svg" alt="Node.js" />
                 <span>Node.js</span>
               </div>
               <div className="tech-item">
@@ -104,7 +104,7 @@ const TechMarquee = () => {
                 <span>Azure</span>
               </div>
               <div className="tech-item">
-                <span className="tech-icon" data-icon="GC">GC</span>
+                <img src="/images/tech-icons/googlecloud.svg" alt="Google Cloud" />
                 <span>Google Cloud</span>
               </div>
               <div className="tech-item">
@@ -112,11 +112,11 @@ const TechMarquee = () => {
                 <span>OpenAI</span>
               </div>
               <div className="tech-item">
-                <span className="tech-icon" data-icon="Go">Go</span>
+                <img src="/images/tech-icons/go.svg" alt="Go" />
                 <span>Go/Golang</span>
               </div>
               <div className="tech-item">
-                <span className="tech-icon" data-icon="C#">C#</span>
+                <img src="/images/tech-icons/csharp.svg" alt="C#" />
                 <span>C#</span>
               </div>
               <div className="tech-item">
@@ -124,11 +124,11 @@ const TechMarquee = () => {
                 <span>MongoDB</span>
               </div>
               <div className="tech-item">
-                <span className="tech-icon" data-icon="SQL">SQL</span>
+                <img src="/images/tech-icons/sql.svg" alt="SQL" />
                 <span>SQL</span>
               </div>
               <div className="tech-item">
-                <span className="tech-icon" data-icon="FB">FB</span>
+                <img src="/images/tech-icons/firebase.svg" alt="Firebase" />
                 <span>Firebase</span>
               </div>
           </div>

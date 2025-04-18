@@ -2,7 +2,7 @@ import React from 'react';
 
 const Skills = () => {
   return (
-    <div id="skills" className="section narrative-section">
+    <div id="skills" className="section narrative-section" style={{ paddingTop: '0.5rem' }}>
       <div className="content-wrapper md:w-3/4 lg:w-3/4">
         <h2 className="slide-up">Core Strengths</h2>
         <p className="fade-in delay-100">
