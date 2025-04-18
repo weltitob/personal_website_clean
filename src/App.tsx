@@ -148,8 +148,8 @@ function App() {
       
       <main>
         <Hero />
-        <TechMarquee />
         <Skills />
+        <TechMarquee />
         <Journey />
         <EducationTimeline />
         <ProjectTimeline />

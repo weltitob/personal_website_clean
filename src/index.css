@@ -352,12 +352,13 @@ p {
 
 .strength-item {
   background: rgba(15, 23, 42, 0.4);
-  border-radius: 12px;
-  padding: 1.5rem;
+  border-radius: 16px;
+  padding: 1.75rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .strength-item:hover {
@@ -430,10 +431,10 @@ p {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  padding: 0.75rem 1.75rem;
+  padding: 0.85rem 1.85rem;
   font-weight: 600;
   color: white;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   background: linear-gradient(to right, #7c3aed, #2563eb);
   box-shadow: 0 0 8px rgba(168, 85, 247, 0.4), 0 0 15px rgba(59, 130, 246, 0.3);
   transition: transform 0.2s ease-out, box-shadow 0.3s ease-out;
@@ -467,7 +468,7 @@ p {
   background-color: transparent;
   color: #cbd5e1;
   font-weight: 500;
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
   transition: background-color 0.2s, color 0.2s;
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -543,8 +544,9 @@ p {
 
 /* Timeline styles */
 .timeline-container-wrapper {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 4rem auto 0 auto;
+  padding: 0 1rem;
 }
 
 .timeline {
@@ -561,12 +563,12 @@ p {
   top: 0;
   left: 24px; /* Mobile position - centered precisely */
   bottom: 0;
-  width: 3px;
+  width: 4px;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(168, 85, 247, 0.2), rgba(59, 130, 246, 0.2)); 
+  background: linear-gradient(to bottom, rgba(168, 85, 247, 0.3), rgba(59, 130, 246, 0.3)); 
   background-size: 100% 200%;
-  border-radius: 2px;
-  box-shadow: 0 0 15px rgba(168, 85, 247, 0.3), 0 0 15px rgba(59, 130, 246, 0.3);
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4), 0 0 20px rgba(59, 130, 246, 0.4);
   animation: flow-gradient 8s linear infinite;
   z-index: 5; /* Ensure the line is above the background but behind nodes */
 }
@@ -579,7 +581,7 @@ p {
 /* Timeline Item */
 .timeline-item {
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   padding-left: 40px;
   opacity: 0;
   transform: translateX(-20px);
@@ -597,12 +599,12 @@ p {
   position: absolute;
   left: 13px; /* Exact alignment with the timeline path */
   top: 20px; /* Center with the title */
-  width: 22px;
-  height: 22px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   background-color: #0f172a; /* Match card background for better contrast */
   border: 3px solid #3b82f6;
-  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
   z-index: 10;
   transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
 }
@@ -624,14 +626,16 @@ p {
 .timeline-content {
   background-color: rgba(30, 41, 59, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0.5rem;
-  padding: 1.5rem;
+  border-radius: 1rem;
+  padding: 2rem;
   position: relative;
   transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
   backdrop-filter: blur(5px);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px -1px rgba(0, 0, 0, 0.15), 0 4px 8px -2px rgba(0, 0, 0, 0.1);
   /* Better vertical alignment to match the node */
   margin-top: -10px;
+  max-width: 400px;
+  width: 100%;
 }
 
 .timeline-item:hover .timeline-content {
@@ -649,10 +653,14 @@ p {
 }
 
 .timeline-title {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 600;
   color: #f1f5f9;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.85rem;
+  background: linear-gradient(to right, #f1f5f9, #cbd5e1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
 }
 
 .timeline-description {
@@ -1640,11 +1648,11 @@ p {
 .btn-outline {
   display: inline-flex;
   align-items: center;
-  padding: 0.75rem 1.5rem;
+  padding: 0.85rem 1.7rem;
   background-color: rgba(15, 23, 42, 0.3);
   color: #e2e8f0;
   font-weight: 500;
-  border-radius: 8px;
+  border-radius: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
