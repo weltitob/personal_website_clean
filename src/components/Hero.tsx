@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback, memo } from 'react';
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -9,31 +9,51 @@ const Hero = () => {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const buttonRef = useRef<HTMLAnchorElement>(null);
   const venetianImageRef = useRef<HTMLImageElement>(null);
+  const counterRefs = useRef<HTMLSpanElement[]>([]);
+  const lastScrollY = useRef(0);
+  const lastMouseMoveTime = useRef(0);
+  const ticking = useRef(false);
 
-  useEffect(() => {
-    const handleMouseMove = (event: MouseEvent) => {
-      // Update only the parallax effect mouse position
+  // Throttled scroll handler
+  const handleScroll = useCallback(() => {
+    if (!ticking.current) {
+      requestAnimationFrame(() => {
+        if (Math.abs(window.scrollY - lastScrollY.current) > 5) {
+          setScrollY(window.scrollY);
+          lastScrollY.current = window.scrollY;
+        }
+        ticking.current = false;
+      });
+      ticking.current = true;
+    }
+  }, []);
+
+  // Throttled mouse move handler
+  const handleMouseMove = useCallback((event: MouseEvent) => {
+    const now = Date.now();
+    if (now - lastMouseMoveTime.current > 50) { // 50ms throttle
       if (heroRef.current) {
-        const { left, top, width, height } = heroRef.current.getBoundingClientRect();
-        const x = (event.clientX - left) / width;
-        const y = (event.clientY - top) / height;
+        const rect = heroRef.current.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width;
+        const y = (event.clientY - rect.top) / rect.height;
         setMousePosition({ x, y });
       }
-    };
-    
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
+      lastMouseMoveTime.current = now;
+    }
+  }, []);
 
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('scroll', handleScroll);
+  // Event listeners with throttling
+  useEffect(() => {
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+    window.addEventListener('scroll', handleScroll, { passive: true });
     
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [handleMouseMove, handleScroll]);
 
+  // Intersection Observer for animations
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -62,34 +82,72 @@ const Hero = () => {
     };
   }, []);
   
-  // Add counter animation effect
+  // Optimized counter animation using refs instead of DOM queries
   useEffect(() => {
-    // Counter animation logic
-    const counters = document.querySelectorAll('.counter');
-    
+    const counters = counterRefs.current;
+    if (!counters.length) return;
+
+    const runCounters = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        
+        const counter = entry.target as HTMLSpanElement;
+        const target = parseInt(counter.getAttribute('data-target') || '0', 10);
+        const duration = 2000; // ms
+        const step = Math.ceil(target / (duration / 16)); // 60fps approx
+        
+        let current = 0;
+        const updateCounter = () => {
+          current += step;
+          if (current < target) {
+            counter.textContent = current.toString();
+            requestAnimationFrame(updateCounter);
+          } else {
+            counter.textContent = target.toString();
+          }
+        };
+        
+        updateCounter();
+        counterObserver.unobserve(counter); // Only animate once
+      });
+    };
+
+    const counterObserver = new IntersectionObserver(runCounters, { threshold: 0.1 });
     counters.forEach(counter => {
-      const target = parseInt(counter.getAttribute('data-target') || '0', 10);
-      const duration = 2000; // ms
-      const step = Math.ceil(target / (duration / 16)); // 60fps approx
-      
-      let current = 0;
-      const updateCounter = () => {
-        current += step;
-        if (current < target) {
-          counter.textContent = current.toString();
-          requestAnimationFrame(updateCounter);
-        } else {
-          counter.textContent = target.toString();
-        }
-      };
-      
-      updateCounter();
+      if (counter) counterObserver.observe(counter);
     });
+
+    return () => {
+      counters.forEach(counter => {
+        if (counter) counterObserver.unobserve(counter);
+      });
+    };
   }, []);
 
-  // Calculate parallax effects based on mouse position only (not affected by scroll)
-  const moveX = mousePosition.x * 30 - 15;
-  const moveY = mousePosition.y * 30 - 15;
+  // Memoized parallax calculations to reduce recalculations
+  const parallaxStyle = useCallback(() => {
+    const moveX = mousePosition.x * 30 - 15;
+    const moveY = mousePosition.y * 30 - 15;
+    return {
+      cardStyle: {
+        transform: `perspective(1000px) rotateX(${moveY * 0.3}deg) rotateY(${-moveX * 0.3}deg) translateZ(10px)`,
+        transition: mousePosition.x === 0 ? 'none' : 'transform 0.2s ease-out'
+      },
+      imageStyle: {
+        transform: `perspective(1000px) rotateX(${moveY * 0.2}deg) rotateY(${-moveX * 0.2}deg) translateZ(5px)`,
+        transition: mousePosition.x === 0 ? 'none' : 'transform 0.2s ease-out'
+      }
+    };
+  }, [mousePosition.x, mousePosition.y]);
+
+  const { cardStyle, imageStyle } = parallaxStyle();
+
+  // Shape transform styles - calculated once and reused
+  const shapeStyles = {
+    shape1: { transform: `translate(${-scrollY * 0.1}px, ${-scrollY * 0.05}px)` },
+    shape2: { transform: `translate(${scrollY * 0.15}px, ${scrollY * 0.08}px)` },
+    shape3: { transform: `translate(${-scrollY * 0.08}px, ${scrollY * 0.12}px)` }
+  };
 
   return (
     <>
@@ -97,9 +155,9 @@ const Hero = () => {
         
         {/* Animated background elements */}
         <div className="hero-shapes">
-          <div className="hero-shape shape1" style={{ transform: `translate(${-scrollY * 0.1}px, ${-scrollY * 0.05}px)` }}></div>
-          <div className="hero-shape shape2" style={{ transform: `translate(${scrollY * 0.15}px, ${scrollY * 0.08}px)` }}></div>
-          <div className="hero-shape shape3" style={{ transform: `translate(${-scrollY * 0.08}px, ${scrollY * 0.12}px)` }}></div>
+          <div className="hero-shape shape1" style={shapeStyles.shape1}></div>
+          <div className="hero-shape shape2" style={shapeStyles.shape2}></div>
+          <div className="hero-shape shape3" style={shapeStyles.shape3}></div>
           <div className="hero-shape shape4"></div>
         </div>
         
@@ -121,10 +179,7 @@ const Hero = () => {
               {/* Info card positioned behind the image */}
               <div 
                 className="profile-card-behind"
-                style={{
-                  transform: `perspective(1000px) rotateX(${moveY * 0.3}deg) rotateY(${-moveX * 0.3}deg) translateZ(10px)`,
-                  transition: mousePosition.x === 0 ? 'none' : 'transform 0.2s ease-out'
-                }}
+                style={cardStyle}
               >
                 <div className="profile-card-inner">
                   <div className="profile-card-content">
@@ -145,21 +200,23 @@ const Hero = () => {
               {/* Main image on top with mouse movement animation */}
               <div 
                 className="venice-image-wrapper"
-                style={{
-                  transform: `perspective(1000px) rotateX(${moveY * 0.2}deg) rotateY(${-moveX * 0.2}deg) translateZ(5px)`,
-                  transition: mousePosition.x === 0 ? 'none' : 'transform 0.2s ease-out'
-                }}
+                style={imageStyle}
               >
-                <img 
-                  ref={venetianImageRef}
-                  src="/images/tobi_profile.jpeg" 
-                  alt="Tobi in Venedig" 
-                  className="venice-image" 
-                />
+                <picture>
+                  <source srcSet="/images/optimized/tobi_profile.webp" type="image/webp" />
+                  <img 
+                    ref={venetianImageRef}
+                    src="/images/tobi_profile.jpeg" 
+                    alt="Tobi in Venedig" 
+                    className="venice-image" 
+                    width="800"
+                    height="800"
+                    loading="eager"
+                    fetchPriority="high"
+                  />
+                </picture>
                 <div className="image-overlay"></div>
               </div>
-              
-             
             </div>
             
             {/* Welcome text and headline - NOW ON THE RIGHT */}
@@ -175,19 +232,29 @@ const Hero = () => {
                 for problem-solving, intuitive design, and AI-enhanced solutions that create impact.
               </p>
   
-  
-              
               <div className="hero-stats">
                 <div className="hero-stat">
-                  <span className="hero-stat-number counter" data-target="6">0</span>
+                  <span 
+                    className="hero-stat-number counter" 
+                    data-target="6" 
+                    ref={el => el && (counterRefs.current[0] = el)}
+                  >0</span>
                   <span className="hero-stat-label">Years Experience</span>
                 </div>
                 <div className="hero-stat">
-                  <span className="hero-stat-number counter" data-target="53">0</span>
+                  <span 
+                    className="hero-stat-number counter" 
+                    data-target="53" 
+                    ref={el => el && (counterRefs.current[1] = el)}
+                  >0</span>
                   <span className="hero-stat-label">Technologies Used</span>
                 </div>
                 <div className="hero-stat">
-                  <span className="hero-stat-number counter" data-target="16">0</span>
+                  <span 
+                    className="hero-stat-number counter" 
+                    data-target="16" 
+                    ref={el => el && (counterRefs.current[2] = el)}
+                  >0</span>
                   <span className="hero-stat-label">Projects Completed</span>
                 </div>
               </div>
@@ -209,11 +276,8 @@ const Hero = () => {
           </div>
         </div>
       </section>
-      
     </>
   );
 };
 
-
-
-export default Hero;
+export default memo(Hero);

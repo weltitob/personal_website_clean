@@ -773,11 +773,11 @@ p {
   
   /* Special handling for project timeline */
   #project-timeline .timeline-item::after {
-    width: 14px; /* Show connector for project timeline */
+    width: 0; /* Hide connector for project timeline */
   }
   
   #cv-timeline .timeline-item::after {
-    width: 14px; /* Show connector for CV timeline */
+    width: 0; /* Hide connector for CV timeline */
   }
 }
 
@@ -949,38 +949,98 @@ p {
   position: relative;
 }
 
-/* Auto-scrolling Technology Marquee */
+/* Tech Marquee Section Styling */
+.tech-marquee-section {
+  position: relative;
+  width: 100%;
+  padding: 2rem 0;
+  background: linear-gradient(to bottom, rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.3));
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.2) inset, 0 -10px 20px -10px rgba(0, 0, 0, 0.2) inset;
+}
+
 .tech-marquee-container {
   position: relative;
   width: 100%;
-  overflow: visible; /* Change to visible to avoid clipping */
-  padding: 0.5rem 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: rgba(15, 23, 42, 0.3);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: visible;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tech-marquee-header {
+  text-align: center;
+  padding-bottom: 1.5rem;
 }
 
 .tech-marquee-title {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #cbd5e1;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e2e8f0;
   margin-bottom: 0.5rem;
-  font-weight: 500;
+  background: linear-gradient(to right, #a78bfa, #60a5fa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.tech-marquee-subtitle {
+  font-size: 1rem;
+  color: #94a3b8;
+  font-weight: 400;
+  margin: 0;
+}
+
+.tech-marquee-wrapper {
+  position: relative;
+  overflow: hidden;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+  background-color: rgba(15, 23, 42, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 .tech-marquee {
   width: 100%;
   overflow: hidden;
   position: relative;
-  padding: 10px 0; /* Add padding to prevent clipping */
+  padding: 1rem 0;
+}
+
+.tech-marquee::before,
+.tech-marquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.tech-marquee::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(15, 23, 42, 0.8), transparent);
+}
+
+.tech-marquee::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(15, 23, 42, 0.8), transparent);
 }
 
 .tech-marquee-content {
   display: flex;
-  animation: marqueeScroll 30s linear infinite;
+  animation: marqueeScroll 40s linear infinite;
   white-space: nowrap;
+  will-change: transform;
 }
 
 @keyframes marqueeScroll {
@@ -988,34 +1048,90 @@ p {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%); /* Move left by half of the content width */
+    transform: translateX(-50%);
   }
 }
 
 .tech-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 5px 1.5rem; /* Reduced padding */
-  margin: 0; /* Remove margin */
-  transition: transform 0.3s ease;
+  justify-content: center;
+  margin: 0;
+  padding: 0 1.5rem;
 }
 
-.tech-item:hover {
+.tech-item-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+  transition: all 0.3s ease;
+  background-color: rgba(30, 41, 59, 0.4);
+  border-radius: 12px;
+  width: 90px;
+  height: 90px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin: 0 auto;
+}
+
+.tech-item-inner:hover {
   transform: translateY(-5px);
+  background-color: rgba(30, 41, 59, 0.6);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border-color: rgba(99, 102, 241, 0.3);
 }
 
 .tech-item img {
-  width: 30px;
-  height: 30px;
-  margin-bottom: 0.3rem;
-  filter: grayscale(50%);
-  transition: filter 0.3s ease, transform 0.3s ease;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 0.6rem;
+  filter: grayscale(30%);
+  transition: all 0.3s ease;
 }
 
-.tech-item:hover img {
+.tech-item-inner:hover img {
   filter: grayscale(0%);
   transform: scale(1.1);
+}
+
+.tech-item span {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+.tech-item-inner:hover span {
+  color: #e2e8f0;
+}
+
+@media (max-width: 768px) {
+  .tech-marquee-section {
+    padding: 1.5rem 0;
+  }
+  
+  .tech-marquee-title {
+    font-size: 1.5rem;
+  }
+  
+  .tech-item-inner {
+    width: 80px;
+    height: 80px;
+    padding: 0.75rem 0.25rem;
+  }
+  
+  .tech-item img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 0.4rem;
+  }
+  
+  .tech-item span {
+    font-size: 0.7rem;
+  }
 }
 
 .tech-icon {

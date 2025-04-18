@@ -22,43 +22,61 @@ function App() {
     // Log to console on component mount
     console.log("%cTobi :: Interactive Journey V2 :: Systems Go", "color: #8b5cf6; font-size: 1.2em; font-weight: bold;");
     
-    // Custom cursor logic
+    // Custom cursor logic with throttling
+    let lastMouseMoveTime = 0;
+    let rafId: number | null = null;
+    
     const handleMouseMove = (event: MouseEvent) => {
-      const { clientX, clientY } = event;
-      
-      if (cursorRingRef.current && cursorDotRef.current) {
-        // Apply positions directly - bypass any transformations
-        cursorRingRef.current.style.left = `${clientX}px`;
-        cursorRingRef.current.style.top = `${clientY}px`;
-        
-        cursorDotRef.current.style.left = `${clientX}px`;
-        cursorDotRef.current.style.top = `${clientY}px`;
+      const now = Date.now();
+      if (now - lastMouseMoveTime < 16) { // ~60fps throttle
+        return;  
       }
+      lastMouseMoveTime = now;
+      
+      // Use requestAnimationFrame to avoid layout thrashing
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+      }
+      
+      rafId = requestAnimationFrame(() => {
+        const { clientX, clientY } = event;
+        
+        if (cursorRingRef.current && cursorDotRef.current) {
+          // Use transform instead of left/top for better performance
+          cursorRingRef.current.style.transform = `translate(${clientX}px, ${clientY}px)`;
+          cursorDotRef.current.style.transform = `translate(${clientX}px, ${clientY}px)`;
+        }
+      });
     };
     
-    // Detect hoverable elements
+    // Detect hoverable elements with debouncing
+    let hoverTimeoutId: number;
     const handleMouseOver = (event: MouseEvent) => {
-      const target = event.target as HTMLElement;
-      const isHoverable = 
-        target.tagName === 'A' || 
-        target.tagName === 'BUTTON' || 
-        target.closest('a') || 
-        target.closest('button') ||
-        target.classList.contains('hoverable');
+      clearTimeout(hoverTimeoutId);
       
-      if (isHoverable && cursorRingRef.current) {
-        setIsHovering(true);
-        cursorRingRef.current.classList.add('cursor-hover');
-      } else {
-        setIsHovering(false);
-        if (cursorRingRef.current) {
-          cursorRingRef.current.classList.remove('cursor-hover');
+      hoverTimeoutId = window.setTimeout(() => {
+        const target = event.target as HTMLElement;
+        const isHoverable = 
+          target.tagName === 'A' || 
+          target.tagName === 'BUTTON' || 
+          target.closest('a') || 
+          target.closest('button') ||
+          target.classList.contains('hoverable');
+        
+        if (isHoverable && cursorRingRef.current) {
+          setIsHovering(true);
+          cursorRingRef.current.classList.add('cursor-hover');
+        } else {
+          setIsHovering(false);
+          if (cursorRingRef.current) {
+            cursorRingRef.current.classList.remove('cursor-hover');
+          }
         }
-      }
+      }, 50); // 50ms debounce
     };
     
     // Hide cursor when inactive
-    let timeout: number;
+    let inactivityTimeout: number;
     const hideCursor = () => {
       if (cursorRingRef.current && cursorDotRef.current) {
         cursorRingRef.current.style.opacity = '0';
@@ -72,8 +90,8 @@ function App() {
         cursorDotRef.current.style.opacity = '1';
       }
       
-      clearTimeout(timeout);
-      timeout = window.setTimeout(hideCursor, 5000);
+      clearTimeout(inactivityTimeout);
+      inactivityTimeout = window.setTimeout(hideCursor, 5000);
     };
     
     // Hide native cursor on all elements
@@ -85,18 +103,28 @@ function App() {
       * {
         cursor: none !important;
       }
+      .cursor-ring, .cursor-dot {
+        transform: translate(-50%, -50%); /* Initial position correction */
+        top: 0;
+        left: 0;
+        will-change: transform; /* Hint for browser optimization */
+      }
     `;
     document.head.appendChild(styleElement);
     
-    // Add event listeners
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseover', handleMouseOver);
-    document.addEventListener('mousemove', showCursor);
+    // Add event listeners with passive flag for better scrolling performance
+    document.addEventListener('mousemove', handleMouseMove, { passive: true });
+    document.addEventListener('mouseover', handleMouseOver, { passive: true });
+    document.addEventListener('mousemove', showCursor, { passive: true });
     
     // Show cursor initially
     showCursor();
     
     return () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      clearTimeout(hoverTimeoutId);
+      clearTimeout(inactivityTimeout);
+      
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseover', handleMouseOver);
       document.removeEventListener('mousemove', showCursor);
@@ -107,8 +135,6 @@ function App() {
       if (styleElement && styleElement.textContent && styleElement.textContent.includes('cursor: none')) {
         styleElement.remove();
       }
-      
-      clearTimeout(timeout);
     };
   }, []);
 
