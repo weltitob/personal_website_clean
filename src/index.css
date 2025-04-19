@@ -85,7 +85,7 @@ body::before {
 }
 
 .tech-highlight {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
   padding: 0.1em 0.4em;
@@ -1241,7 +1241,7 @@ p {
 .tech-item span {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.7);
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-weight: 500;
   transition: color 0.3s ease;
   text-align: center;
@@ -1361,7 +1361,7 @@ p {
 .tech-item span {
   font-size: 0.75rem;
   color: #94a3b8;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   max-width: 200px;
   text-align: center;
 }
@@ -1398,7 +1398,7 @@ p {
 .scroll-indicator {
   position: absolute;
   left: 50%;
-  bottom: 2rem;
+  bottom: 1rem;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
@@ -1415,7 +1415,7 @@ p {
   letter-spacing: 0.2em;
   margin-bottom: 0.5rem;
   opacity: 0.6;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .scroll-indicator-line {
@@ -1688,7 +1688,7 @@ p {
   border-radius: 30px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: white;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 0.75rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
@@ -1899,6 +1899,8 @@ p {
   backdrop-filter: blur(5px);
   z-index: -1;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .hero-stat {
@@ -1951,7 +1953,7 @@ p {
   font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.6);
   margin-top: 0.25rem;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   letter-spacing: 0.05em;
   display: block;
   clear: both;
@@ -2272,7 +2274,7 @@ p {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 1rem;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .contact-response-time {
@@ -2311,7 +2313,7 @@ p {
 .contact-method-label {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.9);
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .contact-copy-button {
@@ -2402,7 +2404,7 @@ p {
 .contact-social-name {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.7);
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 /* Responsive Adjustments */
