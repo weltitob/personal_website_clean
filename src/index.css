@@ -1447,7 +1447,7 @@ p {
 /* Text Components */
 .hero-text {
   position: relative;
-  z-index: 20;
+  z-index: 15;
 }
 
 .hero-heading {
@@ -1510,7 +1510,7 @@ p {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   padding: 1rem;
-  z-index: 1; /* Behind the image for desktop view */
+  z-index: 10; /* Increased z-index to ensure visibility */
   will-change: transform;
   transform-style: preserve-3d;
 }
@@ -1543,8 +1543,8 @@ p {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   will-change: transform;
   transform-style: preserve-3d;
-  z-index: 2; /* Higher than the profile card */
-  margin-left: 0; /* Reset margin */
+  z-index: 5; /* Adjusted z-index for proper stacking */
+  margin-left: 40px; /* Create more space for the profile card */
   margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -1873,6 +1873,8 @@ p {
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 20; /* Increased z-index to ensure buttons are visible */
 }
 
 .btn-outline {
@@ -2036,6 +2038,7 @@ p {
   .hero-visual {
     order: 1;
     margin-top: 3rem;
+    z-index: 10;
   }
   
   .venice-image-wrapper {
@@ -2043,7 +2046,7 @@ p {
     height: 350px;
     margin-left: auto;
     margin-right: auto;
-    z-index: 3;
+    z-index: 5;
   }
   
   .profile-card-behind {
@@ -2055,7 +2058,7 @@ p {
     padding: 1.25rem;
     margin: 0 auto 1rem auto;
     transform: none !important;
-    z-index: 2;
+    z-index: 12;
   }
   
   .profile-name {
