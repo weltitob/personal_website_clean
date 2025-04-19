@@ -49,22 +49,14 @@ const Modal = ({ id, title, status, statusIndicator, description, techStack }: M
     <div id={id} className={`modal ${isActive ? 'active' : ''}`} onClick={handleModalClick}>
       <div className="modal-content">
         <button className="modal-close" onClick={handleClose} aria-label="Schließen">&times;</button>
-        <h3 className="text-gradient text-2xl mb-4">{title}</h3>
-        <p className="text-sm text-slate-400 mb-4">Status: <span className={`status-indicator ${statusIndicator} inline-block`}></span> {status}</p>
-        <p className="mb-4">{description}</p>
-        <h4 className="font-semibold mb-2 text-slate-300">Technologie-Stack:</h4>
-        <div className="flex flex-wrap gap-2 text-xs font-mono mb-6">
+        <h3 className="text-gradient text-2xl mb-4" style={{ fontFamily: 'Montserrat, sans-serif' }}>{title}</h3>
+        <p className="text-sm mb-4" style={{ fontFamily: 'IBM Plex Mono, monospace', color: 'rgba(255, 255, 255, 0.65)' }}>Status: <span className={`status-indicator ${statusIndicator} inline-block`}></span> {status}</p>
+        <p className="mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>{description}</p>
+        <h4 className="font-semibold mb-2 text-slate-300" style={{ fontFamily: 'Montserrat, sans-serif' }}>Technologie-Stack:</h4>
+        <div className="flex flex-wrap gap-2 text-xs font-mono mb-6" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>
           {techStack.map((tech, index) => {
-            const colors = [
-              'bg-blue-900/50 text-blue-300',
-              'bg-purple-900/50 text-purple-300',
-              'bg-green-900/50 text-green-300',
-              'bg-gray-700/50 text-gray-300',
-              'bg-yellow-900/50 text-yellow-300',
-              'bg-red-900/50 text-red-300',
-              'bg-cyan-900/50 text-cyan-300'
-            ];
-            const colorClass = colors[index % colors.length];
+            // Black and white consistent styling
+            const colorClass = 'bg-slate-900/50 text-slate-300';
             
             return (
               <span key={index} className={`${colorClass} px-2 py-0.5 rounded`}>{tech}</span>

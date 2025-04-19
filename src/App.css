@@ -7,22 +7,23 @@
 .status-indicator {
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  border-radius: 0;
   display: inline-block;
   margin-right: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .status-deployed {
-  background-color: #10b981; /* green-500 */
-  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+  background-color: #ffffff; /* white for deployed */
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
 }
 
 .status-development {
-  background-color: #f59e0b; /* amber-500 */
-  box-shadow: 0 0 8px rgba(245, 158, 11, 0.6);
+  background-color: #777777; /* mid-gray for in development */
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
 .status-pending {
-  background-color: #6366f1; /* indigo-500 */
-  box-shadow: 0 0 8px rgba(99, 102, 241, 0.6);
+  background-color: #333333; /* dark gray for pending */
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
 }
