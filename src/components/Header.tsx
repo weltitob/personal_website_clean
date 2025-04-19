@@ -87,7 +87,7 @@ const Header = () => {
     <header id="main-header">
         <div className="content-wrapper flex justify-between items-center">
             <a href="#" className="logo-container hover:opacity-90 transition duration-300">
-              <img src="/images/logo/tw-small.png" alt="TW Logo" className="logo-image" width="40" height="40" />
+              <img src="/images/logo/TW_logo_nobg.png" alt="TW Logo" className="logo-image white-logo" width="45" height="45" />
             </a>
             
             {/* Hamburger button for mobile */}

@@ -6,10 +6,10 @@ const Skills = () => {
       <div className="content-wrapper md:w-3/4 lg:w-3/4">
         <h2 className="slide-up">Core Strengths</h2>
         <p className="fade-in delay-100">
-          Driven by passion for technology and experience across diverse projects, I've cultivated comprehensive full-stack expertise. I thrive in agile environments where adaptability and problem-solving are paramount.
+          Full-stack professional with expertise across multiple domains, specializing in scalable solutions and efficient problem-solving. Excel in agile environments where rapid adaptation and technical versatility create business value.
         </p>
         <p className="fade-in delay-200">
-          My approach emphasizes iterative development, efficient failure analysis for continuous improvement, and versatile adaptation to team dynamics. I'm committed to ongoing skill development and selecting optimal technologies for each unique challenge.
+          Committed to continuous skill development and technology optimization. Strong focus on iterative improvement, team collaboration, and delivering robust, production-ready solutions that meet business requirements.
         </p>
         <div className="skills-module fade-in delay-300">
           <div className="strength-grid">

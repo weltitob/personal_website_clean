@@ -38,15 +38,18 @@ function App() {
         cancelAnimationFrame(rafId);
       }
       
-      rafId = requestAnimationFrame(() => {
-        const { clientX, clientY } = event;
-        
-        if (cursorRingRef.current && cursorDotRef.current) {
-          // Use transform instead of left/top for better performance
-          cursorRingRef.current.style.transform = `translate(${clientX}px, ${clientY}px)`;
-          cursorDotRef.current.style.transform = `translate(${clientX}px, ${clientY}px)`;
-        }
-      });
+      // Only update cursor on desktop devices
+      if (window.innerWidth > 768) {
+        rafId = requestAnimationFrame(() => {
+          const { clientX, clientY } = event;
+          
+          if (cursorRingRef.current && cursorDotRef.current) {
+            // Use transform instead of left/top for better performance
+            cursorRingRef.current.style.transform = `translate(${clientX}px, ${clientY}px)`;
+            cursorDotRef.current.style.transform = `translate(${clientX}px, ${clientY}px)`;
+          }
+        });
+      }
     };
     
     // Detect hoverable elements with debouncing
@@ -94,23 +97,30 @@ function App() {
       inactivityTimeout = window.setTimeout(hideCursor, 5000);
     };
     
-    // Hide native cursor on all elements
-    document.documentElement.style.cursor = 'none';
-    
-    // Add global style to override cursor on all elements
-    const styleElement = document.createElement('style');
-    styleElement.textContent = `
-      * {
-        cursor: none !important;
-      }
-      .cursor-ring, .cursor-dot {
-        transform: translate(-50%, -50%); /* Initial position correction */
-        top: 0;
-        left: 0;
-        will-change: transform; /* Hint for browser optimization */
-      }
-    `;
-    document.head.appendChild(styleElement);
+    // Only apply custom cursor on desktop devices
+    if (window.innerWidth > 768) {
+      // Hide native cursor on all elements
+      document.documentElement.style.cursor = 'none';
+      
+      // Add global style to override cursor on all elements
+      const styleElement = document.createElement('style');
+      styleElement.textContent = `
+        * {
+          cursor: none !important;
+        }
+        .cursor-ring, .cursor-dot {
+          transform: translate(-50%, -50%); /* Initial position correction */
+          top: 0;
+          left: 0;
+          will-change: transform; /* Hint for browser optimization */
+        }
+      `;
+      document.head.appendChild(styleElement);
+    } else {
+      // Hide custom cursor elements on mobile
+      if (cursorRingRef.current) cursorRingRef.current.style.display = 'none';
+      if (cursorDotRef.current) cursorDotRef.current.style.display = 'none';
+    }
     
     // Add event listeners with passive flag for better scrolling performance
     document.addEventListener('mousemove', handleMouseMove, { passive: true });

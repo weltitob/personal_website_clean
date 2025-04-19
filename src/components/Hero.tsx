@@ -159,7 +159,7 @@ const Hero = () => {
 
   return (
     <>
-      <section id="hero" ref={heroRef} className="hero-container overflow-hidden">
+      <section id="hero" ref={heroRef} className="hero-container">
         
         {/* Animated background elements */}
         <div className="hero-shapes">
@@ -178,33 +178,20 @@ const Hero = () => {
           <div className="grid-line"></div>
         </div>
         
+        {/* Scroll indicator */}
+        <div className="scroll-indicator">
+          <div className="scroll-indicator-text">Scroll</div>
+          <div className="scroll-indicator-line">
+            <div className="scroll-indicator-dot"></div>
+          </div>
+        </div>
+        
         <div className="content-wrapper relative z-10">
           {/* Hero badges removed */}
           
           <div className="hero-grid">
             {/* Profile visualization - WITH CARD BEHIND IMAGE */}
             <div ref={imageRef} className="hero-visual slide-up">
-              {/* Info card positioned behind the image */}
-              <div 
-                className="profile-card-behind"
-                style={window.innerWidth > 640 ? cardStyle : {}}
-              >
-                <div className="profile-card-inner">
-                  <div className="profile-card-content">
-                    <div className="profile-name">Tobias Welti</div>
-                    <div className="profile-title">Fullstack Developer</div>
-                    <div className="profile-location">
-                      <span className="location-icon">📍</span> Stuttgart, Germany
-                    </div>
-                  </div>
-                  <div className="tech-pills">
-                    <span className="tech-pill">Python</span>
-                    <span className="tech-pill">React</span>
-                    <span className="tech-pill">Flutter</span>
-                  </div>
-                </div>
-              </div>
-              
               {/* Main image on top with mouse movement animation */}
               <div 
                 className="venice-image-wrapper"
@@ -224,6 +211,27 @@ const Hero = () => {
                   />
                 </picture>
                 <div className="image-overlay"></div>
+              </div>
+              
+              {/* Info card positioned behind the image */}
+              <div 
+                className="profile-card-behind"
+                style={window.innerWidth > 640 ? cardStyle : {}}
+              >
+                <div className="profile-card-inner">
+                  <div className="profile-card-content">
+                    <div className="profile-name">Tobias Welti</div>
+                    <div className="profile-title">Fullstack Developer</div>
+                    <div className="profile-location">
+                      <span className="location-icon">📍</span> Stuttgart, Germany
+                    </div>
+                  </div>
+                  <div className="tech-pills">
+                    <span className="tech-pill">Python</span>
+                    <span className="tech-pill">React</span>
+                    <span className="tech-pill">Flutter</span>
+                  </div>
+                </div>
               </div>
             </div>
             
