@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, useCallback, memo } from 'react';
 
 const Hero = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  // Removed mouse position state
   const [scrollY, setScrollY] = useState(0);
   const heroRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLParagraphElement>(null);
@@ -29,18 +29,7 @@ const Hero = () => {
   }, []);
 
   // Throttled mouse move handler
-  const handleMouseMove = useCallback((event: MouseEvent) => {
-    const now = Date.now();
-    if (now - lastMouseMoveTime.current > 50) { // 50ms throttle
-      if (heroRef.current) {
-        const rect = heroRef.current.getBoundingClientRect();
-        const x = (event.clientX - rect.left) / rect.width;
-        const y = (event.clientY - rect.top) / rect.height;
-        setMousePosition({ x, y });
-      }
-      lastMouseMoveTime.current = now;
-    }
-  }, []);
+  // Mouse move handler removed for parallax effect
 
   // Event listeners with throttling
   useEffect(() => {
@@ -51,15 +40,13 @@ const Hero = () => {
     };
 
     window.addEventListener('resize', handleResize, { passive: true });
-    window.addEventListener('mousemove', handleMouseMove, { passive: true });
     window.addEventListener('scroll', handleScroll, { passive: true });
     
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [handleMouseMove, handleScroll]);
+  }, [handleScroll]);
 
   // Intersection Observer for animations
   useEffect(() => {
@@ -132,23 +119,9 @@ const Hero = () => {
     };
   }, []);
 
-  // Memoized parallax calculations to reduce recalculations
-  const parallaxStyle = useCallback(() => {
-    const moveX = mousePosition.x * 30 - 15;
-    const moveY = mousePosition.y * 30 - 15;
-    return {
-      cardStyle: {
-        transform: `perspective(1000px) rotateX(${moveY * 0.3}deg) rotateY(${-moveX * 0.3}deg) translateZ(10px)`,
-        transition: mousePosition.x === 0 ? 'none' : 'transform 0.2s ease-out'
-      },
-      imageStyle: {
-        transform: `perspective(1000px) rotateX(${moveY * 0.2}deg) rotateY(${-moveX * 0.2}deg) translateZ(5px)`,
-        transition: mousePosition.x === 0 ? 'none' : 'transform 0.2s ease-out'
-      }
-    };
-  }, [mousePosition.x, mousePosition.y]);
-
-  const { cardStyle, imageStyle } = parallaxStyle();
+  // Removed parallax animations
+  const cardStyle = {};
+  const imageStyle = {};
 
   // Shape transform styles - calculated once and reused
   const shapeStyles = {
@@ -195,7 +168,6 @@ const Hero = () => {
               {/* Main image on top with mouse movement animation */}
               <div 
                 className="venice-image-wrapper"
-                style={window.innerWidth > 640 ? imageStyle : {}}
               >
                 <picture>
                   <source srcSet="/images/optimized/tobi_profile.webp" type="image/webp" />
@@ -216,7 +188,6 @@ const Hero = () => {
               {/* Info card positioned behind the image */}
               <div 
                 className="profile-card-behind"
-                style={window.innerWidth > 640 ? cardStyle : {}}
               >
                 <div className="profile-card-inner">
                   <div className="profile-card-content">
@@ -259,13 +230,12 @@ const Hero = () => {
             <div className="hero-text slide-up">
               <h1 ref={headingRef} className="hero-heading">
                 <span className="welcome-text glitch-text" data-text="Fullstack Developer">Fullstack Developer</span>
-                <span className="hero-tagline">creating <span className="text-gradient">innovative solutions</span></span>
+                <span className="hero-tagline">creating <span className="text-gradient">a meaningful impact</span></span>
               </h1>
               
               <p ref={textRef} className="hero-intro delay-100">
-                Currently working as Junior Business Consultant at Boehringer Ingelheim.
-                I build modern applications using the latest technologies, with a passion 
-                for problem-solving, intuitive design, and AI-enhanced solutions that create impact.
+                Junior Business Consultant at Boehringer Ingelheim. Building modern applications 
+                with a focus on intuitive design and AI-enhanced solutions that create impact.
               </p>
   
               <div className="hero-stats">

@@ -33,7 +33,6 @@ const ProjectTimeline = () => {
                 <span className="timeline-date">March 2023 - Present</span>
                 <h4 className="timeline-title">Social Media Automation</h4>
                 <p className="timeline-description">Built a data-driven solution that achieved over 1 million Instagram followers through intelligent trend detection and automated content posting.</p>
-                <button onClick={() => window.dispatchEvent(new CustomEvent('openModal', { detail: 'project-x-modal' }))} className="btn-secondary text-xs mt-3">Details</button>
               </div>
             </li>
             <li className="timeline-item">
@@ -41,7 +40,6 @@ const ProjectTimeline = () => {
                 <span className="timeline-date">September 2022 - February 2023</span>
                 <h4 className="timeline-title">TADA - AI Incident Analysis</h4>
                 <p className="timeline-description">Developed an AI-powered system that identifies trends in incident tickets using <span className="tech-highlight">Python</span>, <span className="tech-highlight">Azure</span>, and <span className="tech-highlight">OpenAI</span>.</p>
-                <button onClick={() => window.dispatchEvent(new CustomEvent('openModal', { detail: 'project-alpha-modal' }))} className="btn-secondary text-xs mt-3">Details</button>
               </div>
             </li>
             <li className="timeline-item">

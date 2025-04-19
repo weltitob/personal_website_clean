@@ -10,7 +10,6 @@ import EducationTimeline from './components/EducationTimeline'
 import CVTimeline from './components/CVTimeline'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import Modal from './components/Modal'
 
 function App() {
   // Custom cursor state and refs
@@ -168,26 +167,7 @@ function App() {
       </main>
       
       <Footer />
-      
-      {/* Modals */}
-      <Modal 
-        id="project-alpha-modal"
-        title="TADA: AI-Powered Incident Trend Analysis"
-        status="DEPLOYED"
-        statusIndicator="status-deployed"
-        description="TADA identifies trends in incident ticket data at Boehringer Ingelheim. Users upload data via a Power App, then workflows route data to Azure where Python code with OpenAI integration analyzes the data. Results are displayed in the Power App interface. The system includes related subprojects: incident solution prediction using embeddings and audio transcription with local Whisper/Phenome models."
-        techStack={["Python", "Azure", "OpenAI", "Microsoft Power Apps", "MS Workflows"]}
-      />
-      
-      
-      <Modal 
-        id="project-x-modal"
-        title="Social Media Automation with AI"
-        status="ACTIVE"
-        statusIndicator="status-development"
-        description="Built a data-driven solution that achieved over 1 million Instagram followers through intelligent trend detection and automated content posting. The system uses Python to analyze emerging content patterns, identify engagement opportunities, and automatically schedule posts for maximum reach and engagement."
-        techStack={["Python", "Data Analysis", "Trend Detection", "Automation", "Instagram API"]}
-      />
+      {/* Modals removed */}
     </>
   )
 }
