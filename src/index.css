@@ -1468,11 +1468,11 @@ p {
 }
 
 .hero-tagline {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(1.7rem, 5vw, 3rem);
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.1;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.01em;
   text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
