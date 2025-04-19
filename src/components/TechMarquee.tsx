@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useRef } from 'react';
+import { memo, useEffect, useRef } from 'react';
 
 // Define tech items once to avoid duplication
 const TECH_ITEMS = [

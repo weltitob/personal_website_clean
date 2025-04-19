@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState, useCallback, memo } from 'react';
 
 const Hero = () => {
-  // Removed mouse position state
   const [scrollY, setScrollY] = useState(0);
   const heroRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLParagraphElement>(null);
@@ -11,7 +10,6 @@ const Hero = () => {
   const venetianImageRef = useRef<HTMLImageElement>(null);
   const counterRefs = useRef<HTMLSpanElement[]>([]);
   const lastScrollY = useRef(0);
-  const lastMouseMoveTime = useRef(0);
   const ticking = useRef(false);
 
   // Throttled scroll handler
@@ -33,17 +31,9 @@ const Hero = () => {
 
   // Event listeners with throttling
   useEffect(() => {
-    // Add resize event listener to handle responsiveness
-    const handleResize = () => {
-      // Force re-render on resize to handle conditional styles
-      setMousePosition(prev => ({...prev}));
-    };
-
-    window.addEventListener('resize', handleResize, { passive: true });
     window.addEventListener('scroll', handleScroll, { passive: true });
     
     return () => {
-      window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
     };
   }, [handleScroll]);
@@ -119,9 +109,7 @@ const Hero = () => {
     };
   }, []);
 
-  // Removed parallax animations
-  const cardStyle = {};
-  const imageStyle = {};
+  // Shape transform styles without parallax
 
   // Shape transform styles - calculated once and reused
   const shapeStyles = {
@@ -242,7 +230,10 @@ const Hero = () => {
                   <span 
                     className="hero-stat-number counter" 
                     data-target="6" 
-                    ref={el => el && (counterRefs.current[0] = el)}
+                    ref={(el) => {
+                      if (el) counterRefs.current[0] = el;
+                      return undefined;
+                    }}
                   >0</span>
                   <span className="hero-stat-label">Years Experience</span>
                 </div>
@@ -250,7 +241,10 @@ const Hero = () => {
                   <span 
                     className="hero-stat-number counter" 
                     data-target="53" 
-                    ref={el => el && (counterRefs.current[1] = el)}
+                    ref={(el) => {
+                      if (el) counterRefs.current[1] = el;
+                      return undefined;
+                    }}
                   >0</span>
                   <span className="hero-stat-label">Technologies Used</span>
                 </div>
@@ -258,7 +252,10 @@ const Hero = () => {
                   <span 
                     className="hero-stat-number counter" 
                     data-target="16" 
-                    ref={el => el && (counterRefs.current[2] = el)}
+                    ref={(el) => {
+                      if (el) counterRefs.current[2] = el;
+                      return undefined;
+                    }}
                   >0</span>
                   <span className="hero-stat-label">Projects Completed</span>
                 </div>
