@@ -1631,10 +1631,10 @@ p {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.75rem;
 }
 
-.location-icon {
+.location-icon, .contact-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1643,6 +1643,22 @@ p {
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #ffffff;
+}
+
+.profile-contact {
+  margin-top: 0.5rem;
+}
+
+.profile-email, .profile-phone {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.3rem;
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.01em;
+  word-break: break-word;
 }
 
 .profile-card-decoration {
@@ -2050,15 +2066,13 @@ p {
     font-size: 0.7rem;
   }
   
-  .tech-pills {
-    gap: 0.3rem;
-    margin-top: 0.75rem;
+  .profile-email, .profile-phone {
+    font-size: 0.6rem;
     justify-content: center;
   }
   
-  .tech-pill {
-    font-size: 0.6rem;
-    padding: 0.15rem 0.4rem;
+  .profile-contact {
+    margin-top: 0.5rem;
   }
   
   .tech-tag {
