@@ -44,10 +44,18 @@ const Hero = () => {
 
   // Event listeners with throttling
   useEffect(() => {
+    // Add resize event listener to handle responsiveness
+    const handleResize = () => {
+      // Force re-render on resize to handle conditional styles
+      setMousePosition(prev => ({...prev}));
+    };
+
+    window.addEventListener('resize', handleResize, { passive: true });
     window.addEventListener('mousemove', handleMouseMove, { passive: true });
     window.addEventListener('scroll', handleScroll, { passive: true });
     
     return () => {
+      window.removeEventListener('resize', handleResize);
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('scroll', handleScroll);
     };
@@ -179,7 +187,7 @@ const Hero = () => {
               {/* Info card positioned behind the image */}
               <div 
                 className="profile-card-behind"
-                style={cardStyle}
+                style={window.innerWidth > 640 ? cardStyle : {}}
               >
                 <div className="profile-card-inner">
                   <div className="profile-card-content">
@@ -200,7 +208,7 @@ const Hero = () => {
               {/* Main image on top with mouse movement animation */}
               <div 
                 className="venice-image-wrapper"
-                style={imageStyle}
+                style={window.innerWidth > 640 ? imageStyle : {}}
               >
                 <picture>
                   <source srcSet="/images/optimized/tobi_profile.webp" type="image/webp" />

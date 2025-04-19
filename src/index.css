@@ -91,6 +91,12 @@ body::before {
   padding: 0 2rem; 
 }
 
+@media (max-width: 767px) {
+  .content-wrapper {
+    padding: 0 1rem;
+  }
+}
+
 .narrative-section {
   min-height: 80vh; 
   padding: 15vh 0; 
@@ -119,6 +125,24 @@ body::before {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo styling */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 40px;
+  width: auto;
+  filter: drop-shadow(0 0 8px rgba(120, 79, 240, 0.6));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo-container:hover .logo-image {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 12px rgba(120, 79, 240, 0.8));
 }
 
 #main-header nav a {
@@ -325,13 +349,14 @@ p {
 }
 
 .section-intro-text { 
-  font-size: clamp(1.1rem, 3vw, 1.3rem); 
+  font-size: clamp(1rem, 3vw, 1.3rem); 
   color: #94a3b8;
   margin-bottom: 3rem;
   max-width: 65ch;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  padding: 0 1rem;
 }
 
 
@@ -348,6 +373,13 @@ p {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
   margin-top: 1rem;
+}
+
+@media (max-width: 767px) {
+  .strength-grid {
+    grid-template-columns: 1fr;
+    padding: 0 0.5rem;
+  }
 }
 
 .strength-item {
@@ -547,6 +579,7 @@ p {
   max-width: 1100px;
   margin: 4rem auto 0 auto;
   padding: 0 1rem;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .timeline {
@@ -638,6 +671,14 @@ p {
   width: 100%;
 }
 
+@media (max-width: 767px) {
+  .timeline-content {
+    padding: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .timeline-item:hover .timeline-content {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
@@ -683,7 +724,7 @@ p {
     left: 50%;
     transform: translateX(-50%);
     height: 100%;
-    width: 3px;
+    width: 4px;
   }
   
   .timeline-item {
@@ -708,30 +749,36 @@ p {
     padding-left: 30px;
     text-align: left;
   }
+}
   
+@media (min-width: 768px) {
   /* Position the circle nodes - desktop view */
   .timeline-item:nth-child(odd)::before {
-    right: -11px;
+    right: -13px;
     left: auto;
     top: 20px;
   }
   
   .timeline-item:nth-child(even)::before {
-    left: -11px; 
+    left: -13px; 
     top: 20px;
   }
+}
   
+@media (min-width: 768px) {
   /* Fix for project timeline - ensure node is on correct side */
   #project-timeline .timeline-item:nth-child(odd)::before {
-    left: -11px;
+    left: -13px;
     right: auto;
   }
   
   #project-timeline .timeline-item:nth-child(even)::before {
-    right: -11px;
+    right: -13px;
     left: auto;
   }
+}
   
+@media (min-width: 768px) {
   /* Switch the side (odd/even) layout for project timeline */
   #project-timeline .timeline-item:nth-child(odd) {
     float: right;
@@ -746,7 +793,42 @@ p {
     padding-left: 0;
     text-align: right;
   }
+}
   
+  @media (max-width: 767px) {
+    /* On mobile, make timeline items full width and left-aligned */
+    .timeline-item,
+    #project-timeline .timeline-item:nth-child(odd),
+    #project-timeline .timeline-item:nth-child(even),
+    #cv-timeline .timeline-item:nth-child(odd),
+    #cv-timeline .timeline-item:nth-child(even),
+    #education-timeline .timeline-item:nth-child(odd),
+    #education-timeline .timeline-item:nth-child(even) {
+      float: none;
+      width: 100%;
+      padding-left: 40px;
+      padding-right: 0;
+      text-align: left;
+    }
+    
+    .timeline-item::before,
+    #project-timeline .timeline-item:nth-child(odd)::before,
+    #project-timeline .timeline-item:nth-child(even)::before,
+    #cv-timeline .timeline-item:nth-child(odd)::before,
+    #cv-timeline .timeline-item:nth-child(even)::before,
+    #education-timeline .timeline-item:nth-child(odd)::before,
+    #education-timeline .timeline-item:nth-child(even)::before {
+      left: 13px;
+      right: auto;
+    }
+    
+    .timeline::before {
+      left: 24px;
+      transform: none;
+    }
+  }
+  
+@media (min-width: 768px) {
   /* Fix hover animations */
   .timeline-item:nth-child(odd):hover::before {
     transform: scale(1.2);
@@ -1068,6 +1150,12 @@ p {
   padding: 0 1.5rem;
 }
 
+@media (max-width: 767px) {
+  .tech-item {
+    padding: 0 1rem;
+  }
+}
+
 .tech-item-inner {
   display: flex;
   flex-direction: column;
@@ -1081,6 +1169,13 @@ p {
   height: 90px;
   border: 1px solid rgba(255, 255, 255, 0.05);
   margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .tech-item-inner {
+    width: 75px;
+    height: 75px;
+  }
 }
 
 .tech-item-inner:hover {
@@ -1124,21 +1219,31 @@ p {
   .tech-marquee-title {
     font-size: 1.5rem;
   }
+
+  .tech-marquee-subtitle {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
   
   .tech-item-inner {
-    width: 80px;
-    height: 80px;
-    padding: 0.75rem 0.25rem;
+    width: 70px;
+    height: 70px;
+    padding: 0.6rem 0.2rem;
   }
   
   .tech-item img {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 0.4rem;
+    width: 28px;
+    height: 28px;
+    margin-bottom: 0.3rem;
   }
   
   .tech-item span {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
+  }
+
+  .tech-marquee::before,
+  .tech-marquee::after {
+    width: 50px;
   }
 }
 
@@ -1216,7 +1321,7 @@ p {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  align-items: flex-start;
+  align-items: center;
   position: relative;
   z-index: 10;
   width: 100%;
@@ -1226,6 +1331,13 @@ p {
   .hero-grid {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-grid {
+    padding: 0 1rem;
   }
 }
 
@@ -1815,6 +1927,7 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem 3rem;
+    width: 100%;
   }
   
   .hero-stat::after {
@@ -1823,18 +1936,35 @@ p {
   
   .hero-text {
     padding-bottom: 2rem;
+    text-align: center;
+  }
+
+  .hero-intro {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
   }
   
   .venice-image-wrapper {
     width: 260px;
     height: 350px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .profile-card-behind {
-    top: 30px;
-    left: -25px;
-    width: 200px;
+    position: relative;
+    top: 10px;
+    left: 0;
+    width: 80%;
+    max-width: 220px;
     padding: 1.25rem;
+    margin: 0 auto;
+    transform: none !important;
   }
   
   .profile-name {
@@ -1848,6 +1978,7 @@ p {
   .tech-pills {
     gap: 0.3rem;
     margin-top: 0.75rem;
+    justify-content: center;
   }
   
   .tech-pill {
@@ -1857,6 +1988,17 @@ p {
   
   .tech-tag {
     display: none;
+  }
+
+  .hero-visual {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .hero-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 

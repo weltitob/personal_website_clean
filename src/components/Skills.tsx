@@ -6,10 +6,10 @@ const Skills = () => {
       <div className="content-wrapper md:w-3/4 lg:w-3/4">
         <h2 className="slide-up">Core Strengths</h2>
         <p className="fade-in delay-100">
-          Through my strong interest in technology and numerous private and work projects, I've developed expertise in both frontend and backend technologies. As a fast learner and problem solver, I excel in agile environments where quick adaptation is essential.
+          Driven by passion for technology and experience across diverse projects, I've cultivated comprehensive full-stack expertise. I thrive in agile environments where adaptability and problem-solving are paramount.
         </p>
         <p className="fade-in delay-200">
-          My strengths include agile working methodologies, embracing fast failure for rapid improvement, and adapting dynamically to different working environments. I believe in continuous learning and using the right tools for each specific challenge.
+          My approach emphasizes iterative development, efficient failure analysis for continuous improvement, and versatile adaptation to team dynamics. I'm committed to ongoing skill development and selecting optimal technologies for each unique challenge.
         </p>
         <div className="skills-module fade-in delay-300">
           <div className="strength-grid">
