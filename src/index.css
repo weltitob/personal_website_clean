@@ -1,5 +1,5 @@
 /* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 @font-face {
   font-family: 'LucideIcons';
@@ -72,8 +72,9 @@ body::before {
 }
 
 .font-mono { 
-  font-family: 'IBM Plex Mono', monospace; 
+  font-family: 'Space Grotesk', sans-serif; 
   font-feature-settings: "ss02", "zero";
+  letter-spacing: -0.02em;
 }
 
 .text-gradient {
@@ -85,7 +86,7 @@ body::before {
 }
 
 .tech-highlight {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Space Grotesk', monospace;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
   padding: 0.1em 0.4em;
@@ -722,7 +723,7 @@ p {
 
 .timeline-date {
   display: block;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Space Grotesk', monospace;
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 0.5rem;
@@ -1241,7 +1242,7 @@ p {
 .tech-item span {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.7);
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Space Grotesk', monospace;
   font-weight: 500;
   transition: color 0.3s ease;
   text-align: center;
@@ -1297,7 +1298,7 @@ p {
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
   border-radius: 0;
   color: white;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Space Grotesk', monospace;
   font-weight: 700;
   font-size: 0.8rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1361,7 +1362,7 @@ p {
 .tech-item span {
   font-size: 0.75rem;
   color: #94a3b8;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Space Grotesk', monospace;
   max-width: 200px;
   text-align: center;
 }
@@ -1415,7 +1416,7 @@ p {
   letter-spacing: 0.2em;
   margin-bottom: 0.5rem;
   opacity: 0.6;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Space Grotesk', monospace;
 }
 
 .scroll-indicator-line {
@@ -1528,7 +1529,7 @@ p {
   color: #ffffff;
   padding: 0.15rem 0.4rem;
   border-radius: 0;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Space Grotesk', monospace;
   border: 1px solid rgba(255, 255, 255, 0.2);
   letter-spacing: 0.5px;
 }
@@ -1619,7 +1620,7 @@ p {
 .profile-title {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.6);
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Space Grotesk', monospace;
   margin-bottom: 0.5rem;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -1656,7 +1657,7 @@ p {
   align-items: center;
   gap: 0.4rem;
   margin-bottom: 0.3rem;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Space Grotesk', monospace;
   letter-spacing: 0.01em;
   word-break: break-word;
 }
@@ -1704,7 +1705,7 @@ p {
   border-radius: 30px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: white;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Space Grotesk', monospace;
   font-size: 0.75rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
@@ -1971,7 +1972,7 @@ p {
   font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.6);
   margin-top: 0.25rem;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Space Grotesk', monospace;
   letter-spacing: 0.05em;
   display: block;
   clear: both;
@@ -2291,7 +2292,7 @@ p {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 1rem;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Space Grotesk', monospace;
 }
 
 .contact-response-time {
@@ -2330,7 +2331,7 @@ p {
 .contact-method-label {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.9);
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Space Grotesk', monospace;
 }
 
 .contact-copy-button {
@@ -2421,7 +2422,7 @@ p {
 .contact-social-name {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.7);
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Space Grotesk', monospace;
 }
 
 /* Responsive Adjustments */

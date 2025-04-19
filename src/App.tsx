@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     // Log to console on component mount
-    console.log("%cTobi :: Interactive Journey V2 :: Systems Go", "color: #ffffff; font-size: 1.2em; font-weight: bold; font-family: 'Space Grotesk', sans-serif;");
+    console.log("%cTobi :: Interactive Journey V2 :: Systems Go", "color: #ffffff; font-size: 1.2em; font-weight: bold; font-family: 'Montserrat', sans-serif;");
     
     // Custom cursor logic with throttling
     let lastMouseMoveTime = 0;

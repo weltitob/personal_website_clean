@@ -50,10 +50,10 @@ const Modal = ({ id, title, status, statusIndicator, description, techStack }: M
       <div className="modal-content">
         <button className="modal-close" onClick={handleClose} aria-label="Schließen">&times;</button>
         <h3 className="text-gradient text-2xl mb-4" style={{ fontFamily: 'Montserrat, sans-serif' }}>{title}</h3>
-        <p className="text-sm mb-4" style={{ fontFamily: 'IBM Plex Mono, monospace', color: 'rgba(255, 255, 255, 0.65)' }}>Status: <span className={`status-indicator ${statusIndicator} inline-block`}></span> {status}</p>
+        <p className="text-sm mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif', color: 'rgba(255, 255, 255, 0.65)' }}>Status: <span className={`status-indicator ${statusIndicator} inline-block`}></span> {status}</p>
         <p className="mb-4" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>{description}</p>
         <h4 className="font-semibold mb-2 text-slate-300" style={{ fontFamily: 'Montserrat, sans-serif' }}>Technologie-Stack:</h4>
-        <div className="flex flex-wrap gap-2 text-xs font-mono mb-6" style={{ fontFamily: 'IBM Plex Mono, monospace' }}>
+        <div className="flex flex-wrap gap-2 text-xs font-mono mb-6" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
           {techStack.map((tech, index) => {
             // Black and white consistent styling
             const colorClass = 'bg-slate-900/50 text-slate-300';
