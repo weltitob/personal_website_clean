@@ -784,6 +784,8 @@ p {
     text-align: right;
     margin-right: 0;
     width: 45%;
+    transform: translateX(20px); /* Initial position adjusted for left items */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
   
   /* Right side items */
@@ -794,6 +796,17 @@ p {
     text-align: left;
     margin-left: 0;
     width: 45%;
+    transform: translateX(-20px); /* Initial position adjusted for right items */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  /* Override the visible state for desktop */
+  .timeline-item:nth-child(odd).visible {
+    transform: translateX(0);
+  }
+  
+  .timeline-item:nth-child(even).visible {
+    transform: translateX(0);
   }
 }
   
@@ -834,6 +847,7 @@ p {
     margin-left: 0;
     margin-right: 0;
     width: 45%;
+    transform: translateX(-20px); /* Initial position adjusted for right-positioned odd items */
   }
   
   #project-timeline .timeline-item:nth-child(even) {
@@ -844,6 +858,16 @@ p {
     margin-right: 0;
     margin-left: 0;
     width: 45%;
+    transform: translateX(20px); /* Initial position adjusted for left-positioned even items */
+  }
+  
+  /* Override visible state for project timeline */
+  #project-timeline .timeline-item:nth-child(odd).visible {
+    transform: translateX(0);
+  }
+  
+  #project-timeline .timeline-item:nth-child(even).visible {
+    transform: translateX(0);
   }
 }
   
@@ -861,6 +885,14 @@ p {
       padding-left: 40px;
       padding-right: 0;
       text-align: left;
+      transform: translateX(-20px); /* Consistent transform for all mobile items */
+    }
+    
+    .timeline-item.visible,
+    #project-timeline .timeline-item.visible,
+    #cv-timeline .timeline-item.visible,
+    #education-timeline .timeline-item.visible {
+      transform: translateX(0);
     }
     
     .timeline-item::before,
