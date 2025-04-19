@@ -170,11 +170,10 @@ const Hero = () => {
                 className="venice-image-wrapper"
               >
                 <picture>
-                  <source srcSet="/images/optimized/tobi_profile.webp" type="image/webp" />
                   <img 
                     ref={venetianImageRef}
-                    src="/images/tobi_profile.jpeg" 
-                    alt="Tobi in Venedig" 
+                    src="/images/optimized/tobi_artstyle.png" 
+                    alt="Tobi art style illustration" 
                     className="venice-image" 
                     width="800"
                     height="800"

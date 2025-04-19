@@ -1592,32 +1592,23 @@ p {
 /* Venice image style */
 .venice-image-wrapper {
   position: relative;
-  width: 300px;
-  height: 400px;
-  overflow: hidden;
+  width: auto;
+  height: auto;
   border-radius: 0;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-  will-change: transform;
-  transform-style: preserve-3d;
   z-index: 5; /* Adjusted z-index for proper stacking */
   margin-left: 40px; /* Create more space for the profile card */
-  margin-bottom: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: -50px; /* Move the image up */
+  border: none;
 }
 
 /* Removed hover state since we're handling with JavaScript now */
 
 .venice-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.05);
-  transition: transform 0.5s ease;
-  filter: grayscale(100%) contrast(1.1);
-}
-
-.venice-image-wrapper:hover .venice-image {
-  transform: scale(1);
+  max-width: 500px;
+  height: auto;
+  display: block;
+  background-color: #000000;
 }
 
 .image-overlay {
@@ -1626,11 +1617,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.4)
-  );
+  background: none;
   z-index: 1;
 }
 
@@ -1954,7 +1941,7 @@ p {
 /* Stats Section */
 .hero-stats {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   margin-top: 2rem;
   position: relative;
   z-index: 1;
@@ -1967,8 +1954,9 @@ p {
   content: '';
   position: absolute;
   top: -0.5rem;
-  left: -1rem;
-  width: calc(100% + 2rem);
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 3.5rem);
   height: calc(100% + 1rem);
   background: rgba(25, 25, 25, 0.8);
   border-radius: 0;
@@ -1981,11 +1969,12 @@ p {
 .hero-stat {
   display: flex;
   flex-direction: column;
-  padding: 0.75rem;
+  padding: 0.75rem 1.75rem;
   position: relative;
-  min-width: 100px;
+  min-width: 120px;
   text-align: center;
   align-items: center;
+  justify-content: center;
 }
 
 .hero-stat::after {
@@ -2011,6 +2000,7 @@ p {
   letter-spacing: -0.02em;
   display: block;
   text-align: center;
+  width: 100%;
 }
 
 .hero-stat-value {
@@ -2103,11 +2093,15 @@ p {
   }
   
   .venice-image-wrapper {
-    width: 260px;
-    height: 350px;
+    width: auto;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     z-index: 5;
+  }
+  
+  .venice-image {
+    max-width: 370px;
   }
   
   .profile-card-behind {
