@@ -1954,36 +1954,38 @@ p {
 /* Stats Section */
 .hero-stats {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
   margin-top: 2rem;
   position: relative;
   z-index: 1;
+  width: fit-content;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .hero-stats::before {
   content: '';
   position: absolute;
-  top: -0.75rem;
-  left: -1.25rem;
-  width: calc(100% + 2.5rem);
-  height: calc(100% + 1.5rem);
+  top: -0.5rem;
+  left: -1rem;
+  width: calc(100% + 2rem);
+  height: calc(100% + 1rem);
   background: rgba(25, 25, 25, 0.8);
   border-radius: 0;
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   z-index: -1;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .hero-stat {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 0.75rem;
   position: relative;
-  min-width: 120px;
+  min-width: 100px;
   text-align: center;
+  align-items: center;
 }
 
 .hero-stat::after {
@@ -2002,35 +2004,38 @@ p {
 }
 
 .hero-stat-number {
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   font-weight: 800;
   color: #ffffff;
   line-height: 1;
-  display: inline;
   letter-spacing: -0.02em;
+  display: block;
+  text-align: center;
 }
 
 .hero-stat-value {
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
+  width: 100%;
 }
 
 .hero-stat-plus {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   font-weight: 800;
   color: #ffffff;
   margin-left: 2px;
 }
 
 .hero-stat-label {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.6);
-  margin-top: 0.25rem;
+  margin-top: 0.2rem;
   font-family: 'Space Grotesk', monospace;
   letter-spacing: 0.05em;
   display: block;
-  clear: both;
+  width: 100%;
+  text-align: center;
 }
 
 /* Footer social icons */
