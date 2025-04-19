@@ -750,60 +750,54 @@ p {
 
 /* Responsive Timeline - Centered line on larger screens */
 @media (min-width: 768px) {
-  /* Timeline container needs clearfix to contain floated items */
-  .timeline::after {
-    content: "";
-    display: table;
-    clear: both;
+  .timeline {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
   }
   
   /* The vertical line - desktop */
   .timeline::before {
+    content: '';
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
     height: 100%;
     width: 1px;
-    margin: 0;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 1;
   }
   
   .timeline-item {
-    width: 45%; /* Balanced width for equal spacing from center */
-    padding-left: 0;
-    padding-right: 0;
+    width: 50%;
     margin-bottom: 4rem;
-    clear: both;
-    position: relative;
+    box-sizing: border-box;
   }
   
   /* Left side items */
   .timeline-item:nth-child(odd) {
-    float: left;
-    padding-right: 25px;
-    padding-left: 0;
+    padding-right: 50px;
     text-align: right;
-    margin-right: 0;
   }
   
   /* Right side items */
   .timeline-item:nth-child(even) {
-    float: right;
-    padding-left: 25px;
-    padding-right: 0;
+    padding-left: 50px;
     text-align: left;
-    margin-left: 0;
+    margin-left: auto;
   }
 }
   
 @media (min-width: 768px) {
   /* Position the circle nodes - desktop view */
   .timeline-item:nth-child(odd)::before {
-    right: -25px;
+    right: 0;
     left: auto;
     top: 20px;
   }
   
   .timeline-item:nth-child(even)::before {
-    left: -25px; 
+    left: 0; 
     top: 20px;
   }
 }
@@ -811,12 +805,12 @@ p {
 @media (min-width: 768px) {
   /* Fix for project timeline - ensure node is on correct side */
   #project-timeline .timeline-item:nth-child(odd)::before {
-    left: -25px;
+    left: 0;
     right: auto;
   }
   
   #project-timeline .timeline-item:nth-child(even)::before {
-    right: -25px;
+    right: 0;
     left: auto;
   }
 }
@@ -824,21 +818,17 @@ p {
 @media (min-width: 768px) {
   /* Switch the side (odd/even) layout for project timeline */
   #project-timeline .timeline-item:nth-child(odd) {
-    float: right;
-    padding-left: 25px;
+    margin-left: auto;
+    padding-left: 50px;
     padding-right: 0;
     text-align: left;
-    margin-left: 0;
-    margin-right: 0;
   }
   
   #project-timeline .timeline-item:nth-child(even) {
-    float: left;
-    padding-right: 25px;
+    margin-left: 0;
+    padding-right: 50px;
     padding-left: 0;
     text-align: right;
-    margin-right: 0;
-    margin-left: 0;
   }
 }
   
