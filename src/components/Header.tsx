@@ -92,7 +92,7 @@ const Header = () => {
             
             {/* Hamburger button for mobile */}
             <button 
-              className="mobile-menu-button md:hidden"
+              className="mobile-menu-button"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle menu"
             >
@@ -104,12 +104,11 @@ const Header = () => {
             </button>
             
             {/* Desktop navigation */}
-            <nav id="main-nav" className="hidden md:flex flex-wrap space-x-2 text-sm">
-                <a href="#journey" className={`nav-link ${activeSection === '#journey' ? 'active' : ''}`}>Journey</a>
+            <nav id="main-nav" className="desktop-nav">
                 <a href="#skills" className={`nav-link ${activeSection === '#skills' ? 'active' : ''}`}>Skills</a>
                 <a href="#education-timeline" className={`nav-link ${activeSection === '#education-timeline' ? 'active' : ''}`}>Education</a>
                 <a href="#project-timeline" className={`nav-link ${activeSection === '#project-timeline' ? 'active' : ''}`}>Projects</a>
-                <a href="#cv-timeline" className={`nav-link ${activeSection === '#cv-timeline' ? 'active' : ''}`}>Resume</a>
+                <a href="#cv-timeline" className={`nav-link ${activeSection === '#cv-timeline' ? 'active' : ''}`}>Personal</a>
                 <a href="#contact" className={`nav-link ${activeSection === '#contact' ? 'active' : ''}`}>Contact</a>
             </nav>
             
@@ -122,13 +121,6 @@ const Header = () => {
             {/* Mobile navigation */}
             <div className={`mobile-menu ${menuOpen ? 'active' : ''}`}>
               <nav className="mobile-nav">
-                <div className="mobile-nav-item">
-                  <a href="#journey" 
-                     className={`nav-link ${activeSection === '#journey' ? 'active' : ''}`}
-                     onClick={handleNavLinkClick}>
-                     Journey
-                  </a>
-                </div>
                 <div className="mobile-nav-item">
                   <a href="#skills" 
                      className={`nav-link ${activeSection === '#skills' ? 'active' : ''}`}
@@ -154,7 +146,7 @@ const Header = () => {
                   <a href="#cv-timeline" 
                      className={`nav-link ${activeSection === '#cv-timeline' ? 'active' : ''}`}
                      onClick={handleNavLinkClick}>
-                     Resume
+                     Personal
                   </a>
                 </div>
                 <div className="mobile-nav-item">

@@ -296,7 +296,7 @@ const Hero = () => {
               </div>
               
               <div className="hero-actions delay-200">
-                <a ref={buttonRef} href="#journey" className="btn-glow-gradient">
+                <a ref={buttonRef} href="#skills" className="btn-glow-gradient">
                   <span className="btn-text">Discover My Work</span>
                   <span className="btn-icon">→</span>
                 </a>
