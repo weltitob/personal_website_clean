@@ -654,7 +654,6 @@ p {
 .timeline-item {
   position: relative;
   margin-bottom: 4rem;
-  padding-left: 40px;
   opacity: 0;
   transform: translateX(-20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -779,10 +778,8 @@ p {
   /* Left side items */
   .timeline-item:nth-child(odd) {
     float: left;
-    padding-right: 25px;
-    padding-left: 0;
     text-align: right;
-    margin-right: 0;
+    margin-right: 25px;
     width: 45%;
     transform: translateX(20px); /* Initial position adjusted for left items */
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -791,10 +788,8 @@ p {
   /* Right side items */
   .timeline-item:nth-child(even) {
     float: right;
-    padding-left: 25px;
-    padding-right: 0;
     text-align: left;
-    margin-left: 0;
+    margin-left: 25px;
     width: 45%;
     transform: translateX(-20px); /* Initial position adjusted for right items */
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -841,10 +836,8 @@ p {
   /* Switch the side (odd/even) layout for project timeline */
   #project-timeline .timeline-item:nth-child(odd) {
     float: right;
-    padding-left: 25px;
-    padding-right: 0;
     text-align: left;
-    margin-left: 0;
+    margin-left: 25px;
     margin-right: 0;
     width: 45%;
     transform: translateX(-20px); /* Initial position adjusted for right-positioned odd items */
@@ -852,10 +845,8 @@ p {
   
   #project-timeline .timeline-item:nth-child(even) {
     float: left;
-    padding-right: 25px;
-    padding-left: 0;
     text-align: right;
-    margin-right: 0;
+    margin-right: 25px;
     margin-left: 0;
     width: 45%;
     transform: translateX(20px); /* Initial position adjusted for left-positioned even items */
@@ -882,8 +873,8 @@ p {
     #education-timeline .timeline-item:nth-child(even) {
       float: none;
       width: 100%;
-      padding-left: 40px;
-      padding-right: 0;
+      margin-left: 40px;
+      margin-right: 0;
       text-align: left;
       transform: translateX(-20px); /* Consistent transform for all mobile items */
     }
