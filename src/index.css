@@ -658,6 +658,7 @@ p {
   opacity: 0;
   transform: translateX(-20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  box-sizing: border-box;
 }
 
 .timeline-item.visible {
@@ -762,10 +763,11 @@ p {
     transform: translateX(-50%);
     height: 100%;
     width: 1px;
+    margin: 0;
   }
   
   .timeline-item {
-    width: 44%; /* Reduced width to accommodate margins */
+    width: 45%; /* Balanced width for equal spacing from center */
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 4rem;
@@ -776,19 +778,19 @@ p {
   /* Left side items */
   .timeline-item:nth-child(odd) {
     float: left;
-    padding-right: 30px;
+    padding-right: 25px;
     padding-left: 0;
     text-align: right;
-    margin-right: 13px;
+    margin-right: 0;
   }
   
   /* Right side items */
   .timeline-item:nth-child(even) {
     float: right;
-    padding-left: 30px;
+    padding-left: 25px;
     padding-right: 0;
     text-align: left;
-    margin-left: 13px;
+    margin-left: 0;
   }
 }
   
@@ -823,19 +825,19 @@ p {
   /* Switch the side (odd/even) layout for project timeline */
   #project-timeline .timeline-item:nth-child(odd) {
     float: right;
-    padding-left: 30px;
+    padding-left: 25px;
     padding-right: 0;
     text-align: left;
-    margin-left: 13px;
+    margin-left: 0;
     margin-right: 0;
   }
   
   #project-timeline .timeline-item:nth-child(even) {
     float: left;
-    padding-right: 30px;
+    padding-right: 25px;
     padding-left: 0;
     text-align: right;
-    margin-right: 13px;
+    margin-right: 0;
     margin-left: 0;
   }
 }
