@@ -1,14 +1,18 @@
 
+import { useRef } from 'react';
+
 const Skills = () => {
   return (
     <div id="skills" className="section narrative-section" style={{ paddingTop: '2rem' }}>
       <div className="content-wrapper md:w-3/4 lg:w-3/4">
         <h2 className="slide-up">Core Strengths</h2>
         <p className="fade-in delay-100">
-          Full-stack professional specializing in scalable solutions and efficient problem-solving. 
-          Building robust applications through continuous learning, team collaboration, and agile methodologies.
+          Technology enthusiast with hands-on experience in developing scalable solutions and strategic problem-solving.
+          Building impactful applications that enhance business processes through innovative AI integration, 
+          cross-functional collaboration, and effective implementation of agile methodologies.
         </p>
-        <div className="skills-module fade-in delay-300">
+        
+        <div className="skills-module fade-in delay-200">
           <div className="strength-grid">
             <div className="strength-item">
               <div className="strength-icon">

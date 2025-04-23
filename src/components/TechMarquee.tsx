@@ -12,8 +12,6 @@ const TECH_ITEMS = [
   { icon: 'azure.svg', name: 'Azure' },
   { icon: 'googlecloud.svg', name: 'Google Cloud' },
   { icon: 'openai.svg', name: 'OpenAI' },
-  { icon: 'go.svg', name: 'Go/Golang' },
-  { icon: 'csharp.svg', name: 'C#' },
   { icon: 'mongodb.svg', name: 'MongoDB' },
   { icon: 'sql.svg', name: 'SQL' },
   { icon: 'firebase.svg', name: 'Firebase' },
@@ -72,7 +70,7 @@ const TechMarquee = () => {
       <div className="tech-marquee-container">
         <div className="tech-marquee-header">
           <h2 className="tech-marquee-title">Tech Stack</h2>
-          <p className="tech-marquee-subtitle">Technologies I've worked with</p>
+          <p className="tech-marquee-subtitle">Technologies I've mastered</p>
         </div>
         
         <div className="tech-marquee-wrapper">

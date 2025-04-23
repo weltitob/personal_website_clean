@@ -160,7 +160,7 @@ const Hero = () => {
                 <picture>
                   <img 
                     ref={venetianImageRef}
-                    src="/images/optimized/tobi_artstyle.png" 
+                    src="/images/tobi_artstyle_new.png" 
                     alt="Tobi art style illustration" 
                     className="venice-image" 
                     width="800"
@@ -179,7 +179,7 @@ const Hero = () => {
                 <div className="profile-card-inner">
                   <div className="profile-card-content">
                     <div className="profile-name">Tobias Welti</div>
-                    <div className="profile-title">Fullstack Developer</div>
+                    <div className="profile-title">Fullstack-Developer</div>
                     <div className="profile-location">
                       <span className="location-icon">
                         <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -216,13 +216,13 @@ const Hero = () => {
             {/* Welcome text and headline - NOW ON THE RIGHT */}
             <div className="hero-text slide-up">
               <h1 ref={headingRef} className="hero-heading">
-                <span className="welcome-text glitch-text" data-text="Fullstack Developer">Fullstack Developer</span>
+                <span className="welcome-text glitch-text" data-text="Fullstack-Developer">Fullstack-Developer</span>
                 <span className="hero-tagline">creating <span className="text-gradient">a meaningful impact</span></span>
               </h1>
               
               <p ref={textRef} className="hero-intro delay-100">
-                Junior Business Consultant at Boehringer Ingelheim. Building modern applications 
-                with a focus on intuitive design and AI-enhanced solutions that create impact.
+                Business Consultant in the AI space at Boehringer Ingelheim. Building modern applications 
+                with a focus on intuitive design and AI-enhanced solutions that deliver measurable business outcomes.
               </p>
   
               <div className="hero-stats">
@@ -240,24 +240,24 @@ const Hero = () => {
                 <div className="hero-stat">
                   <span 
                     className="hero-stat-number counter" 
-                    data-target="53" 
+                    data-target="25" 
                     ref={(el) => {
                       if (el) counterRefs.current[1] = el;
                       return undefined;
                     }}
                   >0</span>
-                  <span className="hero-stat-label">Technologies Used</span>
+                  <span className="hero-stat-label">Core Technologies</span>
                 </div>
                 <div className="hero-stat">
                   <span 
                     className="hero-stat-number counter" 
-                    data-target="16" 
+                    data-target="20" 
                     ref={(el) => {
                       if (el) counterRefs.current[2] = el;
                       return undefined;
                     }}
                   >0</span>
-                  <span className="hero-stat-label">Projects Completed</span>
+                  <span className="hero-stat-label">Enterprise Projects</span>
                 </div>
               </div>
               

@@ -34,7 +34,7 @@ const CVTimeline = () => {
   }, []);
 
   return (
-    <section id="cv-timeline" className="section timeline-section bg-slate-900/30">
+    <section id="cv-timeline" className="section timeline-section">
       <div className="content-wrapper">
         <h2 className="text-center slide-up">Personal Achievements</h2>
         <p className="section-intro-text text-center mx-auto fade-in delay-100">
