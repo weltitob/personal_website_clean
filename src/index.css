@@ -1735,8 +1735,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #ffffff;
@@ -2142,8 +2142,11 @@ p {
   
   .hero-visual {
     order: 1;
-    margin-top: 3rem;
+    margin-top: 0;
     z-index: 10;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 1rem;
   }
   
   .venice-image-wrapper {
@@ -2151,36 +2154,67 @@ p {
     height: auto;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0;
     z-index: 5;
   }
   
   .venice-image {
-    max-width: 320px;
+    max-width: 550px;
+    height: auto;
+    width: 100%;
   }
   
   .profile-card-behind {
     position: relative;
-    top: 10px;
+    top: -50px;
     left: 0;
-    width: 80%;
-    max-width: 220px;
-    padding: 1.25rem;
-    margin: 0 auto 1rem auto;
+    width: 95%;
+    max-width: 520px;
+    padding: 1.7rem;
+    margin: 0 auto;
     transform: none !important;
-    z-index: 12;
+    z-index: 20;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.2);
   }
   
   .profile-name {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 0.4rem;
   }
   
   .profile-title {
-    font-size: 0.7rem;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 0.7rem;
+  }
+  
+  .profile-location {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    gap: 0.6rem;
   }
   
   .profile-email, .profile-phone {
-    font-size: 0.6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+    gap: 0.6rem;
+  }
+  
+  .location-icon, .contact-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 0;
+    flex-shrink: 0;
   }
   
   .profile-contact {
@@ -2191,15 +2225,12 @@ p {
     display: none;
   }
 
-  .hero-visual {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-
   .hero-container {
     padding-left: 1rem;
     padding-right: 1rem;
+    min-height: auto;
+    padding-top: 0.5rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -2688,6 +2719,28 @@ a, button, input, textarea, select, [role="button"],
   * {
     scrollbar-width: thin;
     scrollbar-color: #555555 #0a0a0a;
+  }
+}
+
+/* Tablet and small desktop screens */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .profile-card-behind {
+    top: 20px;
+    left: -20px;
+    width: 220px;
+    z-index: 15;
+  }
+  
+  .venice-image-wrapper {
+    margin-left: 15px;
+  }
+  
+  .venice-image {
+    max-width: 360px;
+  }
+  
+  .hero-visual {
+    min-height: 350px;
   }
 }
 
