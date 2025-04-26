@@ -1,6 +1,4 @@
 
-import { useRef } from 'react';
-
 const Skills = () => {
   return (
     <div id="skills" className="section narrative-section" style={{ paddingTop: '2rem' }}>
