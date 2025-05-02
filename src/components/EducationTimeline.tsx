@@ -38,7 +38,7 @@ const EducationTimeline = () => {
             <li className="timeline-item">
               <div className="timeline-content">
                 <span className="timeline-date">2021 - Present</span>
-                <h4 className="timeline-title">Junior Business Consultant</h4>
+                <h4 className="timeline-title">IT Business Consultant</h4>
                 <p className="timeline-description">Boehringer Ingelheim - Working as part of the dual studies program, focusing on software development, data science, and business consulting with <span className="tech-highlight">Python</span>, <span className="tech-highlight">Azure</span>, and <span className="tech-highlight">OpenAI</span>.</p>
               </div>
             </li>
