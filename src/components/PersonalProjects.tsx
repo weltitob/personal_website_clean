@@ -53,6 +53,19 @@ const PersonalProjects = () => {
             <h3>Loco Maps</h3>
             <p>Led development of a custom mapping platform optimized for offline navigation in remote areas. Built with <span className="tech-highlight">React Native</span> and <span className="tech-highlight">PWA</span> technologies, delivering enhanced performance on low-bandwidth connections and reducing map loading times by 78%.</p>
           </div>
+          <div className="project-card" style={getAnimationDelay(2)}>
+            <div className="project-content">
+              <h3>CypherNexus</h3>
+              <p className="project-description">Knowledge sharing platform for IT beginners. Built with <span className="tech-highlight">HTML</span>, <span className="tech-highlight">JavaScript</span>, <span className="tech-highlight">CSS</span>, <span className="tech-highlight">EJS</span>, and <span className="tech-highlight">Python</span> to create an accessible learning environment for newcomers to the tech industry.</p>
+              <div className="project-image-container">
+                <img 
+                  src="/images/projectimages/cyphernexus.png" 
+                  alt="CypherNexus Platform" 
+                  className="project-image" 
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
         <h2 className="text-center slide-up mt-16">Enterprise Projects</h2>
