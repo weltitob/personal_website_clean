@@ -10,9 +10,8 @@ export default defineConfig({
     port: 5173,
     strictPort: false,
     hmr: {
-      host: '0.0.0.0',
       clientPort: 443,
-      path: '/__vite-hmr'
+      host: '.spock.replit.dev'
     },
     cors: true,
     headers: {
