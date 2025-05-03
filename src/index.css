@@ -1421,13 +1421,13 @@ p {
   width: 36px;
   height: 36px;
   margin-bottom: 0.6rem;
-  filter: grayscale(100%) brightness(1.5);
+  filter: brightness(1.2);
   transition: all 0.3s ease;
   border-radius: 50%; /* Added border-radius */
 }
 
 .tech-item-inner:hover img {
-  filter: grayscale(100%) brightness(2);
+  filter: brightness(1.5);
   transform: scale(1.1);
 }
 
