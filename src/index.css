@@ -2890,16 +2890,28 @@ a, button, input, textarea, select, [role="button"],
 .project-image {
   width: 100%;
   height: auto;
-  max-height: 500px; /* Increased height */
+  min-height: 500px;
+  max-height: 650px;
   object-fit: contain;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: 1rem;
+  background-color: rgba(15, 15, 15, 0.5);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 /* For smaller mobile screens */
 @media (max-width: 480px) {
   .project-image {
-    max-height: 350px;
+    min-height: 400px;
+    padding: 1rem;
   }
 }
 
