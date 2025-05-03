@@ -64,7 +64,7 @@ const Skills = () => {
               </div>
               <h3 className="strength-title">AI Technologies</h3>
               <p className="strength-description">
-                Implementing AI solutions using various frameworks and platforms. Experience with NLP, computer vision, and predictive analytics.
+                Implementing AI solutions using various frameworks and platforms.
               </p>
             </div>
 
