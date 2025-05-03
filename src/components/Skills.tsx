@@ -1,15 +1,14 @@
-
 const Skills = () => {
   return (
     <div id="skills" className="section narrative-section" style={{ paddingTop: '2rem' }}>
       <div className="content-wrapper md:w-3/4 lg:w-3/4">
-        <h2 className="slide-up">Core Strengths</h2>
+        <h2 className="slide-up"><span className="yellow-highlight">Core</span> Strengths</h2>
         <p className="fade-in delay-100">
           Technology enthusiast with hands-on experience in developing scalable solutions and strategic problem-solving.
           Building impactful applications that enhance business processes through innovative AI integration, 
           cross-functional collaboration, and effective implementation of agile methodologies.
         </p>
-        
+
         <div className="skills-module fade-in delay-200">
           <div className="strength-grid">
             <div className="strength-item">
@@ -20,7 +19,7 @@ const Skills = () => {
                   <line x1="12" y1="17" x2="12" y2="21"></line>
                 </svg>
               </div>
-              <h3 className="strength-title">Python & Data Science</h3>
+              <h3 className="strength-title"><span className="yellow-highlight">Python</span> & Data Science</h3>
               <p className="strength-description">
                 Expertise in data analysis, machine learning, and automation solutions using Python and related libraries. Building scalable and efficient data pipelines.
               </p>
@@ -34,7 +33,7 @@ const Skills = () => {
                   <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
                 </svg>
               </div>
-              <h3 className="strength-title">React, Flutter & Frontend</h3>
+              <h3 className="strength-title">React, Flutter & <span className="yellow-highlight">Frontend</span></h3>
               <p className="strength-description">
                 Creating responsive, intuitive user interfaces with modern frameworks. Focus on performance optimization and seamless user experiences.
               </p>
@@ -46,7 +45,7 @@ const Skills = () => {
                   <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
                 </svg>
               </div>
-              <h3 className="strength-title">Cloud Technologies</h3>
+              <h3 className="strength-title"><span className="yellow-highlight">Cloud</span> Technologies</h3>
               <p className="strength-description">
                 Deploying and managing applications on AWS, Azure, and Google Cloud. Experience with serverless architectures and cloud-native development.
               </p>
@@ -62,7 +61,7 @@ const Skills = () => {
                   <line x1="16" y1="16" x2="16" y2="16"></line>
                 </svg>
               </div>
-              <h3 className="strength-title">AI Technologies</h3>
+              <h3 className="strength-title"><span className="yellow-highlight">AI</span> Technologies</h3>
               <p className="strength-description">
                 Implementing AI solutions using various frameworks and platforms.
               </p>
@@ -74,7 +73,7 @@ const Skills = () => {
                   <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
                 </svg>
               </div>
-              <h3 className="strength-title">Agile Working & Project Management</h3>
+              <h3 className="strength-title">Agile Working & <span className="yellow-highlight">Project</span> Management</h3>
               <p className="strength-description">
                 Organizing and leading projects using agile methodologies. Skilled in planning, execution, and continuous improvement processes.
               </p>
@@ -87,3 +86,8 @@ const Skills = () => {
 };
 
 export default Skills;
+
+/* Add this CSS to your stylesheet */
+.yellow-highlight {
+  color: yellow;
+}

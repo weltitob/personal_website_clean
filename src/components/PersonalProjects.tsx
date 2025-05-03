@@ -34,7 +34,7 @@ const PersonalProjects = () => {
   return (
     <section id="personal-projects" className="section">
       <div className="content-wrapper">
-        <h2 className="text-center slide-up">Personal Projects</h2>
+        <h2 className="text-center slide-up">Personal <span className="yellow-highlight">Projects</span></h2>
         <div className="projects-grid">
           <div className="project-card" style={getAnimationDelay(0)}>
             <div className="project-content">
@@ -77,7 +77,7 @@ const PersonalProjects = () => {
           </div>
         </div>
 
-        <h2 className="text-center slide-up mt-16">Enterprise Projects</h2>
+        <h2 className="text-center slide-up mt-16">Enterprise <span className="yellow-highlight">Projects</span></h2>
         <div className="projects-grid">
           <div className="project-card" style={getAnimationDelay(0)}>
             <h3>QAASSIST</h3>

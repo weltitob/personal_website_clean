@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 
 const Contact = () => {
   const [emailCopied, setEmailCopied] = useState(false);
-  
+
   const sectionRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
   const textRef = useRef<HTMLParagraphElement>(null);
@@ -32,7 +32,7 @@ const Contact = () => {
       cardRef.current,
       sectionRef.current
     ].filter(Boolean);
-    
+
     elements.forEach(el => {
       if (el) observer.observe(el);
     });
@@ -51,15 +51,15 @@ const Contact = () => {
         <div className="contact-shape shape-left"></div>
         <div className="contact-shape shape-right"></div>
       </div>
-      
+
       <div className="content-wrapper relative z-10">
         <div className="text-center mb-12">
-          <h2 ref={headingRef} className="slide-up mb-4">Get in Touch</h2>
+          <h2 ref={headingRef} className="slide-up mb-4">Get in <span className="yellow-highlight">Touch</span></h2>
           <p ref={textRef} className="contact-intro-text mx-auto fade-in delay-100">
             Have a question or want to connect? Feel free to reach out through any of the channels below.
           </p>
         </div>
-        
+
         <div ref={cardRef} className="contact-simple-container fade-in delay-200">
           <div className="contact-methods">
             <div className="contact-method">
@@ -90,7 +90,7 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="contact-method">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="contact-method-icon">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
@@ -100,7 +100,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="contact-actions">
             <a href="mailto:tobias.welti@outlook.com" className="btn-glow-gradient contact-btn">
               <span className="btn-text">Send Email</span>
@@ -109,7 +109,7 @@ const Contact = () => {
                 <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
               </svg>
             </a>
-            
+
             <a href="tel:+4917636384058" className="btn-outline">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
@@ -118,7 +118,7 @@ const Contact = () => {
             </a>
           </div>
         </div>
-        
+
         <div className="contact-social">
           <div className="contact-social-label">Or find me on:</div>
           <div className="contact-social-icons">

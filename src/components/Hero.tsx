@@ -213,7 +213,7 @@ const Hero = () => {
             <div className="hero-text slide-up">
               <h1 ref={headingRef} className="hero-heading">
                 <span className="welcome-text glitch-text" data-text="Fullstack-Developer">Fullstack-Developer</span>
-                <span className="hero-tagline">creating <span className="text-gradient">a meaningful impact</span></span>
+                <span className="hero-tagline">creating <span className="yellow-highlight">meaningful</span> impact</span>
               </h1>
               
               <p ref={textRef} className="hero-intro delay-100">

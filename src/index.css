@@ -1,3 +1,10 @@
+
+.yellow-highlight {
+  color: #FFC107; /* Bright yellow color */
+  font-weight: 700;
+  display: inline-block;
+}
+
 /* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 

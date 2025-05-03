@@ -36,7 +36,7 @@ const TechItem = memo(({ icon, name, className }: { icon: string, name: string, 
 
 const TechMarquee = () => {
   const marqueeRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     // Add intersection observer to pause animation when not in view
     const observer = new IntersectionObserver(
@@ -70,10 +70,10 @@ const TechMarquee = () => {
     <section id="tech-marquee" className="tech-marquee-section">
       <div className="tech-marquee-container">
         <div className="tech-marquee-header">
-          <h2 className="tech-marquee-title">Tech Stack</h2>
+          <h2 className="tech-marquee-title">Tech <span className="yellow-highlight">Stack</span></h2>
           <p className="tech-marquee-subtitle">Technologies I've mastered</p>
         </div>
-        
+
         <div className="tech-marquee-wrapper">
           <div className="tech-marquee">
             <div className="tech-marquee-content" ref={marqueeRef}>
@@ -81,7 +81,7 @@ const TechMarquee = () => {
               {TECH_ITEMS.map((item, index) => (
                 <TechItem key={`tech-${index}`} icon={item.icon} name={item.name} className={item.className} />
               ))}
-              
+
               {/* Duplicate items for seamless scrolling */}
               {TECH_ITEMS.map((item, index) => (
                 <TechItem key={`tech-dup-${index}`} icon={item.icon} name={item.name} className={item.className} />

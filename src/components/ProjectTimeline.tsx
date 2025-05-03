@@ -22,7 +22,7 @@ const ProjectTimeline = () => {
   return (
     <section id="project-timeline" className="section timeline-section">
       <div className="content-wrapper">
-        <h2 className="text-center slide-up">Projects</h2>
+        <h2 className="text-center slide-up">Professional <span className="yellow-highlight">Projects</span></h2>
         <p className="section-intro-text text-center mx-auto fade-in delay-100">
           A selection of my key projects and their development timeline.
         </p>
