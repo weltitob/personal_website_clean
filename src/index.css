@@ -2890,7 +2890,7 @@ a, button, input, textarea, select, [role="button"],
 .project-image {
   width: 100%;
   height: auto;
-  max-height: 400px;
+  max-height: 500px; /* Increased height */
   object-fit: contain;
   border: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: 1rem;
@@ -2899,7 +2899,7 @@ a, button, input, textarea, select, [role="button"],
 /* For smaller mobile screens */
 @media (max-width: 480px) {
   .project-image {
-    max-height: 300px;
+    max-height: 350px;
   }
 }
 
