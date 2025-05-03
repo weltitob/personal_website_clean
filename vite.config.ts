@@ -11,9 +11,8 @@ export default defineConfig({
     strictPort: false,
     hmr: {
       host: '0.0.0.0',
-      port: 443,
       clientPort: 443,
-      protocol: 'wss'
+      path: '/__vite-hmr'
     },
     cors: true,
     headers: {
