@@ -1421,14 +1421,77 @@ p {
   width: 36px;
   height: 36px;
   margin-bottom: 0.6rem;
-  filter: brightness(1.2);
+  filter: none;
   transition: all 0.3s ease;
   border-radius: 50%; /* Added border-radius */
 }
 
 .tech-item-inner:hover img {
-  filter: brightness(1.5);
+  filter: brightness(1.2);
   transform: scale(1.1);
+}
+
+/* Tech item specific background colors */
+.tech-react {
+  background-color: rgba(97, 218, 251, 0.1);
+}
+
+.tech-python {
+  background-color: rgba(255, 223, 0, 0.08);
+}
+
+.tech-javascript {
+  background-color: rgba(247, 223, 30, 0.08);
+}
+
+.tech-typescript {
+  background-color: rgba(49, 120, 198, 0.1);
+}
+
+.tech-nodejs {
+  background-color: rgba(104, 160, 99, 0.1);
+}
+
+.tech-flutter {
+  background-color: rgba(69, 208, 227, 0.1);
+}
+
+.tech-aws {
+  background-color: rgba(255, 153, 0, 0.08);
+}
+
+.tech-azure {
+  background-color: rgba(0, 137, 214, 0.1);
+}
+
+.tech-gcp {
+  background-color: rgba(219, 68, 55, 0.08);
+}
+
+.tech-openai {
+  background-color: rgba(10, 210, 120, 0.1);
+}
+
+.tech-mongodb {
+  background-color: rgba(67, 153, 52, 0.1);
+}
+
+.tech-sql {
+  background-color: rgba(0, 173, 232, 0.1);
+}
+
+.tech-firebase {
+  background-color: rgba(255, 153, 0, 0.08);
+}
+
+.tech-item-inner {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.tech-item-inner:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
 .tech-item span {
