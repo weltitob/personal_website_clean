@@ -78,6 +78,10 @@ const PersonalProjects = () => {
             <h3>TADA - AI Incident Analysis</h3>
             <p>Enterprise AI system for automated incident analysis using Azure and OpenAI.</p>
           </div>
+          <div className="project-card" style={getAnimationDelay(2)}>
+            <h3>Incident Predictive Analysis</h3>
+            <p>Through embeddings and telephone call speech-to-text analysis, we were able to achieve a 75% correct prediction rate of incident resolutions.</p>
+          </div>
         </div>
       </div>
     </section>
