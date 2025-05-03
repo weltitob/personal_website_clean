@@ -464,6 +464,10 @@ p {
   border-radius: 0.5rem; /* Added border-radius */
 }
 
+.yellow-highlight {
+  color: #FFD700; /* Using golden yellow color */
+}
+
 /* Skill Circles Container */
 .skills-circles-container {
   display: flex;

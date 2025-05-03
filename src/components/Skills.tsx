@@ -86,8 +86,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
-/* Add this CSS to your stylesheet */
-.yellow-highlight {
-  color: yellow;
-}
