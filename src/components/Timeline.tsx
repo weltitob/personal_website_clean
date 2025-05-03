@@ -44,6 +44,14 @@ const Timeline = () => {
             </li>
             <li className="timeline-item">
               <div className="timeline-content">
+                <span className="timeline-date">2023</span>
+                <span className="timeline-tag achievement">Achievement</span>
+                <h4 className="timeline-title">Overachievement Award</h4>
+                <p className="timeline-description">Recognized as a top 1% student with an overachievement recommendation from Boehringer Ingelheim.</p>
+              </div>
+            </li>
+            <li className="timeline-item">
+              <div className="timeline-content">
                 <span className="timeline-date">2020 - 2021</span>
                 <span className="timeline-tag professional">Professional</span>
                 <h4 className="timeline-title">Freelance Mobile Developer</h4>
@@ -66,14 +74,7 @@ const Timeline = () => {
                 <p className="timeline-description">Completed secondary education in Germany.</p>
               </div>
             </li>
-            <li className="timeline-item">
-              <div className="timeline-content">
-                <span className="timeline-date">2023</span>
-                <span className="timeline-tag achievement">Achievement</span>
-                <h4 className="timeline-title">Overachievement Award</h4>
-                <p className="timeline-description">Received an overachievement recommendation from Boehringer Ingelheim.</p>
-              </div>
-            </li>
+            
             <li className="timeline-item">
               <div className="timeline-content">
                 <span className="timeline-date">2022</span>
