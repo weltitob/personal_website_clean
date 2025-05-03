@@ -332,7 +332,7 @@ body::before {
   #main-header {
     padding: 0.75rem 0;
   }
-  
+
   /* Adjust mobile menu link styling */
   .mobile-menu .mobile-nav a::after {
     bottom: 0.5rem;
@@ -340,12 +340,12 @@ body::before {
     transform: translateX(-50%);
     width: 0;
   }
-  
+
   .mobile-menu .mobile-nav a:hover::after,
   .mobile-menu .mobile-nav a.active::after {
     width: 30%;
   }
-  
+
   /* Make hamburger button visible on mobile only */
   .mobile-menu-button {
     padding: 0.5rem;
@@ -459,16 +459,16 @@ p {
   .skills-circles-container {
     gap: 1.5rem;
   }
-  
+
   .skill-circle {
     width: 100px;
     height: 100px;
   }
-  
+
   .skill-percentage {
     font-size: 1.2rem;
   }
-  
+
   .skill-name {
     font-size: 0.8rem;
     bottom: -25px;
@@ -834,7 +834,7 @@ p {
     display: table;
     clear: both;
   }
-  
+
   /* The vertical line - desktop */
   .timeline::before {
     left: 50%;
@@ -843,7 +843,7 @@ p {
     width: 1px;
     margin: 0;
   }
-  
+
   .timeline-item {
     width: auto; /* Width is now set per odd/even item */
     padding-left: 0;
@@ -853,7 +853,7 @@ p {
     position: relative;
     box-sizing: border-box;
   }
-  
+
   /* Left side items */
   .timeline-item:nth-child(odd) {
     float: left;
@@ -864,7 +864,7 @@ p {
     transform: translateX(-20px); /* Initial position adjusted for left items */
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
-  
+
   /* Right side items */
   .timeline-item:nth-child(even) {
     float: right;
@@ -875,17 +875,17 @@ p {
     transform: translateX(20px); /* Initial position adjusted for right items */
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
-  
+
   /* Override the visible state for desktop */
   .timeline-item:nth-child(odd).visible {
     transform: translateX(0);
   }
-  
+
   .timeline-item:nth-child(even).visible {
     transform: translateX(0);
   }
 }
-  
+
 @media (min-width: 768px) {
   /* Position the circle nodes - desktop view */
   .timeline-item:nth-child(odd)::before {
@@ -893,26 +893,26 @@ p {
     left: auto;
     top: 20px;
   }
-  
+
   .timeline-item:nth-child(even)::before {
     left: -25px; 
     top: 20px;
   }
 }
-  
+
 @media (min-width: 768px) {
   /* Fix for project timeline - ensure node is on correct side */
   #project-timeline .timeline-item:nth-child(odd)::before {
     left: -25px;
     right: auto;
   }
-  
+
   #project-timeline .timeline-item:nth-child(even)::before {
     right: -25px;
     left: auto;
   }
 }
-  
+
 @media (min-width: 768px) {
   /* Switch the side (odd/even) layout for project timeline */
   #project-timeline .timeline-item:nth-child(odd) {
@@ -923,7 +923,7 @@ p {
     width: 45%;
     transform: translateX(20px); /* Initial position adjusted for right-positioned odd items */
   }
-  
+
   #project-timeline .timeline-item:nth-child(even) {
     float: left;
     text-align: right;
@@ -932,17 +932,17 @@ p {
     width: 45%;
     transform: translateX(-20px); /* Initial position adjusted for left-positioned even items */
   }
-  
+
   /* Override visible state for project timeline */
   #project-timeline .timeline-item:nth-child(odd).visible {
     transform: translateX(0);
   }
-  
+
   #project-timeline .timeline-item:nth-child(even).visible {
     transform: translateX(0);
   }
 }
-  
+
   @media (max-width: 767px) {
     /* On mobile, make timeline items full width and left-aligned */
     .timeline-item,
@@ -959,14 +959,14 @@ p {
       text-align: left;
       transform: translateX(-20px); /* Consistent transform for all mobile items */
     }
-    
+
     .timeline-item.visible,
     #project-timeline .timeline-item.visible,
     #cv-timeline .timeline-item.visible,
     #education-timeline .timeline-item.visible {
       transform: translateX(0);
     }
-    
+
     .timeline-item::before,
     #project-timeline .timeline-item:nth-child(odd)::before,
     #project-timeline .timeline-item:nth-child(even)::before,
@@ -977,23 +977,23 @@ p {
       left: 13px;
       right: auto;
     }
-    
+
     .timeline::before {
       left: 24px;
       transform: none;
     }
   }
-  
+
 @media (min-width: 768px) {
   /* Fix hover animations */
   .timeline-item:nth-child(odd):hover::before {
     transform: scale(1.2);
   }
-  
+
   .timeline-item:nth-child(even):hover::before {
     transform: scale(1.2);
   }
-  
+
   /* Add visible connector line between content and timeline */
   .timeline-item:nth-child(odd)::after {
     content: '';
@@ -1005,7 +1005,7 @@ p {
     background-color: rgba(255, 255, 255, 0.5);
     z-index: 6;
   }
-  
+
   .timeline-item:nth-child(even)::after {
     content: '';
     position: absolute;
@@ -1016,12 +1016,12 @@ p {
     background-color: rgba(255, 255, 255, 0.5);
     z-index: 6;
   }
-  
+
   /* Special handling for project timeline */
   #project-timeline .timeline-item::after {
     width: 0; /* Hide connector for project timeline */
   }
-  
+
   #cv-timeline .timeline-item::after {
     width: 0; /* Hide connector for CV timeline */
   }
@@ -1200,11 +1200,8 @@ p {
   position: relative;
   width: 100%;
   padding: 2rem 0;
-  background: rgba(15, 15, 15, 0.5);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: #000000;
   overflow: hidden;
-  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.2) inset, 0 -10px 20px -10px rgba(0, 0, 0, 0.2) inset;
 }
 
 .tech-marquee-container {
@@ -1246,9 +1243,6 @@ p {
   position: relative;
   margin: 1rem 0;
   padding: 0.5rem 0;
-  background-color: rgba(20, 20, 20, 0.5);
-  border-radius: 0;
-  border: 1px solid rgba(255, 255, 255, 0.05);
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -1323,11 +1317,8 @@ p {
   justify-content: center;
   padding: 1rem 0.5rem;
   transition: all 0.3s ease;
-  background-color: rgba(25, 25, 25, 0.8);
-  border-radius: 0;
   width: 90px;
   height: 90px;
-  border: 1px solid rgba(255, 255, 255, 0.07);
   margin: 0 auto;
 }
 
@@ -1375,7 +1366,7 @@ p {
   .tech-marquee-section {
     padding: 1.5rem 0;
   }
-  
+
   .tech-marquee-title {
     font-size: 1.5rem;
   }
@@ -1384,19 +1375,19 @@ p {
     font-size: 0.9rem;
     padding: 0 1rem;
   }
-  
+
   .tech-item-inner {
     width: 70px;
     height: 70px;
     padding: 0.6rem 0.2rem;
   }
-  
+
   .tech-item img {
     width: 28px;
     height: 28px;
     margin-bottom: 0.3rem;
   }
-  
+
   .tech-item span {
     font-size: 0.65rem;
   }
@@ -2118,11 +2109,11 @@ p {
     gap: 2rem 3rem;
     width: 100%;
   }
-  
+
   .hero-stat::after {
     display: none;
   }
-  
+
   .hero-text {
     padding-bottom: 2rem;
     text-align: center;
@@ -2138,7 +2129,7 @@ p {
   .hero-actions {
     justify-content: center;
   }
-  
+
   .hero-visual {
     order: 1;
     margin-top: 0;
@@ -2147,7 +2138,7 @@ p {
     min-height: auto;
     padding-bottom: 1rem;
   }
-  
+
   .venice-image-wrapper {
     width: auto;
     height: auto;
@@ -2156,13 +2147,13 @@ p {
     margin-top: 0;
     z-index: 5;
   }
-  
+
   .venice-image {
     max-width: 550px;
     height: auto;
     width: 100%;
   }
-  
+
   .profile-card-behind {
     position: relative;
     top: -50px;
@@ -2176,19 +2167,19 @@ p {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
     border: 2px solid rgba(255, 255, 255, 0.2);
   }
-  
+
   .profile-name {
     font-size: 1.8rem;
     text-align: center;
     margin-bottom: 0.4rem;
   }
-  
+
   .profile-title {
     font-size: 1rem;
     text-align: center;
     margin-bottom: 0.7rem;
   }
-  
+
   .profile-location {
     display: flex;
     flex-direction: row;
@@ -2198,7 +2189,7 @@ p {
     margin-bottom: 1rem;
     gap: 0.6rem;
   }
-  
+
   .profile-email, .profile-phone {
     display: flex;
     flex-direction: row;
@@ -2208,18 +2199,18 @@ p {
     margin-bottom: 0.8rem;
     gap: 0.6rem;
   }
-  
+
   .location-icon, .contact-icon {
     width: 24px;
     height: 24px;
     margin-right: 0;
     flex-shrink: 0;
   }
-  
+
   .profile-contact {
     margin-top: 0.5rem;
   }
-  
+
   .tech-tag {
     display: none;
   }
@@ -2577,11 +2568,11 @@ p {
     align-items: center;
     text-align: center;
   }
-  
+
   .contact-card-actions {
     flex-direction: column;
   }
-  
+
   .contact-method {
     justify-content: center;
   }
@@ -2669,7 +2660,7 @@ a, button, input, textarea, select, [role="button"],
 /* Reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  
+
   .fade-in, .slide-up, body::before, .skill-bar, 
   .modal.active, .modal-content, .timeline::before, 
   .timeline-item {
@@ -2678,7 +2669,7 @@ a, button, input, textarea, select, [role="button"],
     opacity: 1; 
     transform: none;
   }
-  
+
   .btn-glow-gradient:hover, .btn-secondary:hover, 
   .timeline-item:hover::before, .timeline-item:hover .timeline-content { 
     transform: none; 
@@ -2710,11 +2701,11 @@ a, button, input, textarea, select, [role="button"],
   ::-webkit-scrollbar { 
     width: 4px; 
   }
-  
+
   ::-webkit-scrollbar-thumb { 
     border-radius: 2px;
   }
-  
+
   * {
     scrollbar-width: thin;
     scrollbar-color: #555555 #0a0a0a;
@@ -2729,15 +2720,15 @@ a, button, input, textarea, select, [role="button"],
     width: 220px;
     z-index: 15;
   }
-  
+
   .venice-image-wrapper {
     margin-left: 15px;
   }
-  
+
   .venice-image {
     max-width: 360px;
   }
-  
+
   .hero-visual {
     min-height: 350px;
   }
