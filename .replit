@@ -5,7 +5,8 @@ run = "npm run dev"
 channel = "stable-24_05"
 
 [deployment]
-run = ["sh", "-c", "npm run dev"]
+run = ["sh", "-c", "npx serve -s dist"]
+build = ["sh", "-c", "npm run build"]
 
 [[ports]]
 localPort = 443
@@ -14,6 +15,10 @@ externalPort = 80
 [[ports]]
 localPort = 5173
 externalPort = 5173
+
+[[ports]]
+localPort = 5174
+externalPort = 3000
 
 [workflows]
 runButton = "Run"
