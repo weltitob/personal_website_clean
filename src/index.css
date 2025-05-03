@@ -6,7 +6,7 @@
 }
 
 /* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
 
 @font-face {
   font-family: 'LucideIcons';
@@ -40,7 +40,7 @@ html {
 }
 
 body {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #000000; /* Pure black base */
   color: #ffffff; /* Pure white text */
   margin: 0;
@@ -406,7 +406,7 @@ body::before {
 
 /* Typography */
 h1 { 
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: clamp(2.2rem, 7vw, 3.8rem); 
   font-weight: 800; 
   line-height: 1.1; 
@@ -417,7 +417,7 @@ h1 {
 }
 
 h2 { 
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: clamp(2.1rem, 6vw, 3.6rem); 
   font-weight: 700; 
   line-height: 1.2; 
@@ -427,7 +427,7 @@ h2 {
 }
 
 h3 { 
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: clamp(1.6rem, 4vw, 2.3rem); 
   font-weight: 600; 
   margin-bottom: 1rem; 
@@ -596,7 +596,7 @@ p {
 }
 
 .strength-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 1.1rem;
   color: #ffffff;
@@ -1729,7 +1729,7 @@ p {
 }
 
 .welcome-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: clamp(1.4rem, 3.5vw, 2.1rem);
   font-weight: 600;
   color: #ffffff;
@@ -1738,7 +1738,7 @@ p {
 }
 
 .hero-tagline {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: clamp(1.8rem, 5vw, 3.2rem);
   font-weight: 700;
   line-height: 1.1;
