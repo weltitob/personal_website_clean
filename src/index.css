@@ -148,6 +148,7 @@ body::before {
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   width: 100%;
   max-width: 100%;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .timeline-section {
@@ -156,6 +157,7 @@ body::before {
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   width: 100%;
   max-width: 100%;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .narrative-section:last-of-type, 
@@ -173,6 +175,7 @@ body::before {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 /* Logo styling */
@@ -185,6 +188,7 @@ body::before {
   height: 45px;
   width: auto;
   transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 4px; /* Added border-radius */
 }
 
 .white-logo {
@@ -202,7 +206,7 @@ body::before {
   font-weight: 500;
   position: relative;
   transition: color 0.3s;
-  border-radius: 0;
+  border-radius: 0.25rem; /* Added border-radius */
   text-decoration: none;
 }
 
@@ -212,6 +216,7 @@ body::before {
   flex-wrap: wrap;
   gap: 1rem;
   align-items: center;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 @media (max-width: 767px) {
@@ -262,6 +267,7 @@ body::before {
   align-items: center;
   justify-content: center;
   z-index: 60;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .hamburger-icon {
@@ -272,6 +278,7 @@ body::before {
   height: 20px;
   position: relative;
   transition: all 0.3s ease-in-out;
+  border-radius: 4px; /* Added border-radius */
 }
 
 .hamburger-icon span {
@@ -308,6 +315,7 @@ body::before {
   overflow: hidden;
   transition: right 0.3s ease-in-out;
   box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .mobile-menu.active {
@@ -320,12 +328,14 @@ body::before {
   flex-direction: column;
   width: 100%;
   padding: 5rem 0 2rem 0;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .mobile-nav-item {
   width: 100%;
   text-align: center;
   margin-bottom: 1rem;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .mobile-menu .mobile-nav a {
@@ -334,6 +344,7 @@ body::before {
   display: block;
   text-align: center;
   width: 100%;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 /* Add an overlay when mobile menu is active */
@@ -349,6 +360,7 @@ body::before {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .mobile-menu-overlay.active {
@@ -391,6 +403,7 @@ h1 {
   margin-bottom: 1rem; 
   letter-spacing: -0.03em;
   text-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 h2 { 
@@ -400,6 +413,7 @@ h2 {
   line-height: 1.2; 
   margin-bottom: 3rem; 
   letter-spacing: -0.02em;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 h3 { 
@@ -409,6 +423,7 @@ h3 {
   margin-bottom: 1rem; 
   color: #ffffff;
   letter-spacing: -0.01em;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 p {
@@ -417,6 +432,7 @@ p {
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 1.5rem;
   max-width: 70ch;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .section-intro-text { 
@@ -428,6 +444,7 @@ p {
   margin-right: auto;
   text-align: center;
   padding: 0 1rem;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 
@@ -437,6 +454,7 @@ p {
 .skills-module {
   margin-top: 3rem;
   width: 100%;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 /* Skill Circles Container */
@@ -446,6 +464,7 @@ p {
   justify-content: center;
   gap: 2rem;
   margin: 2rem 0 3rem;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .skill-circle {
@@ -457,6 +476,7 @@ p {
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
+  border-radius: 50%; /* Added border-radius */
 }
 
 .skill-percentage {
@@ -508,6 +528,7 @@ p {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
   margin-top: 1rem;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 @media (max-width: 767px) {
@@ -519,7 +540,7 @@ p {
 
 .strength-item {
   background: rgba(20, 20, 20, 0.8);
-  border-radius: 0;
+  border-radius: 0.5rem; /* Added border-radius */
   padding: 1.75rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -554,6 +575,7 @@ p {
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #ffffff;
+  border-radius: 50%; /* Added border-radius */
 }
 
 .strength-title {
@@ -573,6 +595,7 @@ p {
 
 .project-showcase {
   margin-top: 4rem;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .project-card {
@@ -610,7 +633,7 @@ p {
   padding: 0.85rem 1.85rem;
   font-weight: 600;
   color: white;
-  border-radius: 0;
+  border-radius: 0.5rem; /* Added border-radius */
   background: #1a1a1a;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -647,7 +670,7 @@ p {
   background-color: transparent;
   color: #ffffff;
   font-weight: 500;
-  border-radius: 0;
+  border-radius: 0.25rem; /* Added border-radius */
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -670,6 +693,7 @@ p {
   overflow-y: auto;
   align-items: center;
   justify-content: center;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .modal.active { 
@@ -680,7 +704,7 @@ p {
 .modal-content { 
   background-color: #000000;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 0;
+  border-radius: 0.5rem; /* Added border-radius */
   padding: 2rem;
   max-width: 700px;
   width: 100%;
@@ -700,6 +724,7 @@ p {
   font-size: 1.5rem;
   padding: 0.5rem;
   line-height: 1;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .modal-close:hover { 
@@ -728,6 +753,7 @@ p {
   margin: 4rem auto 0 auto;
   padding: 0 2rem;
   overflow-x: hidden; /* Prevent horizontal scrolling */
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .timeline {
@@ -735,6 +761,7 @@ p {
   padding: 2rem 0;
   list-style: none;
   margin: 0;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 /* The vertical line/path */
@@ -765,6 +792,7 @@ p {
   transform: translateX(0);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   box-sizing: border-box;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .timeline-item.visible {
@@ -780,7 +808,7 @@ p {
   top: 20px; /* Center with the title */
   width: 22px;
   height: 22px;
-  border-radius: 0;
+  border-radius: 50%; /* Added border-radius */
   background-color: #000000; 
   border: 1px solid rgba(255, 255, 255, 0.5);
   z-index: 10;
@@ -803,7 +831,7 @@ p {
 .timeline-content {
   background-color: rgba(20, 20, 20, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0;
+  border-radius: 0.5rem; /* Added border-radius */
   padding: 2rem;
   position: relative;
   transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
@@ -836,6 +864,7 @@ p {
   margin-bottom: 0.5rem;
   font-weight: 500;
   letter-spacing: 0.02em;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .timeline-title {
@@ -846,12 +875,14 @@ p {
   margin-bottom: 0.85rem;
   display: inline-block;
   letter-spacing: -0.01em;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .timeline-description {
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.6;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 /* Responsive Timeline - Centered line on larger screens */
@@ -870,6 +901,7 @@ p {
     height: 100%;
     width: 1px;
     margin: 0;
+    border-radius: 0; /* Added border-radius */
   }
 
   .timeline-item {
@@ -880,6 +912,7 @@ p {
     clear: both;
     position: relative;
     box-sizing: border-box;
+    border-radius: 0.5rem; /* Added border-radius */
   }
 
   /* Left side items */
@@ -1032,6 +1065,7 @@ p {
     height: 2px;
     background-color: rgba(255, 255, 255, 0.5);
     z-index: 6;
+    border-radius: 2px; /*Added border radius*/
   }
 
   .timeline-item:nth-child(even)::after {
@@ -1043,6 +1077,7 @@ p {
     height: 2px;
     background-color: rgba(255, 255, 255, 0.5);
     z-index: 6;
+    border-radius: 2px; /*Added border radius*/
   }
 
   /* Special handling for project timeline */
@@ -1063,6 +1098,7 @@ p {
   mix-blend-mode: difference;
   will-change: transform;
   transform-origin: 0 0;
+  border-radius: 50%; /* Added border-radius */
 }
 
 .cursor-ring {
@@ -1112,6 +1148,7 @@ p {
   perspective: 1000px;
   width: 100%;
   max-width: 100%;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .hero-shapes {
@@ -1122,6 +1159,7 @@ p {
   height: 100%;
   z-index: 0;
   pointer-events: none;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .hero-shape {
@@ -1185,6 +1223,7 @@ p {
   opacity: 0.05;
   pointer-events: none;
   overflow: hidden;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .grid-line {
@@ -1195,6 +1234,7 @@ p {
     rgba(255, 255, 255, 0) 0%,
     rgba(255, 255, 255, 0.05) 50%,
     rgba(255, 255, 255, 0) 100%);
+  border-radius: 2px; /*Added border radius*/
 }
 
 .grid-line:nth-child(1) { left: 20%; }
@@ -1211,6 +1251,7 @@ p {
     rgba(255, 255, 255, 0.05) 50%,
     rgba(255, 255, 255, 0) 100%);
   top: 50%;
+  border-radius: 2px; /*Added border radius*/
 }
 
 /* Hero Layout */
@@ -1221,6 +1262,7 @@ p {
   flex-wrap: wrap;
   z-index: 20;
   position: relative;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 /* Tech Marquee Section Styling */
@@ -1230,6 +1272,7 @@ p {
   padding: 2rem 0;
   background: #000000;
   overflow: hidden;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .tech-marquee-container {
@@ -1243,11 +1286,13 @@ p {
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .tech-marquee-header {
   text-align: center;
   padding-bottom: 1.5rem;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .tech-marquee-title {
@@ -1257,6 +1302,7 @@ p {
   margin-bottom: 0.5rem;
   letter-spacing: -0.02em;
   display: inline-block;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .tech-marquee-subtitle {
@@ -1265,6 +1311,7 @@ p {
   font-weight: 400;
   margin: 0;
   letter-spacing: 0.2px;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .tech-marquee-wrapper {
@@ -1275,6 +1322,7 @@ p {
   max-width: 100%;
   box-sizing: border-box;
   overflow: hidden;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .tech-marquee {
@@ -1283,6 +1331,7 @@ p {
   padding: 1rem 0;
   box-sizing: border-box;
   overflow: hidden;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .tech-marquee::before,
@@ -1294,6 +1343,7 @@ p {
   height: 100%;
   z-index: 2;
   pointer-events: none;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .tech-marquee::before {
@@ -1313,6 +1363,7 @@ p {
   will-change: transform;
   flex-wrap: nowrap;
   width: max-content;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 @keyframes marqueeScroll {
@@ -1330,6 +1381,7 @@ p {
   justify-content: center;
   margin: 0;
   padding: 0 1.5rem;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 @media (max-width: 767px) {
@@ -1348,6 +1400,7 @@ p {
   width: 90px;
   height: 90px;
   margin: 0 auto;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 @media (max-width: 767px) {
@@ -1370,6 +1423,7 @@ p {
   margin-bottom: 0.6rem;
   filter: grayscale(100%) brightness(1.5);
   transition: all 0.3s ease;
+  border-radius: 50%; /* Added border-radius */
 }
 
 .tech-item-inner:hover img {
@@ -1384,6 +1438,7 @@ p {
   font-weight: 500;
   transition: color 0.3s ease;
   text-align: center;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .tech-item-inner:hover span {
@@ -1434,7 +1489,7 @@ p {
   height: 30px;
   margin-bottom: 0.3rem;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-  border-radius: 0;
+  border-radius: 50%; /* Added border-radius */
   color: white;
   font-family: 'Space Grotesk', monospace;
   font-weight: 700;
@@ -1504,6 +1559,7 @@ p {
   z-index: 2;
   width: 100%;
   margin-top: 2rem;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 @media (min-width: 1024px) {
@@ -1536,6 +1592,7 @@ p {
   pointer-events: none;
   width: auto;
   max-width: 100px;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .scroll-indicator-text {
@@ -1545,6 +1602,7 @@ p {
   margin-bottom: 0.5rem;
   opacity: 0.6;
   font-family: 'Space Grotesk', monospace;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .scroll-indicator-line {
@@ -1554,6 +1612,7 @@ p {
     rgba(255, 255, 255, 0.2) 0%,
     rgba(255, 255, 255, 0) 100%);
   position: relative;
+  border-radius: 2px; /*Added border radius*/
 }
 
 .scroll-indicator-dot {
@@ -1563,7 +1622,7 @@ p {
   width: 5px;
   height: 5px;
   background-color: white;
-  border-radius: 0;
+  border-radius: 50%; /* Added border-radius */
   animation: scrollDot 2s ease-in-out infinite;
 }
 
@@ -1577,6 +1636,7 @@ p {
 .hero-text {
   position: relative;
   z-index: 15;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .hero-heading {
@@ -1585,6 +1645,7 @@ p {
   gap: 0.8rem;
   margin-bottom: 2rem;
   margin-top: 1rem;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .welcome-text {
@@ -1593,6 +1654,7 @@ p {
   font-weight: 600;
   color: #ffffff;
   letter-spacing: -0.01em;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .hero-tagline {
@@ -1602,6 +1664,7 @@ p {
   line-height: 1.1;
   letter-spacing: -0.01em;
   text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .hero-intro {
@@ -1610,6 +1673,7 @@ p {
   max-width: 560px;
   margin-bottom: 1.25rem;
   line-height: 1.5;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 /* Visual Elements */
@@ -1624,6 +1688,7 @@ p {
   will-change: transform;
   max-width: 100%;
   margin-bottom: 2rem;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 /* Card positioned behind image */
@@ -1632,7 +1697,7 @@ p {
   top: 10px; /* Better positioned for visibility */
   left: -30px; /* More visible from the left side */
   width: 240px;
-  border-radius: 0;
+  border-radius: 0.5rem; /* Added border-radius */
   overflow: hidden;
   background: rgba(20, 20, 20, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -1649,6 +1714,7 @@ p {
   flex-wrap: wrap;
   gap: 0.4rem;
   margin-top: 0.6rem;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .tech-pill {
@@ -1656,7 +1722,7 @@ p {
   background: rgba(255, 255, 255, 0.05);
   color: #ffffff;
   padding: 0.15rem 0.4rem;
-  border-radius: 0;
+  border-radius: 0.25rem; /* Added border-radius */
   font-family: 'Space Grotesk', monospace;
   border: 1px solid rgba(255, 255, 255, 0.2);
   letter-spacing: 0.5px;
@@ -1667,7 +1733,7 @@ p {
   position: relative;
   width: auto;
   height: auto;
-  border-radius: 0;
+  border-radius: 0.5rem; /* Added border-radius */
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   z-index: 5; /* Adjusted z-index for proper stacking */
   margin-left: 40px; /* Create more space for the profile card */
@@ -1681,6 +1747,7 @@ p {
   max-width: 400px;
   height: auto;
   display: block;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .image-overlay {
@@ -1691,6 +1758,7 @@ p {
   height: 100%;
   background: none;
   z-index: 1;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .profile-card {
@@ -1716,11 +1784,13 @@ p {
   flex-direction: column;
   position: relative;
   overflow: hidden;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .profile-card-content {
   background: transparent;
   z-index: 2;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .profile-name {
@@ -1729,6 +1799,7 @@ p {
   color: white;
   margin-bottom: 0.3rem;
   letter-spacing: -0.01em;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .profile-title {
@@ -1738,6 +1809,7 @@ p {
   margin-bottom: 0.5rem;
   font-weight: 500;
   letter-spacing: 0.02em;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .profile-location, .profile-email, .profile-phone {
@@ -1750,6 +1822,7 @@ p {
   font-family: 'Space Grotesk', monospace;
   letter-spacing: 0.01em;
   word-break: break-word;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .location-icon, .contact-icon {
@@ -1761,10 +1834,12 @@ p {
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #ffffff;
+  border-radius: 50%; /* Added border-radius */
 }
 
 .profile-contact {
   margin-top: 0.75rem;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .profile-card-decoration {
@@ -1777,6 +1852,7 @@ p {
   transform: translate(-50%, -50%);
   z-index: 1;
   opacity: 0.3;
+  border-radius: 50%; /* Added border-radius */
 }
 
 .profile-card-glow {
@@ -1789,6 +1865,7 @@ p {
   z-index: -1;
   filter: blur(30px);
   animation: rotateGlow 10s linear infinite;
+  border-radius: 50%; /* Added border-radius */
 }
 
 @keyframes rotateGlow {
@@ -1806,6 +1883,7 @@ p {
   font-weight: 500;
   display: inline-block;
   clear: both;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 /* For even items (right side) */
@@ -1826,6 +1904,7 @@ p {
 .timeline-title {
   clear: both;
   display: block;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .tech-tag-img {
@@ -1833,27 +1912,32 @@ p {
   height: 22px;
   object-fit: contain;
   filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.3));
+  border-radius: 50%; /* Added border-radius */
 }
 
 .azure-icon {
   width: 22px;
   height: 22px;
+  border-radius: 50%; /* Added border-radius */
 }
 
 .aws-icon {
   width: 20px;
   height: 20px;
+  border-radius: 50%; /* Added border-radius */
 }
 
 .mongodb-icon {
   width: 20px;
   height: 20px;
+  border-radius: 50%; /* Added border-radius */
 }
 
 
 /* Tech skills section in hero */
 .hero-key-points {
   margin-bottom: 1.5rem;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .hero-intro-small {
@@ -1861,11 +1945,13 @@ p {
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 0.75rem;
   font-weight: 500;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .highlight {
   color: #ffffff;
   font-weight: 600;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .tech-tag-label {
@@ -1877,6 +1963,7 @@ p {
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.5px;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 /* Button Styles */
@@ -1887,7 +1974,7 @@ p {
   gap: 0.5rem;
   padding: 0.75rem 1.75rem;
   background: #1a1a1a;
-  border-radius: 0;
+  border-radius: 0.5rem; /* Added border-radius */
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
@@ -1929,6 +2016,7 @@ p {
 .btn-text {
   position: relative;
   z-index: 2;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .btn-icon {
@@ -1936,6 +2024,7 @@ p {
   position: relative;
   z-index: 2;
   transition: transform 0.3s ease;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .btn-glow-gradient:hover .btn-icon {
@@ -1973,6 +2062,7 @@ p {
   margin-bottom: 1.5rem;
   position: relative;
   z-index: 20; /* Increased z-index to ensure buttons are visible */
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .btn-outline {
@@ -1982,7 +2072,7 @@ p {
   background-color: transparent;
   color: #ffffff;
   font-weight: 500;
-  border-radius: 0;
+  border-radius: 0.25rem; /* Added border-radius */
   border: 1px solid rgba(255, 255, 255, 0.15);
   transition: all 0.3s ease;
 }
@@ -2003,6 +2093,7 @@ p {
   width: fit-content;
   margin-left: 0;
   margin-right: auto;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .hero-stats::before {
@@ -2014,7 +2105,7 @@ p {
   width: calc(100% + 3.5rem);
   height: calc(100% + 1rem);
   background: rgba(25, 25, 25, 0.8);
-  border-radius: 0;
+  border-radius: 0.5rem; /* Added border-radius */
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   z-index: -1;
@@ -2030,6 +2121,7 @@ p {
   text-align: center;
   align-items: center;
   justify-content: center;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .hero-stat::after {
@@ -2041,6 +2133,7 @@ p {
   width: 1px;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   transform: translateY(-50%);
+  border-radius: 2px; /*Added border radius*/
 }
 
 .hero-stat:last-child::after {
@@ -2056,6 +2149,7 @@ p {
   display: block;
   text-align: center;
   width: 100%;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .hero-stat-value {
@@ -2063,6 +2157,7 @@ p {
   justify-content: center;
   align-items: center;
   width: 100%;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .hero-stat-plus {
@@ -2070,6 +2165,7 @@ p {
   font-weight: 800;
   color: #ffffff;
   margin-left: 2px;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .hero-stat-label {
@@ -2081,6 +2177,7 @@ p {
   display: block;
   width: 100%;
   text-align: center;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 /* Footer social icons */
@@ -2090,7 +2187,7 @@ p {
   justify-content: center;
   width: 40px;
   height: 40px;
-  border-radius: 0;
+  border-radius: 50%; /* Added border-radius */
   background-color: rgba(20, 20, 20, 0.8);
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
@@ -2106,6 +2203,7 @@ p {
 .social-icon {
   color: rgba(255, 255, 255, 0.7);
   transition: color 0.3s ease;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .social-icon-link:hover .social-icon {
@@ -2241,6 +2339,7 @@ p {
   padding: 6rem 0;
   overflow: hidden;
   background-color: rgba(10, 10, 15, 0.5);
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .contact-shapes {
@@ -2248,6 +2347,7 @@ p {
   inset: 0;
   overflow: hidden;
   z-index: 0;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .contact-shape {
@@ -2285,6 +2385,7 @@ p {
   color: rgba(255, 255, 255, 0.7);
   max-width: 700px;
   line-height: 1.7;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 /* Contact Card */
@@ -2292,6 +2393,7 @@ p {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 0;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .contact-simple-container {
@@ -2299,7 +2401,7 @@ p {
   margin: 0 auto;
   padding: 2rem;
   background: rgba(20, 20, 20, 0.8);
-  border-radius: 0;
+  border-radius: 0.5rem; /* Added border-radius */
   backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
@@ -2317,11 +2419,12 @@ p {
   gap: 1rem;
   margin-top: 2rem;
   justify-content: center;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .contact-card {
   background: rgba(20, 20, 20, 0.8);
-  border-radius: 0;
+  border-radius: 0.5rem; /* Added border-radius */
   backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
@@ -2337,18 +2440,20 @@ p {
 .contact-card-header {
   padding: 1.25rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .contact-tabs {
   display: flex;
   gap: 0.5rem;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .contact-tab {
   padding: 0.5rem 1rem;
   background: transparent;
   border: none;
-  border-radius: 0;
+  border-radius: 0.25rem; /* Added border-radius */
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.9rem;
   font-weight: 500;
@@ -2363,6 +2468,7 @@ p {
 
 .contact-card-content {
   padding: 1.5rem;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .contact-info {
@@ -2370,17 +2476,19 @@ p {
   gap: 1.5rem;
   margin-bottom: 1.5rem;
   align-items: flex-start;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .contact-avatar {
   position: relative;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .contact-avatar-img {
   width: 90px;
   height: 90px;
   object-fit: cover;
-  border-radius: 0;
+  border-radius: 50%; /* Added border-radius */
   border: 1px solid rgba(255, 255, 255, 0.2);
   filter: grayscale(100%) contrast(1.1);
 }
@@ -2394,7 +2502,7 @@ p {
   color: #ffffff;
   font-size: 0.7rem;
   padding: 0.25rem 0.5rem;
-  border-radius: 0;
+  border-radius: 0.25rem; /* Added border-radius */
   white-space: nowrap;
   display: flex;
   align-items: center;
@@ -2407,7 +2515,7 @@ p {
   width: 8px;
   height: 8px;
   background-color: #ffffff;
-  border-radius: 0;
+  border-radius: 50%; /* Added border-radius */
   display: inline-block;
   animation: blink 2s infinite;
 }
@@ -2419,6 +2527,7 @@ p {
 
 .contact-details {
   flex: 1;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .contact-name {
@@ -2426,6 +2535,7 @@ p {
   font-weight: 600;
   margin: 0 0 0.25rem;
   color: white;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .contact-title {
@@ -2433,6 +2543,7 @@ p {
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 1rem;
   font-family: 'Space Grotesk', monospace;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .contact-response-time {
@@ -2442,36 +2553,43 @@ p {
   font-size: 0.85rem;
   color: #cbd5e1;
   margin-bottom: 1rem;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .contact-response-icon {
   font-size: 1rem;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .contact-methods {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .contact-method {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .contact-method-icon {
   color: #ffffff;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .contact-method-detail {
   flex: 1;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .contact-method-label {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.9);
   font-family: 'Space Grotesk', monospace;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .contact-copy-button {
@@ -2484,6 +2602,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .contact-copy-button:hover {
@@ -2493,11 +2612,12 @@ p {
 .copy-success {
   color: #ffffff;
   font-weight: bold;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .contact-message {
   background: rgba(20, 20, 20, 0.8);
-  border-radius: 0;
+  border-radius: 0.5rem; /* Added border-radius */
   padding: 1.25rem;
   margin-top: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -2505,9 +2625,10 @@ p {
 
 .contact-message-text {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 0.95rem;
+  fontsize: 0.95rem;
   line-height: 1.6;
   margin: 0;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .contact-card-actions {
@@ -2516,24 +2637,28 @@ p {
   display: flex;
   gap: 1rem;
   justify-content: center;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .contact-btn {
   padding: 0.75rem 1.5rem;
   display: flex;
   align-items: center;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 /* Contact Social */
 .contact-social {
   text-align: center;
   margin-top: 3rem;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .contact-social-label {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 1rem;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .contact-social-icons {
@@ -2541,6 +2666,7 @@ p {
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .contact-social-link {
@@ -2549,6 +2675,7 @@ p {
   align-items: center;
   gap: 0.5rem;
   transition: transform 0.3s ease;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .contact-social-link:hover {
@@ -2557,12 +2684,14 @@ p {
 
 .contact-social-icon {
   color: #ffffff;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .contact-social-name {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.7);
   font-family: 'Space Grotesk', monospace;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 /* Responsive Adjustments */
@@ -2640,6 +2769,7 @@ a, button, input, textarea, select, [role="button"],
   margin-top: -25px;
   border-width: 1px;
   background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%; /* Added border-radius */
 }
 
 /* Animations */
@@ -2691,15 +2821,17 @@ a, button, input, textarea, select, [role="button"],
 /* Custom scrollbar */
 ::-webkit-scrollbar { 
   width: 8px;
+  border-radius: 4px; /* Added border-radius */
 }
 
 ::-webkit-scrollbar-track { 
   background: #000000; 
+  border-radius: 4px; /* Added border-radius */
 }
 
 ::-webkit-scrollbar-thumb { 
   background: #333333;
-  border-radius: 0;
+  border-radius: 4px; /* Added border-radius */
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -2866,6 +2998,7 @@ a, button, input, textarea, select, [role="button"],
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .project-card {
@@ -2873,7 +3006,7 @@ a, button, input, textarea, select, [role="button"],
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1.5rem;
   transition: transform 0.3s ease, border-color 0.3s ease, opacity 0.5s ease;
-  border-radius: 0; /* Ensure sharp edges */
+  border-radius: 0.5rem; /* Added border-radius */
   opacity: 0;
   transform: translateY(20px);
   display: flex;
@@ -2894,27 +3027,32 @@ a, button, input, textarea, select, [role="button"],
   margin-bottom: 0.75rem;
   font-size: 1.25rem;
   color: rgba(255, 255, 255, 0.9);
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .project-card p {
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.6;
   font-size: 0.95rem;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .project-content {
   display: flex;
   flex-direction: column;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .project-description {
   margin-bottom: 1.25rem;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .project-image-container {
   margin-top: 0.5rem;
   max-width: 100%;
   width: 100%;
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .project-image {
@@ -2951,6 +3089,7 @@ a, button, input, textarea, select, [role="button"],
   font-weight: 500;
   display: inline-block;
   clear: both;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 /* For even items (right side) */
@@ -2971,6 +3110,7 @@ a, button, input, textarea, select, [role="button"],
 .timeline-title {
   clear: both;
   display: block;
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .timeline-tag.achievement {
@@ -3001,6 +3141,7 @@ a, button, input, textarea, select, [role="button"],
   cursor: pointer;
   border: 1px solid rgba(80, 85, 95, 0.4);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem; /* Added border-radius */
 }
 
 .pdf-button:hover {
@@ -3013,4 +3154,5 @@ a, button, input, textarea, select, [role="button"],
   width: 16px;
   height: 16px;
   color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.25rem; /* Added border-radius */
 }
