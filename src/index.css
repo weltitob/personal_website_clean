@@ -2889,14 +2889,8 @@ a, button, input, textarea, select, [role="button"],
 
 .project-image {
   width: 100%;
-  height: auto;
-  min-height: 500px;
-  max-height: 650px;
-  object-fit: contain;
-  background-color: rgba(15, 15, 15, 0.5);
   border-radius: 8px;
-  padding: 1.5rem;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
