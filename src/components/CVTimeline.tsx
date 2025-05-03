@@ -47,6 +47,9 @@ const CVTimeline = () => {
                 <span className="timeline-date">2023</span>
                 <h4 className="timeline-title">Overachievement Award</h4>
                 <p className="timeline-description">Received an overachievement recommendation from Boehringer Ingelheim based on my performance during dual studies and contributions to the company's projects.</p>
+                <div className="timeline-image-container">
+                  <img src="/images/timelineimages/2501_Biberacher_Wirtschaftpreis.jpg" alt="Biberacher Wirtschaftpreis" className="timeline-image" />
+                </div>
               </div>
             </li>
             <li className="timeline-item">
@@ -61,6 +64,9 @@ const CVTimeline = () => {
                 <span className="timeline-date">2021</span>
                 <h4 className="timeline-title">Start-up BW "Young Talents" Winner</h4>
                 <p className="timeline-description">Part of the winning team at the Elevator Pitch "Young Talents" competition hosted by Start-up BW for our innovative business concept.</p>
+                <div className="timeline-image-container">
+                  <img src="/images/timelineimages/beeprotected.png" alt="BeeProtected" className="timeline-image" />
+                </div>
               </div>
             </li>
             <li className="timeline-item">

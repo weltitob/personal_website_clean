@@ -54,6 +54,9 @@ const Timeline = () => {
                 <span className="timeline-tag achievement">Achievement</span>
                 <h4 className="timeline-title">Overachievement Award</h4>
                 <p className="timeline-description">Recognized as a top 1% student with an overachievement recommendation from Boehringer Ingelheim.</p>
+                <div className="timeline-image-container">
+                  <img src="/images/timelineimages/2501_Biberacher_Wirtschaftpreis.jpg" alt="Biberacher Wirtschaftpreis" className="timeline-image" />
+                </div>
               </div>
             </li>
             <li className="timeline-item">
@@ -93,6 +96,9 @@ const Timeline = () => {
                 <span className="timeline-tag achievement">Achievement</span>
                 <h4 className="timeline-title">StartupBW - BeeProtected Winner</h4>
                 <p className="timeline-description">Won the StartupBW pitch competition with BeeProtected startup concept.</p>
+                <div className="timeline-image-container">
+                  <img src="/images/timelineimages/beeprotected.png" alt="BeeProtected" className="timeline-image" />
+                </div>
               </div>
             </li>
           </ul>

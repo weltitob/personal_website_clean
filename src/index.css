@@ -77,6 +77,34 @@ body::before {
   letter-spacing: -0.02em;
 }
 
+
+/* Timeline images */
+.timeline-image-container {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.timeline-image:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 767px) {
+  .timeline-image {
+    max-width: 90%;
+  }
+}
+
 .text-gradient {
   background: linear-gradient(to right, #ffffff, #aaaaaa);
   -webkit-background-clip: text;
