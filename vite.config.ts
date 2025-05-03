@@ -11,7 +11,7 @@ export default defineConfig({
     strictPort: false,
     hmr: {
       clientPort: 443,
-      host: '.spock.replit.dev'
+      host: 'localhost'
     },
     cors: true,
     headers: {
@@ -20,7 +20,7 @@ export default defineConfig({
     watch: {
       usePolling: true
     },
-    allowedHosts: true
+    allowedHosts: ['localhost', '.replit.dev', '.repl.co']
   },
   preview: {
     host: '0.0.0.0',
