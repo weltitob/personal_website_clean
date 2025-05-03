@@ -2872,10 +2872,48 @@ a, button, input, textarea, select, [role="button"],
   font-size: 0.95rem;
 }
 
+.project-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-image-container {
+  margin-bottom: 1rem;
+  max-width: 100%;
+}
+
 .project-image {
   width: 100%;
-  margin-bottom: 1rem;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile-friendly arrangement */
+@media (min-width: 768px) {
+  .project-content {
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  
+  .project-image-container {
+    width: 40%;
+    margin-bottom: 0;
+  }
+  
+  .project-content p {
+    width: 60%;
+    margin-top: 0;
+  }
+}
+
+/* For smaller mobile screens */
+@media (max-width: 480px) {
+  .project-image {
+    max-height: 200px;
+  }
 }
 
 .mt-16 {

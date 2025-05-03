@@ -38,8 +38,12 @@ const PersonalProjects = () => {
         <div className="projects-grid">
           <div className="project-card" style={getAnimationDelay(0)}>
             <h3>Bitcoin Wallet (NexusWallet)</h3>
-            <img src="/images/projectimages/nexuswallet/nexus_wallet.png" alt="NexusWallet" className="project-image" />
-            <p>Designed and developed a secure cryptocurrency wallet application with institutional-grade security features. Built using <span className="tech-highlight">Flutter</span> and <span className="tech-highlight">JavaScript</span> to deliver a seamless cross-platform experience with 99.99% transaction reliability.</p>
+            <div className="project-content">
+              <div className="project-image-container">
+                <img src="/images/projectimages/nexuswallet/nexus_wallet.png" alt="NexusWallet" className="project-image" />
+              </div>
+              <p>Designed and developed a secure cryptocurrency wallet application with institutional-grade security features. Built using <span className="tech-highlight">Flutter</span> and <span className="tech-highlight">JavaScript</span> to deliver a seamless cross-platform experience with 99.99% transaction reliability.</p>
+            </div>
           </div>
           <div className="project-card" style={getAnimationDelay(1)}>
             <h3>Loco Maps</h3>
