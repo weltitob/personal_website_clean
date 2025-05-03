@@ -67,7 +67,7 @@ const CVTimeline = () => {
               <div className="timeline-content">
                 <span className="timeline-date">2021</span>
                 <h4 className="timeline-title">Accepted to DHBW Friedrichshafen</h4>
-                <p className="timeline-description">Started my dual studies program in Mobile Informatics, partnering with Boehringer Ingelheim for practical experience while maintaining a 1.6 GPA.</p>
+                <p className="timeline-description">Started my dual studies program in Mobile Informatics, partnering with Boehringer Ingelheim for practical experience while maintaining a 1.4 GPA.</p>
               </div>
             </li>
           </ul>
