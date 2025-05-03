@@ -1712,13 +1712,16 @@ p {
   letter-spacing: 0.02em;
 }
 
-.profile-location {
-  font-size: 0.8rem;
+.profile-location, .profile-email, .profile-phone {
+  font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.7);
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem;
   margin-bottom: 0.75rem;
+  font-family: 'Space Grotesk', monospace;
+  letter-spacing: 0.01em;
+  word-break: break-word;
 }
 
 .location-icon, .contact-icon {
@@ -1733,19 +1736,7 @@ p {
 }
 
 .profile-contact {
-  margin-top: 0.5rem;
-}
-
-.profile-email, .profile-phone {
-  font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.7);
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  margin-bottom: 0.3rem;
-  font-family: 'Space Grotesk', monospace;
-  letter-spacing: 0.01em;
-  word-break: break-word;
+  margin-top: 0.75rem;
 }
 
 .profile-card-decoration {
@@ -2839,4 +2830,11 @@ a, button, input, textarea, select, [role="button"],
   .md\:w-3\/4 { width: 75%; }
   .md\:order-first { order: -9999; }
   .md\:block { display: block; }
+}
+
+@media (min-width: 768px) {
+  .profile-card {
+    width: 320px;
+    height: 460px;
+  }
 }
