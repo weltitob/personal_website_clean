@@ -6,15 +6,30 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: true,
+    host: '0.0.0.0',
     port: 5173,
-    strictPort: true,
+    strictPort: false,
     hmr: {
+      host: '0.0.0.0',
+      port: 443,
       clientPort: 443,
-      host: '0.0.0.0'
+      protocol: 'wss'
+    },
+    cors: true,
+    headers: {
+      'Access-Control-Allow-Origin': '*'
     },
     watch: {
       usePolling: true
+    }
+  },
+  preview: {
+    host: '0.0.0.0',
+    port: 5173,
+    strictPort: false,
+    cors: true,
+    headers: {
+      'Access-Control-Allow-Origin': '*'
     }
   }
 })
