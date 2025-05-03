@@ -74,6 +74,14 @@ const Timeline = () => {
                 <p className="timeline-description">Received an overachievement recommendation from Boehringer Ingelheim.</p>
               </div>
             </li>
+            <li className="timeline-item">
+              <div className="timeline-content">
+                <span className="timeline-date">2022</span>
+                <span className="timeline-tag achievement">Achievement</span>
+                <h4 className="timeline-title">StartupBW - BeeProtected Winner</h4>
+                <p className="timeline-description">Won the StartupBW pitch competition with BeeProtected startup concept.</p>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
