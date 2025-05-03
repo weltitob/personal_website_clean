@@ -20,8 +20,8 @@ const PersonalProjects = () => {
         <h2 className="text-center slide-up mt-16">Enterprise Projects</h2>
         <div className="projects-grid">
           <div className="project-card">
-            <h3>Social Media Automation</h3>
-            <p>Custom automation tools for social media growth and analytics.</p>
+            <h3>QAASSIST</h3>
+            <p>Speeding up the medicine submission process using agentic systems.</p>
           </div>
           <div className="project-card">
             <h3>TADA - AI Incident Analysis</h3>
