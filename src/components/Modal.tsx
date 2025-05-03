@@ -55,8 +55,44 @@ const Modal = ({ id, title, status, statusIndicator, description, techStack }: M
         <h4 className="font-semibold mb-2 text-slate-300" style={{ fontFamily: 'Montserrat, sans-serif' }}>Technologie-Stack:</h4>
         <div className="flex flex-wrap gap-2 text-xs font-mono mb-6" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
           {techStack.map((tech, index) => {
-            // Black and white consistent styling
-            const colorClass = 'bg-slate-900/50 text-slate-300';
+            // Colorful styling based on tech name
+            let colorClass = '';
+            
+            // Assign colors based on technology
+            if (tech.includes('React') || tech.includes('Next.js')) {
+              colorClass = 'bg-blue-900/50 text-blue-300';
+            } else if (tech.includes('Node') || tech.includes('Express')) {
+              colorClass = 'bg-green-900/50 text-green-300';
+            } else if (tech.includes('Python') || tech.includes('Django')) {
+              colorClass = 'bg-yellow-900/50 text-yellow-300';
+            } else if (tech.includes('TypeScript') || tech.includes('Angular')) {
+              colorClass = 'bg-blue-900/50 text-blue-300';
+            } else if (tech.includes('AWS') || tech.includes('Amazon')) {
+              colorClass = 'bg-orange-900/50 text-orange-300';
+            } else if (tech.includes('Azure') || tech.includes('Microsoft')) {
+              colorClass = 'bg-blue-900/50 text-blue-300';
+            } else if (tech.includes('Firebase') || tech.includes('Google')) {
+              colorClass = 'bg-yellow-900/50 text-yellow-300';
+            } else if (tech.includes('MongoDB')) {
+              colorClass = 'bg-green-900/50 text-green-300';
+            } else if (tech.includes('SQL') || tech.includes('Postgres')) {
+              colorClass = 'bg-blue-900/50 text-blue-300';
+            } else if (tech.includes('Flutter') || tech.includes('Dart')) {
+              colorClass = 'bg-cyan-900/50 text-cyan-300';
+            } else if (tech.includes('JavaScript')) {
+              colorClass = 'bg-yellow-900/50 text-yellow-300';
+            } else if (tech.includes('Swift') || tech.includes('iOS')) {
+              colorClass = 'bg-orange-900/50 text-orange-300';
+            } else if (tech.includes('Kotlin') || tech.includes('Android')) {
+              colorClass = 'bg-green-900/50 text-green-300';
+            } else if (tech.includes('Docker') || tech.includes('Kubernetes')) {
+              colorClass = 'bg-blue-900/50 text-blue-300';
+            } else if (tech.includes('OpenAI') || tech.includes('AI')) {
+              colorClass = 'bg-purple-900/50 text-purple-300';
+            } else {
+              // Default for other technologies
+              colorClass = 'bg-gray-900/50 text-gray-300';
+            }
             
             return (
               <span key={index} className={`${colorClass} px-2 py-0.5 rounded`}>{tech}</span>
