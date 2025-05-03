@@ -1769,44 +1769,36 @@ p {
 }
 
 /* Tech Tags */
-.tech-tag {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 0 12px;
-  height: 30px;
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(8px);
-  border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: white;
-  font-family: 'Space Grotesk', monospace;
+.timeline-tag {
   font-size: 0.75rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-  animation: float 8s ease-in-out infinite;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 500;
+  display: inline-block;
+  clear: both;
 }
 
-.tech-tag:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+/* For even items (right side) */
+.timeline-item:nth-child(even) .timeline-tag {
+  margin-left: 0;
+  float: left;
+  margin-bottom: 0.5rem;
 }
 
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0px); }
+/* For odd items (left side) */
+.timeline-item:nth-child(odd) .timeline-tag {
+  margin-right: 0;
+  float: right;
+  margin-bottom: 0.5rem;
 }
 
-.tech-tag:nth-child(2) { animation-delay: 0s; }
-.tech-tag:nth-child(3) { animation-delay: 1s; }
-.tech-tag:nth-child(4) { animation-delay: 2s; }
-.tech-tag:nth-child(5) { animation-delay: 3s; }
-.tech-tag:nth-child(6) { animation-delay: 4s; }
-.tech-tag:nth-child(7) { animation-delay: 5s; }
-.tech-tag:nth-child(8) { animation-delay: 6s; }
+/* Clear the float for the title */
+.timeline-title {
+  clear: both;
+  display: block;
+}
 
 .tech-tag-img {
   width: 22px;
@@ -2766,7 +2758,7 @@ a, button, input, textarea, select, [role="button"],
 .text-sm { font-size: 0.875rem; }
 .text-xl { font-size: 1.25rem; }
 .text-2xl { font-size: 1.5rem; }
-.font-medium { font-weight: 500; }
+.font-medium {font-weight: 500; }
 .font-semibold { font-weight: 600; }
 .font-bold { font-weight: 700; }
 .text-center { text-align: center; }
@@ -2887,30 +2879,31 @@ a, button, input, textarea, select, [role="button"],
   font-size: 0.75rem;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
-  margin-left: 1rem;
+  margin-left: 0;
+  margin-right: 0;
   font-weight: 500;
+  display: inline-block;
+  clear: both;
 }
 
-.timeline-tag.achievement {
-  background: rgba(74, 222, 128, 0.2);
-  color: rgb(74, 222, 128);
+/* For even items (right side) */
+.timeline-item:nth-child(even) .timeline-tag {
+  margin-left: 0;
+  float: left;
+  margin-bottom: 0.5rem;
 }
 
-.timeline-tag.professional {
-  background: rgba(56, 189, 248, 0.2);
-  color: rgb(56, 189, 248);
+/* For odd items (left side) */
+.timeline-item:nth-child(odd) .timeline-tag {
+  margin-right: 0;
+  float: right;
+  margin-bottom: 0.5rem;
 }
 
-.timeline-tag.education {
-  background: rgba(251, 146, 60, 0.2);
-  color: rgb(251, 146, 60);
-}
-.timeline-tag {
-  font-size: 0.75rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  margin-left: 1rem;
-  font-weight: 500;
+/* Clear the float for the title */
+.timeline-title {
+  clear: both;
+  display: block;
 }
 
 .timeline-tag.achievement {
