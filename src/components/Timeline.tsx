@@ -39,7 +39,7 @@ const Timeline = () => {
                 <span className="timeline-date">2021 - 2024</span>
                 <span className="timeline-tag education">Education</span>
                 <h4 className="timeline-title">Bachelor of Science in Mobile Informatics</h4>
-                <p className="timeline-description">DHBW Friedrichshafen - Dual studies program with Boehringer Ingelheim. GPA: 1.6</p>
+                <p className="timeline-description">DHBW Friedrichshafen - Dual studies program with Boehringer Ingelheim. GPA: 1.4. Bachelor Thesis: Grade 1.0</p>
               </div>
             </li>
             <li className="timeline-item">

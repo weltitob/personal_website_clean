@@ -32,7 +32,7 @@ const EducationTimeline = () => {
               <div className="timeline-content">
                 <span className="timeline-date">2021 - 2024</span>
                 <h4 className="timeline-title">Bachelor of Science in Mobile Informatics</h4>
-                <p className="timeline-description">DHBW Friedrichshafen - Dual studies program with a focus on mobile applications and software development. GPA: 1.6</p>
+                <p className="timeline-description">DHBW Friedrichshafen - Dual studies program with a focus on mobile applications and software development. GPA: 1.4. Bachelor Thesis: Grade 1.0</p>
               </div>
             </li>
             <li className="timeline-item">
