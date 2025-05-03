@@ -22,7 +22,7 @@ export default defineConfig({
     watch: {
       usePolling: true
     },
-    allowedHosts: ['.replit.dev', '.repl.co']
+    allowedHosts: true
   },
   preview: {
     host: '0.0.0.0',
