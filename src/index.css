@@ -2963,24 +2963,26 @@ a, button, input, textarea, select, [role="button"],
 .pdf-button {
   display: inline-flex;
   align-items: center;
-  background-color: rgba(59, 130, 246, 0.2);
-  color: rgb(59, 130, 246);
-  padding: 0.3rem 0.75rem;
-  border-radius: 4px;
-  margin-top: 0.5rem;
+  background-color: rgba(64, 65, 79, 0.9);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  margin-top: 0.7rem;
   font-size: 0.8rem;
   transition: all 0.2s ease;
   cursor: pointer;
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  border: 1px solid rgba(80, 85, 95, 0.4);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .pdf-button:hover {
-  background-color: rgba(59, 130, 246, 0.3);
-  transform: translateY(-1px);
+  background-color: rgba(75, 77, 90, 0.95);
+  border-color: rgba(100, 105, 115, 0.5);
 }
 
 .pdf-button svg {
-  margin-right: 0.4rem;
+  margin-right: 0.5rem;
   width: 16px;
   height: 16px;
+  color: rgba(255, 255, 255, 0.8);
 }
