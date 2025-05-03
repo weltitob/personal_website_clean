@@ -50,8 +50,17 @@ const PersonalProjects = () => {
             </div>
           </div>
           <div className="project-card" style={getAnimationDelay(1)}>
-            <h3>Loco Maps</h3>
-            <p>Led development of a custom mapping platform optimized for offline navigation in remote areas. Built with <span className="tech-highlight">React Native</span> and <span className="tech-highlight">PWA</span> technologies, delivering enhanced performance on low-bandwidth connections and reducing map loading times by 78%.</p>
+            <div className="project-content">
+              <h3>Loco Maps</h3>
+              <p className="project-description">Led development of a custom mapping platform optimized for offline navigation in remote areas. Built with <span className="tech-highlight">React Native</span> and <span className="tech-highlight">PWA</span> technologies, delivering enhanced performance on low-bandwidth connections and reducing map loading times by 78%.</p>
+              <div className="project-image-container">
+                <img 
+                  src="/images/projectimages/locomaps/locomaps.png" 
+                  alt="LocoMaps Interface" 
+                  className="project-image" 
+                />
+              </div>
+            </div>
           </div>
           <div className="project-card" style={getAnimationDelay(2)}>
             <div className="project-content">
