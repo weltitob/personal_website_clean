@@ -3138,23 +3138,29 @@ a, button, input, textarea, select, [role="button"],
 
 .project-image {
   width: 100%;
+  height: auto;
+  object-fit: contain;
   border-radius: 8px;
   margin-top: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-height: 300px;
 }
 
 .project-image-container {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 /* For smaller mobile screens */
 @media (max-width: 480px) {
   .project-image {
-    min-height: 400px;
-    padding: 1rem;
+    max-height: 250px;
+    padding: 0.5rem;
+    width: auto;
+    max-width: 100%;
   }
 }
 
