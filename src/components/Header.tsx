@@ -47,9 +47,31 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Handle mobile menu toggling
-  const handleNavLinkClick = () => {
+  // Handle mobile menu toggling and smooth scrolling
+  const handleNavLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
     setMenuOpen(false);
+    
+    // Get the target section element
+    const sectionElement = document.getElementById(sectionId);
+    
+    if (sectionElement) {
+      // Get header height to offset scrolling
+      const headerHeight = document.getElementById('main-header')?.offsetHeight || 60;
+      
+      // Calculate the position to scroll to
+      const offsetTop = sectionElement.offsetTop - headerHeight;
+      
+      // Smooth scroll to the section
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+      
+      // Update the URL hash
+      window.history.pushState(null, '', `#${sectionId}`);
+      setActiveSection(`#${sectionId}`);
+    }
   };
   
   // Close menu when clicking outside
@@ -109,11 +131,16 @@ const Header = () => {
             
             {/* Desktop navigation */}
             <nav id="main-nav" className="desktop-nav">
-                <a href="#skills" className={`nav-link ${activeSection === '#skills' ? 'active' : ''}`}>Skills</a>
-                <a href="#education-timeline" className={`nav-link ${activeSection === '#education-timeline' ? 'active' : ''}`}>Education</a>
-                <a href="#project-timeline" className={`nav-link ${activeSection === '#project-timeline' ? 'active' : ''}`}>Projects</a>
-                <a href="#cv-timeline" className={`nav-link ${activeSection === '#cv-timeline' ? 'active' : ''}`}>Personal</a>
-                <a href="#contact" className={`nav-link ${activeSection === '#contact' ? 'active' : ''}`}>Contact</a>
+                <a href="#skills" className={`nav-link ${activeSection === '#skills' ? 'active' : ''}`}
+                   onClick={(e) => handleNavLinkClick(e, 'skills')}>Skills</a>
+                <a href="#education-timeline" className={`nav-link ${activeSection === '#education-timeline' ? 'active' : ''}`}
+                   onClick={(e) => handleNavLinkClick(e, 'education-timeline')}>Education</a>
+                <a href="#project-timeline" className={`nav-link ${activeSection === '#project-timeline' ? 'active' : ''}`}
+                   onClick={(e) => handleNavLinkClick(e, 'project-timeline')}>Projects</a>
+                <a href="#cv-timeline" className={`nav-link ${activeSection === '#cv-timeline' ? 'active' : ''}`}
+                   onClick={(e) => handleNavLinkClick(e, 'cv-timeline')}>Personal</a>
+                <a href="#contact" className={`nav-link ${activeSection === '#contact' ? 'active' : ''}`}
+                   onClick={(e) => handleNavLinkClick(e, 'contact')}>Contact</a>
             </nav>
             
             {/* Background overlay for mobile menu */}
@@ -128,35 +155,35 @@ const Header = () => {
                 <div className="mobile-nav-item">
                   <a href="#skills" 
                      className={`nav-link ${activeSection === '#skills' ? 'active' : ''}`}
-                     onClick={handleNavLinkClick}>
+                     onClick={(e) => handleNavLinkClick(e, 'skills')}>
                      Skills
                   </a>
                 </div>
                 <div className="mobile-nav-item">
                   <a href="#education-timeline" 
                      className={`nav-link ${activeSection === '#education-timeline' ? 'active' : ''}`}
-                     onClick={handleNavLinkClick}>
+                     onClick={(e) => handleNavLinkClick(e, 'education-timeline')}>
                      Education
                   </a>
                 </div>
                 <div className="mobile-nav-item">
                   <a href="#project-timeline" 
                      className={`nav-link ${activeSection === '#project-timeline' ? 'active' : ''}`}
-                     onClick={handleNavLinkClick}>
+                     onClick={(e) => handleNavLinkClick(e, 'project-timeline')}>
                      Projects
                   </a>
                 </div>
                 <div className="mobile-nav-item">
                   <a href="#cv-timeline" 
                      className={`nav-link ${activeSection === '#cv-timeline' ? 'active' : ''}`}
-                     onClick={handleNavLinkClick}>
+                     onClick={(e) => handleNavLinkClick(e, 'cv-timeline')}>
                      Personal
                   </a>
                 </div>
                 <div className="mobile-nav-item">
                   <a href="#contact" 
                      className={`nav-link ${activeSection === '#contact' ? 'active' : ''}`}
-                     onClick={handleNavLinkClick}>
+                     onClick={(e) => handleNavLinkClick(e, 'contact')}>
                      Contact
                   </a>
                 </div>

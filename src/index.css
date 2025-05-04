@@ -389,18 +389,25 @@ body::before {
 .mobile-nav-fullscreen a {
   font-size: 2rem;
   font-weight: 600;
-  padding: 1rem;
+  padding: 1.2rem;
   display: block;
   text-align: center;
   width: 100%;
   color: rgba(255, 255, 255, 0.85);
   transition: color 0.3s, transform 0.3s;
+  position: relative;
 }
 
 .mobile-nav-fullscreen a:hover,
 .mobile-nav-fullscreen a.active {
   color: #FFD54F;
   transform: scale(1.05);
+}
+
+.mobile-nav-item {
+  margin-bottom: 1.5rem;
+  position: relative;
+  width: 100%;
 }
 
 .mobile-menu .mobile-nav a {
