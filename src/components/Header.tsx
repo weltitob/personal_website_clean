@@ -3,21 +3,21 @@ import { useState, useEffect } from 'react';
 const Header = () => {
   const [activeSection, setActiveSection] = useState<string>('');
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll('.section');
       const headerHeight = document.getElementById('main-header')?.offsetHeight || 60;
-      
+
       let bestMatch: { id: string | null, ratio: number, top: number } = { id: null, ratio: 0, top: Infinity };
-      
+
       sections.forEach((section) => {
         const id = `#${section.getAttribute('id')}`;
         const rect = section.getBoundingClientRect();
         const top = rect.top;
         const height = rect.height;
         const visiblePercentage = Math.max(0, Math.min(height, window.innerHeight - top)) / height;
-        
+
         // Condition: Section top is near or above the bottom of the header
         // and it has the highest intersection ratio among eligible sections.
         if (top <= headerHeight + 100 && visiblePercentage > bestMatch.ratio) {
@@ -51,36 +51,36 @@ const Header = () => {
   const handleNavLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
     e.preventDefault();
     setMenuOpen(false);
-    
+
     // Get the target section element
     const sectionElement = document.getElementById(sectionId);
-    
+
     if (sectionElement) {
       // Get header height to offset scrolling
       const headerHeight = document.getElementById('main-header')?.offsetHeight || 60;
-      
+
       // Calculate the position to scroll to
       const offsetTop = sectionElement.offsetTop - headerHeight;
-      
+
       // Smooth scroll to the section
       window.scrollTo({
         top: offsetTop,
         behavior: 'smooth'
       });
-      
+
       // Update the URL hash
       window.history.pushState(null, '', `#${sectionId}`);
       setActiveSection(`#${sectionId}`);
     }
   };
-  
+
   // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
       const mobileMenu = document.querySelector('.mobile-menu-fullscreen');
       const hamburgerButton = document.querySelector('.mobile-menu-button');
-      
+
       if (menuOpen && 
           mobileMenu && 
           hamburgerButton && 
@@ -89,16 +89,16 @@ const Header = () => {
         setMenuOpen(false);
       }
     };
-    
+
     document.addEventListener('mousedown', handleClickOutside);
-    
+
     // Prevent body scrolling when menu is open
     if (menuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
     }
-    
+
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = '';
@@ -111,7 +111,7 @@ const Header = () => {
             <a href="#" className="logo-container hover:opacity-90 transition duration-300">
               <img src="/images/logo/TW_logo_nobg.png" alt="TW Logo" className="logo-image white-logo" width="45" height="45" />
             </a>
-            
+
             {/* Hamburger button for mobile */}
             <button 
               className="mobile-menu-button"
@@ -128,7 +128,7 @@ const Header = () => {
                 <span></span>
               </div>
             </button>
-            
+
             {/* Desktop navigation */}
             <nav id="main-nav" className="desktop-nav">
                 <a href="#skills" className={`nav-link ${activeSection === '#skills' ? 'active' : ''}`}
@@ -142,13 +142,13 @@ const Header = () => {
                 <a href="#contact" className={`nav-link ${activeSection === '#contact' ? 'active' : ''}`}
                    onClick={(e) => handleNavLinkClick(e, 'contact')}>Contact</a>
             </nav>
-            
+
             {/* Background overlay for mobile menu */}
             <div 
               className={`mobile-menu-overlay ${menuOpen ? 'active' : ''}`} 
               onClick={() => setMenuOpen(false)}
             ></div>
-            
+
             {/* Mobile navigation - fullscreen */}
             <div className={`mobile-menu-fullscreen ${menuOpen ? 'active' : ''}`}>
               <nav className="mobile-nav-fullscreen">
