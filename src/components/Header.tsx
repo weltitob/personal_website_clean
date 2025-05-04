@@ -146,7 +146,7 @@ const Header = () => {
             {/* Background overlay for mobile menu */}
             <div 
               className={`mobile-menu-overlay ${menuOpen ? 'active' : ''}`} 
-              onClick={handleNavLinkClick}
+              onClick={() => setMenuOpen(false)}
             ></div>
             
             {/* Mobile navigation - fullscreen */}
