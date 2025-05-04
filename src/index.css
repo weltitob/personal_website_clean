@@ -2322,11 +2322,11 @@ p {
 
   .hero-visual {
     order: 1;
-    margin-top: 0;
+    margin-top: -10px; /* Move up by reducing top margin */
     z-index: 10;
     flex-direction: column;
     min-height: auto;
-    padding-bottom: 1rem;
+    padding-bottom: 0; /* Reduced padding to move elements up */
   }
 
   .venice-image-wrapper {
@@ -2334,7 +2334,7 @@ p {
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0;
+    margin-top: -20px; /* Moved up by using negative margin */
     z-index: 5;
   }
 
@@ -2346,10 +2346,10 @@ p {
 
   .profile-card-behind {
     position: relative;
-    top: -50px;
+    top: -80px; /* Increased negative top position to move up */
     left: 0;
     width: 95%;
-    max-width: 540px; /* Increased slightly for mobile view as well */
+    max-width: 540px;
     padding: 1.7rem;
     margin: 0 auto;
     transform: none !important;
@@ -2410,7 +2410,8 @@ p {
     padding-right: 1rem;
     min-height: auto;
     padding-top: 0.5rem;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem; /* Reduced bottom padding */
+    margin-bottom: 1rem; /* Added margin to maintain spacing with next section */
   }
 }
 
