@@ -1,12 +1,12 @@
 
+/* Import fonts - moved to top for proper loading */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
 .yellow-highlight {
   color: #FFC107; /* Bright yellow color */
   font-weight: 700;
   display: inline-block;
 }
-
-/* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
 
 @font-face {
   font-family: 'LucideIcons';
@@ -40,7 +40,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif !important;
   background-color: #000000; /* Pure black base */
   color: #ffffff; /* Pure white text */
   margin: 0;
