@@ -773,6 +773,12 @@ p {
   border-radius: 0.5rem; /* Added border-radius */
 }
 
+@media (max-width: 767px) {
+  .timeline-container-wrapper {
+    padding: 0 0.5rem;
+  }
+}
+
 .timeline {
   position: relative;
   padding: 2rem 0;
@@ -862,9 +868,10 @@ p {
 
 @media (max-width: 767px) {
   .timeline-content {
-    padding: 1.5rem;
+    padding: 1.25rem;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
   }
 }
 
@@ -1032,10 +1039,10 @@ p {
     #education-timeline .timeline-item:nth-child(even) {
       float: none;
       width: 100%;
-      padding-left: 40px;
+      padding-left: 35px;
       padding-right: 0;
       text-align: left;
-      transform: translateX(-20px); /* Consistent transform for all mobile items */
+      transform: translateX(-10px); /* Reduced transform for all mobile items */
     }
 
     /* Fix timeline tags alignment in mobile view */
@@ -1067,12 +1074,12 @@ p {
     #cv-timeline .timeline-item:nth-child(even)::before,
     #education-timeline .timeline-item:nth-child(odd)::before,
     #education-timeline .timeline-item:nth-child(even)::before {
-      left: 13px;
+      left: 9px;
       right: auto;
     }
 
     .timeline::before {
-      left: 24px;
+      left: 20px;
       transform: none;
     }
   }
