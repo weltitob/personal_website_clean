@@ -56,7 +56,7 @@ const Header = () => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
-      const mobileMenu = document.querySelector('.mobile-menu');
+      const mobileMenu = document.querySelector('.mobile-menu-fullscreen');
       const hamburgerButton = document.querySelector('.mobile-menu-button');
       
       if (menuOpen && 
@@ -118,9 +118,9 @@ const Header = () => {
               onClick={handleNavLinkClick}
             ></div>
             
-            {/* Mobile navigation */}
-            <div className={`mobile-menu ${menuOpen ? 'active' : ''}`}>
-              <nav className="mobile-nav">
+            {/* Mobile navigation - fullscreen */}
+            <div className={`mobile-menu-fullscreen ${menuOpen ? 'active' : ''}`}>
+              <nav className="mobile-nav-fullscreen">
                 <div className="mobile-nav-item">
                   <a href="#skills" 
                      className={`nav-link ${activeSection === '#skills' ? 'active' : ''}`}
