@@ -1980,24 +1980,24 @@ p {
   display: inline-block;
   clear: both;
   border-radius: 0.25rem; /* Added border-radius */
-  float: left;
-  text-align: left;
+  float: left !important;
+  text-align: left !important;
 }
 
 /* For even items (right side) */
 .timeline-item:nth-child(even) .timeline-tag {
   margin-left: 0;
-  float: left;
+  float: left !important;
   margin-bottom: 0.5rem;
-  text-align: left;
+  text-align: left !important;
 }
 
 /* For odd items (left side) */
 .timeline-item:nth-child(odd) .timeline-tag {
   margin-right: 0.5rem;
-  float: left;
+  float: left !important;
   margin-bottom: 0.5rem;
-  text-align: left;
+  text-align: left !important;
 }
 
 /* Clear the float for the title */
@@ -3223,16 +3223,22 @@ a, button, input, textarea, select, [role="button"],
 .timeline-tag.achievement {
   background: rgba(74, 222, 128, 0.2);
   color: rgb(74, 222, 128);
+  float: left !important;
+  text-align: left !important;
 }
 
 .timeline-tag.professional {
   background: rgba(56, 189, 248, 0.2);
   color: rgb(56, 189, 248);
+  float: left !important;
+  text-align: left !important;
 }
 
 .timeline-tag.education {
   background: rgba(251, 146, 60, 0.2);
   color: rgb(251, 146, 60);
+  float: left !important;
+  text-align: left !important;
 }
 
 .pdf-button {
