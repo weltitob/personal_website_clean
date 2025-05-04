@@ -1777,14 +1777,14 @@ p {
   position: absolute;
   top: 10px; /* Better positioned for visibility */
   left: -30px; /* More visible from the left side */
-  width: 240px;
+  width: 280px; /* Increased width from 240px to 280px */
   border-radius: 0.5rem; /* Added border-radius */
   overflow: hidden;
   background: rgba(20, 20, 20, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
-  padding: 1rem;
+  padding: 1.2rem; /* Slightly increased padding for better spacing */
   z-index: 10; /* Increased z-index to ensure visibility */
   will-change: transform;
   transform-style: preserve-3d;
@@ -2349,7 +2349,7 @@ p {
     top: -50px;
     left: 0;
     width: 95%;
-    max-width: 520px;
+    max-width: 540px; /* Increased slightly for mobile view as well */
     padding: 1.7rem;
     margin: 0 auto;
     transform: none !important;
