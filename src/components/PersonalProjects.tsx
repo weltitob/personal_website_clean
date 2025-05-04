@@ -79,16 +79,22 @@ const PersonalProjects = () => {
         <h2 className="text-center slide-up mt-16">Enterprise <span className="yellow-highlight">Projects</span></h2>
         <div className="projects-grid">
           <div className="project-card" style={getAnimationDelay(0)}>
-            <h3>QAASSIST</h3>
-            <p>Speeding up the medicine submission process using agentic systems.</p>
+            <div className="project-content">
+              <h3>QAASSIST</h3>
+              <p className="project-description">Speeding up the medicine submission process using agentic systems. Built with <span className="tech-highlight">React</span>, <span className="tech-highlight">Tailwind</span>, <span className="tech-highlight">Python</span>, <span className="tech-highlight">MongoDB</span>, and <span className="tech-highlight">Vector Databases</span> to create an efficient document processing system.</p>
+            </div>
           </div>
           <div className="project-card" style={getAnimationDelay(1)}>
-            <h3>TADA - AI Incident Analysis</h3>
-            <p>Enterprise AI system for automated incident analysis using Azure and OpenAI.</p>
+            <div className="project-content">
+              <h3>TADA - AI Incident Analysis</h3>
+              <p className="project-description">Enterprise AI system for automated incident analysis. Implemented using <span className="tech-highlight">OpenAI</span>, <span className="tech-highlight">Microsoft Azure</span>, and <span className="tech-highlight">Python</span> to create powerful clustering tools that reduced resolution time by 65%.</p>
+            </div>
           </div>
           <div className="project-card" style={getAnimationDelay(2)}>
-            <h3>Incident Predictive Analysis</h3>
-            <p>Through embeddings and telephone call speech-to-text analysis, we were able to achieve a 75% correct prediction rate of incident resolutions.</p>
+            <div className="project-content">
+              <h3>Incident Predictive Analysis</h3>
+              <p className="project-description">Through embeddings and telephone call speech-to-text analysis, achieved a 75% correct prediction rate of incident resolutions. Built with <span className="tech-highlight">Python</span>, <span className="tech-highlight">Whisper OpenAI</span>, and <span className="tech-highlight">Vector Databases</span> for advanced NLP processing.</p>
+            </div>
           </div>
         </div>
       </div>
