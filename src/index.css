@@ -1975,11 +1975,13 @@ p {
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   margin-left: 0;
-  margin-right: 0;
+  margin-right: 0.5rem;
   font-weight: 500;
   display: inline-block;
   clear: both;
   border-radius: 0.25rem; /* Added border-radius */
+  float: left;
+  text-align: left;
 }
 
 /* For even items (right side) */
@@ -1987,13 +1989,15 @@ p {
   margin-left: 0;
   float: left;
   margin-bottom: 0.5rem;
+  text-align: left;
 }
 
 /* For odd items (left side) */
 .timeline-item:nth-child(odd) .timeline-tag {
-  margin-right: 0;
-  float: right;
+  margin-right: 0.5rem;
+  float: left;
   margin-bottom: 0.5rem;
+  text-align: left;
 }
 
 /* Clear the float for the title */
