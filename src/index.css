@@ -2328,11 +2328,21 @@ p {
     text-align: center;
     order: 2;
   }
+  
+  .hero-heading .welcome-text {
+    font-size: 1.8rem !important;
+  }
+  
+  .hero-heading .hero-tagline {
+    font-size: 2.4rem !important;
+    line-height: 1.2;
+  }
 
   .hero-intro {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    font-size: 1.1rem !important;
   }
 
   .hero-actions {
