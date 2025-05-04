@@ -1,8 +1,7 @@
 
-import React, { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
 const PersonalProjects = () => {
-  const projectsRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
