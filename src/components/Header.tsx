@@ -94,6 +94,10 @@ const Header = () => {
             <button 
               className="mobile-menu-button"
               onClick={() => setMenuOpen(!menuOpen)}
+              onTouchEnd={(e) => {
+                e.preventDefault();
+                setMenuOpen(!menuOpen);
+              }}
               aria-label="Toggle menu"
             >
               <div className={`hamburger-icon ${menuOpen ? 'open' : ''}`}>
