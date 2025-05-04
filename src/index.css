@@ -1038,6 +1038,21 @@ p {
       transform: translateX(-20px); /* Consistent transform for all mobile items */
     }
 
+    /* Fix timeline tags alignment in mobile view */
+    .timeline-item:nth-child(odd) .timeline-tag,
+    .timeline-item:nth-child(even) .timeline-tag,
+    #project-timeline .timeline-item:nth-child(odd) .timeline-tag,
+    #project-timeline .timeline-item:nth-child(even) .timeline-tag,
+    #cv-timeline .timeline-item:nth-child(odd) .timeline-tag,
+    #cv-timeline .timeline-item:nth-child(even) .timeline-tag,
+    #education-timeline .timeline-item:nth-child(odd) .timeline-tag,
+    #education-timeline .timeline-item:nth-child(even) .timeline-tag {
+      float: left;
+      margin-left: 0;
+      margin-right: 0.5rem;
+      text-align: left;
+    }
+
     .timeline-item.visible,
     #project-timeline .timeline-item.visible,
     #cv-timeline .timeline-item.visible,
